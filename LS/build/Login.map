@@ -1,0 +1,1340 @@
+ Login
+
+ Timestamp is 52f415ef (Thu Feb 06 18:08:31 2014)
+
+ Preferred load address is 00400000
+
+ Start         Length     Name                   Class
+ 0001:00000000 00016b92H .text                   CODE
+ 0001:00016ba0 00000f3eH .text$x                 CODE
+ 0001:00017ae0 00000136H .text$yc                CODE
+ 0001:00017c20 0000009aH .text$yd                CODE
+ 0002:00000000 0000026cH .idata$5                DATA
+ 0002:0000026c 00000004H .CRT$XCA                DATA
+ 0002:00000270 00000004H .CRT$XCAA               DATA
+ 0002:00000274 00000028H .CRT$XCU                DATA
+ 0002:0000029c 00000004H .CRT$XCZ                DATA
+ 0002:000002a0 00000004H .CRT$XIA                DATA
+ 0002:000002a4 00000004H .CRT$XIAA               DATA
+ 0002:000002a8 00000004H .CRT$XIC                DATA
+ 0002:000002ac 00000004H .CRT$XIY                DATA
+ 0002:000002b0 00000004H .CRT$XIZ                DATA
+ 0002:000002b8 00005b00H .rdata                  DATA
+ 0002:00005db8 000002c0H .rdata$r                DATA
+ 0002:00006080 000000ccH .rdata$sxdata           DATA
+ 0002:0000614c 00000004H .rtc$IAA                DATA
+ 0002:00006150 00000004H .rtc$IZZ                DATA
+ 0002:00006154 00000004H .rtc$TAA                DATA
+ 0002:00006158 00000004H .rtc$TZZ                DATA
+ 0002:00006160 00000dacH .xdata$x                DATA
+ 0002:00006f0c 00000078H .idata$2                DATA
+ 0002:00006f84 00000014H .idata$3                DATA
+ 0002:00006f98 0000026cH .idata$4                DATA
+ 0002:00007204 00000b54H .idata$6                DATA
+ 0002:00007d58 00000000H .edata                  DATA
+ 0003:00000000 000009d0H .data                   DATA
+ 0003:000009d0 0001af78H .bss                    DATA
+
+  Address         Publics by Value              Rva+Base       Lib:Object
+
+ 0000:00000000       __except_list              00000000     <absolute>
+ 0000:00000033       ___safe_se_handler_count   00000033     <absolute>
+ 0000:00009876       __ldused                   00009876     <absolute>
+ 0000:00009876       __fltused                  00009876     <absolute>
+ 0000:00000000       ___ImageBase               00400000     <linker-defined>
+ 0001:00000000       ?dec@std@@YAAAVios_base@1@AAV21@@Z 00401000 f i client.obj
+ 0001:00000020       ?hex@std@@YAAAVios_base@1@AAV21@@Z 00401020 f i client.obj
+ 0001:00000040       ??0APPLAYER@@QAE@GI@Z      00401040 f i client.obj
+ 0001:00000090       ??1APPLAYER@@QAE@XZ        00401090 f i client.obj
+ 0001:000000b0       ??0ServerPacket@@QAE@GI@Z  004010b0 f i client.obj
+ 0001:00000100       ??0Client@@QAE@PAVEQNetworkConnection@@@Z 00401100 f   client.obj
+ 0001:000001e0       ??1_Sentry_base@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 004011e0 f i client.obj
+ 0001:00000200       ??_G?$ListElement@PAVClient@@@@QAEPAXI@Z 00401200 f i client.obj
+ 0001:00000230       ??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 00401230 f i client.obj
+ 0001:000002b0       ??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 004012b0 f i client.obj
+ 0001:00000500       ?QueuePacket@Client@@QAEXPAVAPPLAYER@@@Z 00401500 f   client.obj
+ 0001:000005d0       ?FastQueuePacket@Client@@QAEXPAPAVAPPLAYER@@@Z 004015d0 f   client.obj
+ 0001:000006b0       ?FatalError@Client@@QAEXPBD_N@Z 004016b0 f   client.obj
+ 0001:000007f0       ?Add@ClientList@@QAEXPAVClient@@@Z 004017f0 f   client.obj
+ 0001:00000830       ??1?$ListElement@PAVClient@@@@QAE@XZ 00401830 f i client.obj
+ 0001:00000890       ?WorldResponse@Client@@QAEXIC@Z 00401890 f   client.obj
+ 0001:00000b40       ?FindByLSID@ClientList@@QAEPAVClient@@I@Z 00401b40 f   client.obj
+ 0001:00000bc0       ?Process@Client@@QAE_NXZ   00401bc0 f   client.obj
+ 0001:00001940       ?Process@ClientList@@QAEXXZ 00402940 f   client.obj
+ 0001:00001a50       ??0EQCrypto@@QAE@XZ        00402a50 f   EQCrypto.obj
+ 0001:00001a70       ?DoEQDecrypt@EQCrypto@@QAEXPBEPAEH@Z 00402a70 f   EQCrypto.obj
+ 0001:00001ac0       ??1bad_alloc@std@@UAE@XZ   00402ac0 f i logindatabase.obj
+ 0001:00001ad0       ??_Gbad_alloc@std@@UAEPAXI@Z 00402ad0 f i logindatabase.obj
+ 0001:00001ad0       ??_Ebad_alloc@std@@UAEPAXI@Z 00402ad0 f i logindatabase.obj
+ 0001:00001b00       ?compare@?$char_traits@D@std@@SAHPBD0I@Z 00402b00 f i logindatabase.obj
+ 0001:00001b80       ?UpdateWorldName@Database@@QAE_NIPBD@Z 00402b80 f   logindatabase.obj
+ 0001:00001c90       ?InsertStats@Database@@QAE_NIII@Z 00402c90 f   logindatabase.obj
+ 0001:00001d40       ??0bad_alloc@std@@QAE@ABV01@@Z 00402d40 f i logindatabase.obj
+ 0001:00001d60       ?erase@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@II@Z 00402d60 f i logindatabase.obj
+ 0001:00001df0       ?allocate@?$allocator@D@std@@QAEPADI@Z 00402df0 f i logindatabase.obj
+ 0001:00001e40       ?GetLSLoginInfo@Database@@QAEIPAD0PAEPAHPA_NPAF@Z 00402e40 f   logindatabase.obj
+ 0001:000020d0       ?GetLSAccountInfo@Database@@QAE_NIPADPAEPAHPA_NPAF@Z 004030d0 f   logindatabase.obj
+ 0001:000022b0       ?CheckWorldAuth@Database@@QAECPBD0PAI1PA_N2@Z 004032b0 f   logindatabase.obj
+ 0001:00002520       ?AccountLoggedIn@Database@@QAE_NI@Z 00403520 f   logindatabase.obj
+ 0001:00002650       ?CountUsers@Database@@QAEIPAD@Z 00403650 f   logindatabase.obj
+ 0001:00002750       ?_Copy@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXII@Z 00403750 f i logindatabase.obj
+ 0001:000028c0       ??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ 004038c0 f i logindatabase.obj
+ 0001:000028f0       ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@ABV12@II@Z 004038f0 f i logindatabase.obj
+ 0001:000029e0       ?assign@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@PBDI@Z 004039e0 f i logindatabase.obj
+ 0001:00002ae0       ?CheckEQLogin@Database@@QAEIPBVAPPLAYER@@PADPAEPAHPA_NPAFI@Z 00403ae0 f   logindatabase.obj
+ 0001:00002da0       ??0LWorld@@QAE@PAVTCPConnection@@_NIG1@Z 00403da0 f   LWorld.obj
+ 0001:00002f50       ??0LWorld@@QAE@IPAD0I_N@Z  00403f50 f   LWorld.obj
+ 0001:00003070       ??0LWorld@@QAE@PAVTCPConnection@@IIIPAD11HI_N2E2I@Z 00404070 f   LWorld.obj
+ 0001:000031a0       ?SendPacket@LWorld@@QAEXPAVServerPacket@@@Z 004041a0 f   LWorld.obj
+ 0001:000032b0       ?Message@LWorld@@QAAXPAD0ZZ 004042b0 f   LWorld.obj
+ 0001:000033e0       ?Kick@LWorld@@QAEXPAD_N@Z  004043e0 f   LWorld.obj
+ 0001:000034f0       ?CheckServerName@LWorld@@SA_NPAD@Z 004044f0 f   LWorld.obj
+ 0001:000035b0       ?SetRemoteInfo@LWorld@@QAEXIIPAD00IIEHH@Z 004045b0 f   LWorld.obj
+ 0001:00003640       ??_G?$ListElement@PAVLWorld@@@@QAEPAXI@Z 00404640 f i LWorld.obj
+ 0001:00003690       ??_G?$ListElement@PAUPeerInfo@LWorldList@@@@QAEPAXI@Z 00404690 f i LWorld.obj
+ 0001:000036e0       ?Clear@?$LinkedList@PAVLWorld@@@@QAEXXZ 004046e0 f i LWorld.obj
+ 0001:00003750       ?Clear@?$LinkedList@PAUPeerInfo@LWorldList@@@@QAEXXZ 00404750 f i LWorld.obj
+ 0001:000037a0       ?Add@LWorldList@@QAEXPAVLWorld@@@Z 004047a0 f   LWorld.obj
+ 0001:000037e0       ?LoadWorldList@Database@@QAEXXZ 004047e0 f   LWorld.obj
+ 0001:00003a30       ??1?$LinkedList@PAVLWorld@@@@QAE@XZ 00404a30 f i LWorld.obj
+ 0001:00003a40       ??1?$LinkedList@PAUPeerInfo@LWorldList@@@@QAE@XZ 00404a40 f i LWorld.obj
+ 0001:00003a50       ?Append@?$LinkedList@PAUPeerInfo@LWorldList@@@@QAEXABQAUPeerInfo@LWorldList@@@Z 00404a50 f i LWorld.obj
+ 0001:00003a50       ?Append@?$LinkedList@PAVEQNetworkConnection@@@@QAEXABQAVEQNetworkConnection@@@Z 00404a50 f i EQNetwork.obj
+ 0001:00003a50       ?Append@?$LinkedList@PAVEQNetworkPacket@@@@QAEXABQAVEQNetworkPacket@@@Z 00404a50 f i EQNetwork.obj
+ 0001:00003a50       ?Append@?$LinkedList@PAVTCPConnection@@@@QAEXABQAVTCPConnection@@@Z 00404a50 f i TCPConnection.obj
+ 0001:00003ac0       ?RemoveCurrent@?$LinkedListIterator@PAVLWorld@@@@QAEX_N@Z 00404ac0 f i LWorld.obj
+ 0001:00003b80       ?RemoveCurrent@?$LinkedListIterator@PAUPeerInfo@LWorldList@@@@QAEX_N@Z 00404b80 f i LWorld.obj
+ 0001:00003c20       ??0LWorldList@@QAE@XZ      00404c20 f   LWorld.obj
+ 0001:00003d10       ??1LWorldList@@QAE@XZ      00404d10 f   LWorld.obj
+ 0001:00003da0       ?Shutdown@LWorldList@@QAEXXZ 00404da0 f   LWorld.obj
+ 0001:00003df0       ?KickGhostIP@LWorldList@@QAEXIPAVLWorld@@G@Z 00404df0 f   LWorld.obj
+ 0001:00003ff0       ?KickGhost@LWorldList@@QAEXW4ConType@@IPAVLWorld@@@Z 00404ff0 f   LWorld.obj
+ 0001:00004160       ?SendPacket@LWorldList@@QAEXPAVServerPacket@@PAVLWorld@@@Z 00405160 f   LWorld.obj
+ 0001:000042e0       ?SendPacketLocal@LWorldList@@QAEXPAVServerPacket@@PAVLWorld@@@Z 004052e0 f   LWorld.obj
+ 0001:00004360       ?SendPacketLogin@LWorldList@@QAEXPAVServerPacket@@PAVLWorld@@@Z 00405360 f   LWorld.obj
+ 0001:000043e0       ?FindByID@LWorldList@@QAEPAVLWorld@@I@Z 004053e0 f   LWorld.obj
+ 0001:00004460       ?FindByAddress@LWorldList@@QAEPAVLWorld@@PAD@Z 00405460 f   LWorld.obj
+ 0001:000044f0       ?FindByLink@LWorldList@@QAEPAVLWorld@@PAVTCPConnection@@I@Z 004054f0 f   LWorld.obj
+ 0001:00004590       ?FindByAccount@LWorldList@@QAEPAVLWorld@@IW4ConType@@@Z 00405590 f   LWorld.obj
+ 0001:00004630       ?MakeServerListPacket@LWorldList@@QAEXPAVAPPLAYER@@E@Z 00405630 f   LWorld.obj
+ 0001:000048e0       ?SendWorldStatus@LWorldList@@QAEXPAVLWorld@@PAD@Z 004058e0 f   LWorld.obj
+ 0001:00004a30       ?RemoveByLink@LWorldList@@QAEXPAVTCPConnection@@IPAVLWorld@@@Z 00405a30 f   LWorld.obj
+ 0001:00004ad0       ?RemoveByID@LWorldList@@QAEXI@Z 00405ad0 f   LWorld.obj
+ 0001:00004b50       ?Init@LWorldList@@QAE_NXZ  00405b50 f   LWorld.obj
+ 0001:00004bb0       ?AddPeer@LWorldList@@QAEXIG_N@Z 00405bb0 f   LWorld.obj
+ 0001:00004dc0       ?AddPeer@LWorldList@@QAEXPAVLWorld@@@Z 00405dc0 f   LWorld.obj
+ 0001:00004e10       ?AddPeer@LWorldList@@QAEXPAD_N@Z 00405e10 f   LWorld.obj
+ 0001:00004ef0       ?RemovePeer@LWorldList@@QAEXPAVLWorld@@@Z 00405ef0 f   LWorld.obj
+ 0001:00004f70       ?ConnectPeer@LWorldList@@QAECPAVLWorld@@@Z 00405f70 f   LWorld.obj
+ 0001:00005040       ?ListWorldsToConsole@LWorldList@@QAEXXZ 00406040 f   LWorld.obj
+ 0001:00005470       ?WriteXML@LWorldList@@QAE_NXZ 00406470 f   LWorld.obj
+ 0001:00005500       ??1LWorld@@QAE@XZ          00406500 f   LWorld.obj
+ 0001:00005650       ?SetupWorld@LWorld@@QAE_NPAD0000@Z 00406650 f   LWorld.obj
+ 0001:00005830       ?SetupChat@LWorld@@QAE_NPAD0@Z 00406830 f   LWorld.obj
+ 0001:00005960       ?SetupLogin@LWorld@@QAE_NPAD00@Z 00406960 f   LWorld.obj
+ 0001:00005b60       ?UpdateWorldList@LWorld@@QAEXPAV1@@Z 00406b60 f   LWorld.obj
+ 0001:00005d20       ?UpdateWorldList@LWorldList@@QAEXPAVLWorld@@@Z 00406d20 f   LWorld.obj
+ 0001:00005da0       ?ConnectUplink@LWorldList@@QAEXXZ 00406da0 f   LWorld.obj
+ 0001:00006130       ?UpdateStatus@LWorld@@QAEXHHH@Z 00407130 f i LWorld.obj
+ 0001:00006160       ?Process@LWorld@@QAE_NXZ   00407160 f   LWorld.obj
+ 0001:00007230       ?Process@LWorldList@@QAEXXZ 00408230 f   LWorld.obj
+ 0001:00007480       ?IsNumber@Seperator@@SA_NPBD@Z 00408480 f i net.obj
+ 0001:000074f0       ??0NetConnection@@QAE@XZ   004084f0 f i net.obj
+ 0001:00007570       ?Clear@?$LinkedList@PAVClient@@@@QAEXXZ 00408570 f i net.obj
+ 0001:000075b0       ?CatchSignal@@YAXH@Z       004085b0 f   net.obj
+ 0001:000075f0       ?ReadLoginConfig@NetConnection@@QAE_NXZ 004085f0 f   net.obj
+ 0001:00007b50       _main                      00408b50 f   net.obj
+ 0001:00007eb0       ?Generate@CRC32@@SAIPBEI@Z 00408eb0 f   crc32.obj
+ 0001:00007f00       ?HandleMysqlError@Database@@SAXI@Z 00408f00 f   database.obj
+ 0001:00007f50       ?InitVars@Database@@AAEXXZ 00408f50 f   database.obj
+ 0001:00008010       ??1Database@@QAE@XZ        00409010 f   database.obj
+ 0001:00008360       ?LoadVariables_result@Database@@QAE_NPAUst_mysql_res@@@Z 00409360 f   database.obj
+ 0001:00008630       ?GetVariable@Database@@QAE_NPBDPADG@Z 00409630 f   database.obj
+ 0001:00008730       ??0Database@@QAE@XZ        00409730 f   database.obj
+ 0001:00008b80       ?LoadVariables@Database@@QAE_NXZ 00409b80 f   database.obj
+ 0001:00008cd0       ??0DBcore@@QAE@XZ          00409cd0 f   dbcore.obj
+ 0001:00008d10       ??1DBcore@@QAE@XZ          00409d10 f   dbcore.obj
+ 0001:00008d90       ?ping@DBcore@@QAEXXZ       00409d90 f   dbcore.obj
+ 0001:00008dc0       ?DoEscapeString@DBcore@@QAEIPADPBDI@Z 00409dc0 f   dbcore.obj
+ 0001:00008e00       ?Open@DBcore@@AAE_NPAIPAD@Z 00409e00 f   dbcore.obj
+ 0001:00008f50       ?Open@DBcore@@IAE_NPBD000PAIPAD_N3@Z 00409f50 f   dbcore.obj
+ 0001:00009120       ?RunQuery@DBcore@@QAE_NPBDIPADPAPAUst_mysql_res@@PAI33_N@Z 0040a120 f   dbcore.obj
+ 0001:00009390       ??0EQEMuLog@@QAE@XZ        0040a390 f   debug.obj
+ 0001:00009470       ??1EQEMuLog@@QAE@XZ        0040a470 f   debug.obj
+ 0001:00009520       ?open@EQEMuLog@@AAE_NW4LogIDs@1@@Z 0040a520 f   debug.obj
+ 0001:000096a0       ?write@EQEMuLog@@QAA_NW4LogIDs@1@PBDZZ 0040a6a0 f   debug.obj
+ 0001:00009830       ?Copy@APPLAYER@@QBEPAV1@XZ 0040a830 f i EQNetwork.obj
+ 0001:00009900       ?CheckActive@EQNetworkConnection@@QAE_NXZ 0040a900 f   EQNetwork.obj
+ 0001:00009930       ?ReturnPacket@EQNetworkPacket@@QAEIPAPAE@Z 0040a930 f   EQNetwork.obj
+ 0001:00009ad0       ??0EQNetworkFragmentGroup@@QAE@GG@Z 0040aad0 f   EQNetwork.obj
+ 0001:00009bd0       ??1EQNetworkFragmentGroup@@UAE@XZ 0040abd0 f   EQNetwork.obj
+ 0001:00009c30       ?Assemble@EQNetworkFragmentGroup@@QAEIPAPAE@Z 0040ac30 f   EQNetwork.obj
+ 0001:00009cd0       ?clear@?$MyQueue@VAPPLAYER@@@@QAEXXZ 0040acd0 f i EQNetwork.obj
+ 0001:00009d20       ??_G?$ListElement@PAVEQNetworkPacket@@@@QAEPAXI@Z 0040ad20 f i EQNetwork.obj
+ 0001:00009d20       ??_G?$ListElement@PAVEQNetworkFragmentGroup@@@@QAEPAXI@Z 0040ad20 f i EQNetwork.obj
+ 0001:00009d20       ??_G?$ListElement@PAVTCPConnection@@@@QAEPAXI@Z 0040ad20 f i TCPConnection.obj
+ 0001:00009d20       ??_G?$ListElement@PAVEQNetworkConnection@@@@QAEPAXI@Z 0040ad20 f i EQNetwork.obj
+ 0001:00009d50       ?Clear@?$LinkedList@PAVEQNetworkFragmentGroup@@@@QAEXXZ 0040ad50 f i EQNetwork.obj
+ 0001:00009d50       ?Clear@?$LinkedList@PAVTCPConnection@@@@QAEXXZ 0040ad50 f i TCPConnection.obj
+ 0001:00009d50       ?Clear@?$LinkedList@PAVEQNetworkConnection@@@@QAEXXZ 0040ad50 f i EQNetwork.obj
+ 0001:00009d50       ?Clear@?$LinkedList@PAVEQNetworkPacket@@@@QAEXXZ 0040ad50 f i EQNetwork.obj
+ 0001:00009d90       ??1?$ListElement@PAVEQNetworkConnection@@@@QAE@XZ 0040ad90 f i EQNetwork.obj
+ 0001:00009d90       ??1?$ListElement@PAVTCPConnection@@@@QAE@XZ 0040ad90 f i TCPConnection.obj
+ 0001:00009d90       ??1?$ListElement@PAVEQNetworkPacket@@@@QAE@XZ 0040ad90 f i EQNetwork.obj
+ 0001:00009d90       ??1?$ListElement@PAVEQNetworkFragmentGroup@@@@QAE@XZ 0040ad90 f i EQNetwork.obj
+ 0001:00009dd0       ?NewQueuePop@EQNetworkServer@@QAEPAVEQNetworkConnection@@XZ 0040add0 f   EQNetwork.obj
+ 0001:00009e30       ?PopPacket@EQNetworkConnection@@QAEPAVAPPLAYER@@XZ 0040ae30 f   EQNetwork.obj
+ 0001:00009e90       ??0EQNetworkPacket@@QAE@PAVEQNetworkConnection@@@Z 0040ae90 f   EQNetwork.obj
+ 0001:00009ee0       ??_EEQNetworkPacket@@UAEPAXI@Z 0040aee0 f i EQNetwork.obj
+ 0001:00009ee0       ??_GEQNetworkPacket@@UAEPAXI@Z 0040aee0 f i EQNetwork.obj
+ 0001:00009f20       ??_EEQNetworkFragmentGroup@@UAEPAXI@Z 0040af20 f i EQNetwork.obj
+ 0001:00009f20       ??_GEQNetworkFragmentGroup@@UAEPAXI@Z 0040af20 f i EQNetwork.obj
+ 0001:00009f50       ??1?$MyQueue@VAPPLAYER@@@@QAE@XZ 0040af50 f i EQNetwork.obj
+ 0001:00009f60       ?push@?$MyQueue@D@@QAEXPAD@Z 0040af60 f i TCPConnection.obj
+ 0001:00009f60       ?push@?$MyQueue@UInQueue_Struct@@@@QAEXPAUInQueue_Struct@@@Z 0040af60 f i EQNetwork.obj
+ 0001:00009f60       ?push@?$MyQueue@VEQNetworkConnection@@@@QAEXPAVEQNetworkConnection@@@Z 0040af60 f i EQNetwork.obj
+ 0001:00009f60       ?push@?$MyQueue@VAPPLAYER@@@@QAEXPAVAPPLAYER@@@Z 0040af60 f i EQNetwork.obj
+ 0001:00009f60       ?push@?$MyQueue@VTCPConnection@@@@QAEXPAVTCPConnection@@@Z 0040af60 f i TCPConnection.obj
+ 0001:00009f60       ?push@?$MyQueue@VServerPacket@@@@QAEXPAVServerPacket@@@Z 0040af60 f i TCPConnection.obj
+ 0001:00009f60       ?push@?$MyQueue@UTCPNetPacket_Struct@TCPConnection@@@@QAEXPAUTCPNetPacket_Struct@TCPConnection@@@Z 0040af60 f i TCPConnection.obj
+ 0001:00009fe0       ??1?$LinkedList@PAVEQNetworkFragmentGroup@@@@QAE@XZ 0040afe0 f i EQNetwork.obj
+ 0001:00009fe0       ??1?$LinkedList@PAVEQNetworkPacket@@@@QAE@XZ 0040afe0 f i EQNetwork.obj
+ 0001:00009ff0       ?Advance@?$LinkedListIterator@PAVEQNetworkConnection@@@@QAEXXZ 0040aff0 f i EQNetwork.obj
+ 0001:00009ff0       ?Advance@?$LinkedListIterator@PAVLWorld@@@@QAEXXZ 0040aff0 f i LWorld.obj
+ 0001:00009ff0       ?Advance@?$LinkedListIterator@PAVEQNetworkPacket@@@@QAEXXZ 0040aff0 f i EQNetwork.obj
+ 0001:0000a040       ?RemoveCurrent@?$LinkedListIterator@PAVEQNetworkPacket@@@@QAEX_N@Z 0040b040 f i EQNetwork.obj
+ 0001:0000a040       ?RemoveCurrent@?$LinkedListIterator@PAVEQNetworkFragmentGroup@@@@QAEX_N@Z 0040b040 f i EQNetwork.obj
+ 0001:0000a0e0       ??0EQNetworkServer@@QAE@G@Z 0040b0e0 f   EQNetwork.obj
+ 0001:0000a1b0       ?QueuePacket@EQNetworkConnection@@QAEXPBVAPPLAYER@@_N@Z 0040b1b0 f   EQNetwork.obj
+ 0001:0000a2d0       ?FastQueuePacket@EQNetworkConnection@@QAEXPAPAVAPPLAYER@@_N@Z 0040b2d0 f   EQNetwork.obj
+ 0001:0000a420       ?Close@EQNetworkConnection@@QAEXXZ 0040b420 f   EQNetwork.obj
+ 0001:0000a4a0       ?CloseSock@EQNetworkConnection@@QAEXXZ 0040b4a0 f   EQNetwork.obj
+ 0001:0000a690       ?DecodePacket@EQNetworkPacket@@QAE_NPAEI@Z 0040b690 f   EQNetwork.obj
+ 0001:0000a810       ??1EQNetworkFragmentGroupList@@UAE@XZ 0040b810 f   EQNetwork.obj
+ 0001:0000a840       ?Reset@?$LinkedListIterator@PAUPeerInfo@LWorldList@@@@QAEXXZ 0040b840 f i LWorld.obj
+ 0001:0000a840       ?Reset@?$LinkedListIterator@PAVClient@@@@QAEXXZ 0040b840 f i client.obj
+ 0001:0000a840       ?Reset@?$LinkedListIterator@PAVEQNetworkFragmentGroup@@@@QAEXXZ 0040b840 f i EQNetwork.obj
+ 0001:0000a840       ?Reset@?$LinkedListIterator@PAVEQNetworkConnection@@@@QAEXXZ 0040b840 f i EQNetwork.obj
+ 0001:0000a840       ?Reset@?$LinkedListIterator@PAVEQNetworkPacket@@@@QAEXXZ 0040b840 f i EQNetwork.obj
+ 0001:0000a840       ?Reset@?$LinkedListIterator@PAVLWorld@@@@QAEXXZ 0040b840 f i LWorld.obj
+ 0001:0000a840       ?Reset@?$LinkedListIterator@PAVTCPConnection@@@@QAEXXZ 0040b840 f i TCPConnection.obj
+ 0001:0000a8c0       ??1EQNetworkServer@@UAE@XZ 0040b8c0 f   EQNetwork.obj
+ 0001:0000a9f0       ??0EQNetworkConnection@@QAE@IG@Z 0040b9f0 f   EQNetwork.obj
+ 0001:0000ac10       ??1EQNetworkConnection@@UAE@XZ 0040bc10 f   EQNetwork.obj
+ 0001:0000ae40       ?Free@EQNetworkConnection@@QAEXXZ 0040be40 f   EQNetwork.obj
+ 0001:0000ae80       ?IncomingARSP@EQNetworkConnection@@AAEXG@Z 0040be80 f   EQNetwork.obj
+ 0001:0000af70       ?MakeEQPacket@EQNetworkConnection@@AAEXPAVAPPLAYER@@_N@Z 0040bf70 f   EQNetwork.obj
+ 0001:0000b2a0       ??_EEQNetworkFragmentGroupList@@UAEPAXI@Z 0040c2a0 f i EQNetwork.obj
+ 0001:0000b2a0       ??_GEQNetworkFragmentGroupList@@UAEPAXI@Z 0040c2a0 f i EQNetwork.obj
+ 0001:0000b2e0       ?CheckTimers@EQNetworkFragmentGroupList@@QAEXXZ 0040c2e0 f   EQNetwork.obj
+ 0001:0000b3e0       ?GotPacket@EQNetworkFragmentGroupList@@QAEPAVEQNetworkFragmentGroup@@PAVEQNetworkPacket@@@Z 0040c3e0 f   EQNetwork.obj
+ 0001:0000b590       ?DeleteGroup@EQNetworkFragmentGroupList@@QAEXG@Z 0040c590 f   EQNetwork.obj
+ 0001:0000b620       ??_GEQNetworkServer@@UAEPAXI@Z 0040c620 f i EQNetwork.obj
+ 0001:0000b620       ??_EEQNetworkServer@@UAEPAXI@Z 0040c620 f i EQNetwork.obj
+ 0001:0000b650       ??_GEQNetworkConnection@@UAEPAXI@Z 0040c650 f i EQNetwork.obj
+ 0001:0000b650       ??_EEQNetworkConnection@@UAEPAXI@Z 0040c650 f i EQNetwork.obj
+ 0001:0000b680       ?Process@EQNetworkConnection@@IAEXI@Z 0040c680 f   EQNetwork.obj
+ 0001:0000b9f0       ?ProcessPacket@EQNetworkConnection@@AAE_NPAVEQNetworkPacket@@_N@Z 0040c9f0 f   EQNetwork.obj
+ 0001:0000bcc0       ?CheckBufferedPackets@EQNetworkConnection@@AAEXXZ 0040ccc0 f   EQNetwork.obj
+ 0001:0000be40       ?RecvData@EQNetworkConnection@@QAEXPAEI@Z 0040ce40 f   EQNetwork.obj
+ 0001:0000c190       ?RecvData@EQNetworkServer@@AAEXPAEIIG@Z 0040d190 f   EQNetwork.obj
+ 0001:0000c2e0       ?EQNetworkServerLoop@@YAXPAX@Z 0040d2e0 f   EQNetwork.obj
+ 0001:0000c580       ?Open@EQNetworkServer@@QAE_NG@Z 0040d580 f   EQNetwork.obj
+ 0001:0000c6f0       ??BMD5@@QAEPBDXZ           0040d6f0 f   md5.obj
+ 0001:0000c760       ?byteSwap@MD5@@CAXPAII@Z   0040d760 f   md5.obj
+ 0001:0000c7a0       ?Transform@MD5@@CAXQAIQBI@Z 0040d7a0 f   md5.obj
+ 0001:0000ce30       ?Update@MD5@@SAXPAUMD5Context@1@PBEI@Z 0040de30 f   md5.obj
+ 0001:0000cf20       ?Final@MD5@@SAXQAEPAUMD5Context@1@@Z 0040df20 f   md5.obj
+ 0001:0000cfe0       ??0MD5@@QAE@PBDI@Z         0040dfe0 f   md5.obj
+ 0001:0000d050       ??0Seperator@@QAE@PBDDGG_NDD1@Z 0040e050 f i MiscFunctions.obj
+ 0001:0000d2c0       ??1Seperator@@QAE@XZ       0040e2c0 f i MiscFunctions.obj
+ 0001:0000d300       ?strn0cpy@@YAPADPADPBDI@Z  0040e300 f   MiscFunctions.obj
+ 0001:0000d340       ?MakeAnyLenString@@YAHPAPADPBDZZ 0040e340 f   MiscFunctions.obj
+ 0001:0000d3b0       ?atobool@@YA_NPAD@Z        0040e3b0 f   MiscFunctions.obj
+ 0001:0000d4b0       ??0InitWinsock@@QAE@XZ     0040e4b0 f   MiscFunctions.obj
+ 0001:0000d4f0       ??1InitWinsock@@QAE@XZ     0040e4f0 f   MiscFunctions.obj
+ 0001:0000d500       ?ResolveIP@@YAIPBDPAD@Z    0040e500 f   MiscFunctions.obj
+ 0001:0000d5f0       ?ParseAddress@@YA_NPBDPAIPAGPAD@Z 0040e5f0 f   MiscFunctions.obj
+ 0001:0000d680       ?IsTryLockSupported@@YA_NXZ 0040e680 f   Mutex.obj
+ 0001:0000d720       ??0Mutex@@QAE@XZ           0040e720 f   Mutex.obj
+ 0001:0000d730       ??1Mutex@@QAE@XZ           0040e730 f   Mutex.obj
+ 0001:0000d740       ?lock@Mutex@@QAEXXZ        0040e740 f   Mutex.obj
+ 0001:0000d750       ?trylock@Mutex@@QAE_NXZ    0040e750 f   Mutex.obj
+ 0001:0000d770       ?unlock@Mutex@@QAEXXZ      0040e770 f   Mutex.obj
+ 0001:0000d780       ??0LockMutex@@QAE@PAVMutex@@_N@Z 0040e780 f   Mutex.obj
+ 0001:0000d7b0       ??1LockMutex@@QAE@XZ       0040e7b0 f   Mutex.obj
+ 0001:0000d7c0       ?DumpPacketHex@@YAXPBEIII@Z 0040e7c0 f   packet_dump.obj
+ 0001:0000d9b0       ?DumpPacket@@YAXPBEI@Z     0040e9b0 f   packet_dump.obj
+ 0001:0000d9d0       ?DumpPacket@@YAXPBVAPPLAYER@@_N@Z 0040e9d0 f   packet_dump.obj
+ 0001:0000daa0       ?DumpPacket@@YAXPBVServerPacket@@_N@Z 0040eaa0 f   packet_dump.obj
+ 0001:0000db70       ?InflatePacket@@YAIPAEI0I_N@Z 0040eb70 f   packet_functions.obj
+ 0001:0000dcb0       ?MakePacket@TCPConnection@@SAPAUTCPNetPacket_Struct@1@PBVServerPacket@@I@Z 0040ecb0 f   TCPConnection.obj
+ 0001:0000dd30       ?MakeOldPacket@TCPConnection@@SAPAUSPackSendQueue@@PBVServerPacket@@@Z 0040ed30 f   TCPConnection.obj
+ 0001:0000dd80       ?SetState@TCPConnection@@IAEXE@Z 0040ed80 f   TCPConnection.obj
+ 0001:0000ddb0       ?GetState@TCPConnection@@UAEEXZ 0040edb0 f   TCPConnection.obj
+ 0001:0000dde0       ?ServerSendQueuePushEnd@TCPConnection@@AAEXPBEH@Z 0040ede0 f   TCPConnection.obj
+ 0001:0000deb0       ?ServerSendQueuePushEnd@TCPConnection@@AAEXPAPAEH@Z 0040eeb0 f   TCPConnection.obj
+ 0001:0000dfa0       ?ServerSendQueuePushFront@TCPConnection@@AAEXPBEH@Z 0040efa0 f   TCPConnection.obj
+ 0001:0000e070       ?SetAsyncConnect@TCPConnection@@IAE_N_N@Z 0040f070 f   TCPConnection.obj
+ 0001:0000e0a0       ?SetEcho@TCPConnection@@QAEX_N@Z 0040f0a0 f   TCPConnection.obj
+ 0001:0000e0d0       ?SendNetErrorPacket@TCPConnection@@AAEXPBD@Z 0040f0d0 f   TCPConnection.obj
+ 0001:0000e1c0       ?RemoveRelay@TCPConnection@@IAEXPAV1@_N@Z 0040f1c0 f   TCPConnection.obj
+ 0001:0000e2a0       ?Open@TCPServer@@QAE_NGPAD@Z 0040f2a0 f   TCPConnection.obj
+ 0001:0000e480       ?IsOpen@TCPServer@@QAE_NXZ 0040f480 f   TCPConnection.obj
+ 0001:0000e4b0       ?clear@?$MyQueue@VServerPacket@@@@QAEXXZ 0040f4b0 f i TCPConnection.obj
+ 0001:0000e500       ?PopPacket@TCPConnection@@QAEPAVServerPacket@@XZ 0040f500 f   TCPConnection.obj
+ 0001:0000e570       ?ClearBuffers@TCPConnection@@AAEXXZ 0040f570 f   TCPConnection.obj
+ 0001:0000e740       ?NewQueuePop@TCPServer@@QAEPAVTCPConnection@@XZ 0040f740 f   TCPConnection.obj
+ 0001:0000e7a0       ??1?$MyQueue@VServerPacket@@@@QAE@XZ 0040f7a0 f i TCPConnection.obj
+ 0001:0000e7b0       ??1?$MyQueue@D@@QAE@XZ     0040f7b0 f i TCPConnection.obj
+ 0001:0000e7b0       ??1?$MyQueue@UInQueue_Struct@@@@QAE@XZ 0040f7b0 f i EQNetwork.obj
+ 0001:0000e7b0       ??1?$MyQueue@UTCPNetPacket_Struct@TCPConnection@@@@QAE@XZ 0040f7b0 f i TCPConnection.obj
+ 0001:0000e7e0       ??1?$MyQueue@VTCPConnection@@@@QAE@XZ 0040f7e0 f i TCPConnection.obj
+ 0001:0000e7e0       ??1?$MyQueue@VEQNetworkConnection@@@@QAE@XZ 0040f7e0 f i EQNetwork.obj
+ 0001:0000e810       ??0TCPConnection@@QAE@_NPAVTCPServer@@W4eTCPMode@@@Z 0040f810 f   TCPConnection.obj
+ 0001:0000e9a0       ??0TCPConnection@@QAE@PAVTCPServer@@IIG_N@Z 0040f9a0 f   TCPConnection.obj
+ 0001:0000eb40       ??0TCPConnection@@QAE@PAVTCPServer@@PAV0@IIG@Z 0040fb40 f   TCPConnection.obj
+ 0001:0000ed30       ?Free@TCPConnection@@QAEXXZ 0040fd30 f   TCPConnection.obj
+ 0001:0000ee00       ?InModeQueuePush@TCPConnection@@AAEXPAUTCPNetPacket_Struct@1@@Z 0040fe00 f   TCPConnection.obj
+ 0001:0000ee40       ?LineOutQueuePush@TCPConnection@@AAEXPAD@Z 0040fe40 f   TCPConnection.obj
+ 0001:0000ef60       ?Connect@TCPConnection@@QAE_NIGPAD@Z 0040ff60 f   TCPConnection.obj
+ 0001:0000f290       ?ProcessReceivedDataAsOldPackets@TCPConnection@@AAE_NPAD@Z 00410290 f   TCPConnection.obj
+ 0001:0000f490       ?SendData@TCPConnection@@AAE_NPAD@Z 00410490 f   TCPConnection.obj
+ 0001:0000f6f0       ?SendPacket@TCPConnection@@UAE_NPBVServerPacket@@I@Z 004106f0 f   TCPConnection.obj
+ 0001:0000f830       ?SendPacket@TCPConnection@@UAE_NPBUTCPNetPacket_Struct@1@@Z 00410830 f   TCPConnection.obj
+ 0001:0000f930       ?Disconnect@TCPConnection@@UAEX_N@Z 00410930 f   TCPConnection.obj
+ 0001:0000f9f0       ?TCPConnectionLoop@@YAXPAX@Z 004109f0 f   TCPConnection.obj
+ 0001:0000fbb0       ??1TCPServer@@UAE@XZ       00410bb0 f   TCPConnection.obj
+ 0001:0000fd10       ?AddConnection@TCPServer@@IAEXPAVTCPConnection@@@Z 00410d10 f   TCPConnection.obj
+ 0001:0000fd50       ?GetConnection@TCPServer@@IAEPAVTCPConnection@@I@Z 00410d50 f   TCPConnection.obj
+ 0001:0000fdd0       ?CheckInQueue@TCPServer@@AAEXXZ 00410dd0 f   TCPConnection.obj
+ 0001:0000feb0       ??1TCPConnection@@UAE@XZ   00410eb0 f   TCPConnection.obj
+ 0001:00010090       ?AsyncConnect@TCPConnection@@QAEXIG@Z 00411090 f   TCPConnection.obj
+ 0001:000101d0       ?ProcessNetworkLayerPacket@TCPConnection@@AAEXPAVServerPacket@@@Z 004111d0 f   TCPConnection.obj
+ 0001:00010430       ??_GTCPServer@@UAEPAXI@Z   00411430 f i TCPConnection.obj
+ 0001:00010430       ??_ETCPServer@@UAEPAXI@Z   00411430 f i TCPConnection.obj
+ 0001:00010460       ?ListenNewConnections@TCPServer@@AAEXXZ 00411460 f   TCPConnection.obj
+ 0001:00010620       ??_GTCPConnection@@UAEPAXI@Z 00411620 f i TCPConnection.obj
+ 0001:00010620       ??_ETCPConnection@@UAEPAXI@Z 00411620 f i TCPConnection.obj
+ 0001:00010650       ?ProcessReceivedDataAsPackets@TCPConnection@@AAE_NPAD@Z 00411650 f   TCPConnection.obj
+ 0001:00010900       ?Process@TCPServer@@IAEXXZ 00411900 f   TCPConnection.obj
+ 0001:00010a40       ?ProcessReceivedData@TCPConnection@@AAE_NPAD@Z 00411a40 f   TCPConnection.obj
+ 0001:00010d70       ?TCPServerLoop@@YAXPAX@Z   00411d70 f   TCPConnection.obj
+ 0001:00010e90       ?RecvData@TCPConnection@@AAE_NPAD@Z 00411e90 f   TCPConnection.obj
+ 0001:00011040       ??0TCPServer@@QAE@G_N@Z    00412040 f   TCPConnection.obj
+ 0001:00011120       ?Process@TCPConnection@@MAE_NXZ 00412120 f   TCPConnection.obj
+ 0001:000112d0       ??0Timer@@QAE@I_N@Z        004122d0 f   timer.obj
+ 0001:00011300       ?gettimeofday@@YAHPAUtimeval@@ZZ 00412300 f   timer.obj
+ 0001:00011350       ?Check@Timer@@QAE_N_N@Z    00412350 f   timer.obj
+ 0001:000113b0       ?Disable@Timer@@QAEXXZ     004123b0 f   timer.obj
+ 0001:000113c0       ?Start@Timer@@QAEXI_N@Z    004123c0 f   timer.obj
+ 0001:000113f0       ?Trigger@Timer@@QAEXXZ     004123f0 f   timer.obj
+ 0001:00011410       ?GetTickCount@Timer@@SAABIXZ 00412410 f   timer.obj
+ 0001:00011420       ?SetCurrentTime@Timer@@SAABIXZ 00412420 f   timer.obj
+ 0001:00011482       _ntohs@4                   00412482 f   wsock32:WSOCK32.dll
+ 0001:00011488       _inet_ntoa@4               00412488 f   wsock32:WSOCK32.dll
+ 0001:0001148e       _htonl@4                   0041248e f   wsock32:WSOCK32.dll
+ 0001:00011494       _closesocket@4             00412494 f   wsock32:WSOCK32.dll
+ 0001:0001149a       _WSAStartup@8              0041249a f   wsock32:WSOCK32.dll
+ 0001:000114a0       _WSACleanup@0              004124a0 f   wsock32:WSOCK32.dll
+ 0001:000114a6       _sendto@24                 004124a6 f   wsock32:WSOCK32.dll
+ 0001:000114ac       _ntohl@4                   004124ac f   wsock32:WSOCK32.dll
+ 0001:000114b2       _recv@16                   004124b2 f   wsock32:WSOCK32.dll
+ 0001:000114b8       _recvfrom@24               004124b8 f   wsock32:WSOCK32.dll
+ 0001:000114be       _ioctlsocket@12            004124be f   wsock32:WSOCK32.dll
+ 0001:000114c4       _connect@12                004124c4 f   wsock32:WSOCK32.dll
+ 0001:000114ca       _socket@12                 004124ca f   wsock32:WSOCK32.dll
+ 0001:000114d0       _htons@4                   004124d0 f   wsock32:WSOCK32.dll
+ 0001:000114d6       _bind@12                   004124d6 f   wsock32:WSOCK32.dll
+ 0001:000114dc       _setsockopt@20             004124dc f   wsock32:WSOCK32.dll
+ 0001:000114e2       _WSAGetLastError@0         004124e2 f   wsock32:WSOCK32.dll
+ 0001:000114e8       _gethostbyname@4           004124e8 f   wsock32:WSOCK32.dll
+ 0001:000114ee       _listen@8                  004124ee f   wsock32:WSOCK32.dll
+ 0001:000114f4       _send@16                   004124f4 f   wsock32:WSOCK32.dll
+ 0001:000114fa       _shutdown@8                004124fa f   wsock32:WSOCK32.dll
+ 0001:00011500       _accept@12                 00412500 f   wsock32:WSOCK32.dll
+ 0001:00011506       _mysql_free_result@4       00412506 f   libmysql:LIBMYSQL.dll
+ 0001:0001150c       _mysql_fetch_row@4         0041250c f   libmysql:LIBMYSQL.dll
+ 0001:00011512       _mysql_num_rows@4          00412512 f   libmysql:LIBMYSQL.dll
+ 0001:00011518       _mysql_init@4              00412518 f   libmysql:LIBMYSQL.dll
+ 0001:0001151e       _mysql_close@4             0041251e f   libmysql:LIBMYSQL.dll
+ 0001:00011524       _mysql_ping@4              00412524 f   libmysql:LIBMYSQL.dll
+ 0001:0001152a       _mysql_real_escape_string@16 0041252a f   libmysql:LIBMYSQL.dll
+ 0001:00011530       _mysql_error@4             00412530 f   libmysql:LIBMYSQL.dll
+ 0001:00011536       _mysql_errno@4             00412536 f   libmysql:LIBMYSQL.dll
+ 0001:0001153c       _mysql_real_connect@32     0041253c f   libmysql:LIBMYSQL.dll
+ 0001:00011542       _mysql_insert_id@4         00412542 f   libmysql:LIBMYSQL.dll
+ 0001:00011548       _mysql_affected_rows@4     00412548 f   libmysql:LIBMYSQL.dll
+ 0001:0001154e       _mysql_store_result@4      0041254e f   libmysql:LIBMYSQL.dll
+ 0001:00011554       _mysql_field_count@4       00412554 f   libmysql:LIBMYSQL.dll
+ 0001:0001155a       _mysql_real_query@12       0041255a f   libmysql:LIBMYSQL.dll
+ 0001:000121a0       _inflateReset              004131a0 f   zlib:inflate.obj
+ 0001:00012200       _inflateInit2_             00413200 f   zlib:inflate.obj
+ 0001:000123e0       _inflate                   004133e0 f   zlib:inflate.obj
+ 0001:000139d0       _inflateEnd                004149d0 f   zlib:inflate.obj
+ 0001:00013a20       _adler32                   00414a20 f   zlib:adler32.obj
+ 0001:000151c0       __tr_stored_block          004161c0 f   zlib:trees.obj
+ 0001:00015260       __tr_flush_block           00416260 f   zlib:trees.obj
+ 0001:00015710       _crc32                     00416710 f   zlib:crc32.obj
+ 0001:00015730       _zcalloc                   00416730 f   zlib:zutil.obj
+ 0001:00015750       _zcfree                    00416750 f   zlib:zutil.obj
+ 0001:00015760       _inflate_fast              00416760 f   zlib:inffast.obj
+ 0001:00015c20       _inflate_table             00416c20 f   zlib:inftrees.obj
+ 0001:0001610e       _DES_key_sched             0041710e f   libeay32:LIBEAY32.dll
+ 0001:00016114       _DES_ncbc_encrypt          00417114 f   libeay32:LIBEAY32.dll
+ 0001:0001611a       ??_U@YAPAXI@Z              0041711a f   msvcprt:newaop_s.obj
+ 0001:00016126       _memset                    00417126 f   MSVCRT:MSVCR100.dll
+ 0001:0001612c       ??_V@YAXPAX@Z              0041712c f   MSVCRT:MSVCR100.dll
+ 0001:00016132       ??3@YAXPAX@Z               00417132 f   MSVCRT:MSVCR100.dll
+ 0001:00016138       ??2@YAPAXI@Z               00417138 f   MSVCRT:MSVCR100.dll
+ 0001:0001613e       ___CxxFrameHandler3        0041713e f   MSVCRT:MSVCR100.dll
+ 0001:00016144       @__security_check_cookie@4 00417144 f   MSVCRT:secchk.obj
+ 0001:00016153       ??_Etype_info@@UAEPAXI@Z   00417153 f i MSVCRT:ti_inst.obj
+ 0001:000161a0       ?what@exception@std@@UBEPBDXZ 004171a0 f   MSVCRT:MSVCR100.dll
+ 0001:000161a6       _memcpy                    004171a6 f   MSVCRT:MSVCR100.dll
+ 0001:000161ac       __CxxThrowException@8      004171ac f   MSVCRT:MSVCR100.dll
+ 0001:000161b2       ??0exception@std@@QAE@ABV01@@Z 004171b2 f   MSVCRT:MSVCR100.dll
+ 0001:000161b8       __onexit                   004171b8 f   MSVCRT:atonexit.obj
+ 0001:00016259       _atexit                    00417259 f   MSVCRT:atonexit.obj
+ 0001:00016270       __chkstk                   00417270 f   MSVCRT:chkstk.obj
+ 0001:00016270       __alloca_probe             00417270     MSVCRT:chkstk.obj
+ 0001:000162a0       __ftol2_sse                004172a0 f   MSVCRT:ftol2.obj
+ 0001:000162a9       __ftol2_pentium4           004172a9 f   MSVCRT:ftol2.obj
+ 0001:000162bc       __ftol2_sse_excpt          004172bc f   MSVCRT:ftol2.obj
+ 0001:000162d6       __ftol2                    004172d6 f   MSVCRT:ftol2.obj
+ 0001:00016350       __allshl                   00417350 f   MSVCRT:llshl.obj
+ 0001:00016370       __aullshr                  00417370 f   MSVCRT:ullshr.obj
+ 0001:0001661d       _mainCRTStartup            0041761d f   MSVCRT:crtexe.obj
+ 0001:00016628       _malloc                    00417628 f   MSVCRT:MSVCR100.dll
+ 0001:0001662e       _free                      0041762e f   MSVCRT:MSVCR100.dll
+ 0001:00016634       ___report_gsfailure        00417634 f   MSVCRT:gs_report.obj
+ 0001:0001673a       ?__ArrayUnwind@@YGXPAXIHP6EX0@Z@Z 0041773a f   MSVCRT:ehvecdtr.obj
+ 0001:00016798       ??_M@YGXPAXIHP6EX0@Z@Z     00417798 f   MSVCRT:ehvecdtr.obj
+ 0001:000167fc       __unlock                   004177fc f   MSVCRT:MSVCR100.dll
+ 0001:00016802       ___dllonexit               00417802 f   MSVCRT:MSVCR100.dll
+ 0001:00016808       __lock                     00417808 f   MSVCRT:MSVCR100.dll
+ 0001:00016810       __SEH_prolog4              00417810 f   MSVCRT:sehprolg4.obj
+ 0001:00016855       __SEH_epilog4              00417855 f   MSVCRT:sehprolg4.obj
+ 0001:00016869       __except_handler4          00417869 f   MSVCRT:chandler4gs.obj
+ 0001:0001688e       ___sse2_available_init     0041788e f   MSVCRT:cpu_disp.obj
+ 0001:0001689e       ?__CxxUnhandledExceptionFilter@@YGJPAU_EXCEPTION_POINTERS@@@Z 0041789e f   MSVCRT:unhandld.obj
+ 0001:000168e0       ___CxxSetUnhandledExceptionFilter 004178e0 f   MSVCRT:unhandld.obj
+ 0001:000168ee       __amsg_exit                004178ee f   MSVCRT:MSVCR100.dll
+ 0001:000168f4       __RTC_Initialize           004178f4 f   MSVCRT:_initsect_.obj
+ 0001:0001691a       __RTC_Terminate            0041791a f   MSVCRT:_initsect_.obj
+ 0001:00016940       __XcptFilter               00417940 f   MSVCRT:MSVCR100.dll
+ 0001:00016950       __ValidateImageBase        00417950 f   MSVCRT:pesect.obj
+ 0001:00016990       __FindPESection            00417990 f   MSVCRT:pesect.obj
+ 0001:000169e0       __IsNonwritableInCurrentImage 004179e0 f   MSVCRT:pesect.obj
+ 0001:00016a9c       __initterm                 00417a9c f   MSVCRT:MSVCR100.dll
+ 0001:00016aa2       __initterm_e               00417aa2 f   MSVCRT:MSVCR100.dll
+ 0001:00016aa8       __setdefaultprecision      00417aa8 f   MSVCRT:fp8.obj
+ 0001:00016ad0       __matherr                  00417ad0 f   MSVCRT:merr.obj
+ 0001:00016ad0       __setargv                  00417ad0 f   MSVCRT:dllargv.obj
+ 0001:00016ad3       ___security_init_cookie    00417ad3 f   MSVCRT:gs_support.obj
+ 0001:00016b6e       __crt_debugger_hook        00417b6e f   MSVCRT:MSVCR100.dll
+ 0001:00016b74       ?terminate@@YAXXZ          00417b74 f   MSVCRT:MSVCR100.dll
+ 0001:00016b7a       ??1type_info@@UAE@XZ       00417b7a f   MSVCRT:MSVCR100.dll
+ 0001:00016b7a       ?_type_info_dtor_internal_method@type_info@@QAEXXZ 00417b7a f   MSVCRT:MSVCR100.dll
+ 0001:00016b80       __except_handler4_common   00417b80 f   MSVCRT:MSVCR100.dll
+ 0001:00016b86       __invoke_watson            00417b86 f   MSVCRT:MSVCR100.dll
+ 0001:00016b8c       __controlfp_s              00417b8c f   MSVCRT:MSVCR100.dll
+ 0002:00000000       __imp__LeaveCriticalSection@4 00419000     kernel32:KERNEL32.dll
+ 0002:00000004       __imp__TryEnterCriticalSection@4 00419004     kernel32:KERNEL32.dll
+ 0002:00000008       __imp__GetSystemTimeAsFileTime@4 00419008     kernel32:KERNEL32.dll
+ 0002:0000000c       __imp__GetCurrentProcessId@0 0041900c     kernel32:KERNEL32.dll
+ 0002:00000010       __imp__GetCurrentThreadId@0 00419010     kernel32:KERNEL32.dll
+ 0002:00000014       __imp__GetTickCount@0      00419014     kernel32:KERNEL32.dll
+ 0002:00000018       __imp__QueryPerformanceCounter@4 00419018     kernel32:KERNEL32.dll
+ 0002:0000001c       __imp__IsProcessorFeaturePresent@4 0041901c     kernel32:KERNEL32.dll
+ 0002:00000020       __imp__IsDebuggerPresent@0 00419020     kernel32:KERNEL32.dll
+ 0002:00000024       __imp__SetUnhandledExceptionFilter@4 00419024     kernel32:KERNEL32.dll
+ 0002:00000028       __imp__UnhandledExceptionFilter@4 00419028     kernel32:KERNEL32.dll
+ 0002:0000002c       __imp__GetCurrentProcess@0 0041902c     kernel32:KERNEL32.dll
+ 0002:00000030       __imp__TerminateProcess@8  00419030     kernel32:KERNEL32.dll
+ 0002:00000034       __imp__HeapSetInformation@16 00419034     kernel32:KERNEL32.dll
+ 0002:00000038       __imp__InterlockedCompareExchange@12 00419038     kernel32:KERNEL32.dll
+ 0002:0000003c       __imp__InterlockedExchange@8 0041903c     kernel32:KERNEL32.dll
+ 0002:00000040       __imp__DecodePointer@4     00419040     kernel32:KERNEL32.dll
+ 0002:00000044       __imp__EncodePointer@4     00419044     kernel32:KERNEL32.dll
+ 0002:00000048       __imp__EnterCriticalSection@4 00419048     kernel32:KERNEL32.dll
+ 0002:0000004c       __imp__DeleteCriticalSection@4 0041904c     kernel32:KERNEL32.dll
+ 0002:00000050       __imp__InitializeCriticalSection@4 00419050     kernel32:KERNEL32.dll
+ 0002:00000054       __imp__GetVersionExA@4     00419054     kernel32:KERNEL32.dll
+ 0002:00000058       __imp__Sleep@4             00419058     kernel32:KERNEL32.dll
+ 0002:0000005c       __imp__GetCurrentThread@0  0041905c     kernel32:KERNEL32.dll
+ 0002:00000060       __imp__SetThreadPriority@8 00419060     kernel32:KERNEL32.dll
+ 0002:00000064       \177KERNEL32_NULL_THUNK_DATA 00419064     kernel32:KERNEL32.dll
+ 0002:00000068       __imp__DES_ncbc_encrypt    00419068     libeay32:LIBEAY32.dll
+ 0002:0000006c       __imp__DES_key_sched       0041906c     libeay32:LIBEAY32.dll
+ 0002:00000070       \177LIBEAY32_NULL_THUNK_DATA 00419070     libeay32:LIBEAY32.dll
+ 0002:00000074       __imp__mysql_ping@4        00419074     libmysql:LIBMYSQL.dll
+ 0002:00000078       __imp__mysql_real_escape_string@16 00419078     libmysql:LIBMYSQL.dll
+ 0002:0000007c       __imp__mysql_error@4       0041907c     libmysql:LIBMYSQL.dll
+ 0002:00000080       __imp__mysql_errno@4       00419080     libmysql:LIBMYSQL.dll
+ 0002:00000084       __imp__mysql_real_connect@32 00419084     libmysql:LIBMYSQL.dll
+ 0002:00000088       __imp__mysql_close@4       00419088     libmysql:LIBMYSQL.dll
+ 0002:0000008c       __imp__mysql_affected_rows@4 0041908c     libmysql:LIBMYSQL.dll
+ 0002:00000090       __imp__mysql_fetch_row@4   00419090     libmysql:LIBMYSQL.dll
+ 0002:00000094       __imp__mysql_field_count@4 00419094     libmysql:LIBMYSQL.dll
+ 0002:00000098       __imp__mysql_real_query@12 00419098     libmysql:LIBMYSQL.dll
+ 0002:0000009c       __imp__mysql_init@4        0041909c     libmysql:LIBMYSQL.dll
+ 0002:000000a0       __imp__mysql_insert_id@4   004190a0     libmysql:LIBMYSQL.dll
+ 0002:000000a4       __imp__mysql_free_result@4 004190a4     libmysql:LIBMYSQL.dll
+ 0002:000000a8       __imp__mysql_num_rows@4    004190a8     libmysql:LIBMYSQL.dll
+ 0002:000000ac       __imp__mysql_store_result@4 004190ac     libmysql:LIBMYSQL.dll
+ 0002:000000b0       \177LIBMYSQL_NULL_THUNK_DATA 004190b0     libmysql:LIBMYSQL.dll
+ 0002:000000b4       __imp_?_Xout_of_range@std@@YAXPBD@Z 004190b4     msvcprt:MSVCP100.dll
+ 0002:000000b8       __imp_?_Xlength_error@std@@YAXPBD@Z 004190b8     msvcprt:MSVCP100.dll
+ 0002:000000bc       __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@H@Z 004190bc     msvcprt:MSVCP100.dll
+ 0002:000000c0       __imp_?cerr@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A 004190c0     msvcprt:MSVCP100.dll
+ 0002:000000c4       __imp_?flush@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV12@XZ 004190c4     msvcprt:MSVCP100.dll
+ 0002:000000c8       __imp_?_Osfx@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEXXZ 004190c8     msvcprt:MSVCP100.dll
+ 0002:000000cc       __imp_?uncaught_exception@std@@YA_NXZ 004190cc     msvcprt:MSVCP100.dll
+ 0002:000000d0       __imp_?setstate@?$basic_ios@DU?$char_traits@D@std@@@std@@QAEXH_N@Z 004190d0     msvcprt:MSVCP100.dll
+ 0002:000000d4       __imp_?sputn@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAE_JPBD_J@Z 004190d4     msvcprt:MSVCP100.dll
+ 0002:000000d8       __imp_?sputc@?$basic_streambuf@DU?$char_traits@D@std@@@std@@QAEHD@Z 004190d8     msvcprt:MSVCP100.dll
+ 0002:000000dc       __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAV01@AAV01@@Z@Z 004190dc     msvcprt:MSVCP100.dll
+ 0002:000000e0       __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@I@Z 004190e0     msvcprt:MSVCP100.dll
+ 0002:000000e4       __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@G@Z 004190e4     msvcprt:MSVCP100.dll
+ 0002:000000e8       __imp_?endl@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@1@AAV21@@Z 004190e8     msvcprt:MSVCP100.dll
+ 0002:000000ec       __imp_?setw@std@@YA?AU?$_Smanip@_J@1@_J@Z 004190ec     msvcprt:MSVCP100.dll
+ 0002:000000f0       __imp_??6?$basic_ostream@DU?$char_traits@D@std@@@std@@QAEAAV01@P6AAAVios_base@1@AAV21@@Z@Z 004190f0     msvcprt:MSVCP100.dll
+ 0002:000000f4       __imp_?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A 004190f4     msvcprt:MSVCP100.dll
+ 0002:000000f8       \177MSVCP100_NULL_THUNK_DATA 004190f8     msvcprt:MSVCP100.dll
+ 0002:000000fc       __imp___except_handler4_common 004190fc     MSVCRT:MSVCR100.dll
+ 0002:00000100       __imp___invoke_watson      00419100     MSVCRT:MSVCR100.dll
+ 0002:00000104       __imp___controlfp_s        00419104     MSVCRT:MSVCR100.dll
+ 0002:00000108       __imp__getch               00419108     MSVCRT:MSVCR100.dll
+ 0002:00000108       __imp___getch              00419108     MSVCRT:MSVCR100.dll
+ 0002:0000010c       __imp__kbhit               0041910c     MSVCRT:MSVCR100.dll
+ 0002:0000010c       __imp___kbhit              0041910c     MSVCRT:MSVCR100.dll
+ 0002:00000110       __imp__printf              00419110     MSVCRT:MSVCR100.dll
+ 0002:00000114       __imp_?_type_info_dtor_internal_method@type_info@@QAEXXZ 00419114     MSVCRT:MSVCR100.dll
+ 0002:00000118       __imp__memset              00419118     MSVCRT:MSVCR100.dll
+ 0002:0000011c       __imp_??_V@YAXPAX@Z        0041911c     MSVCRT:MSVCR100.dll
+ 0002:00000120       __imp_??3@YAXPAX@Z         00419120     MSVCRT:MSVCR100.dll
+ 0002:00000124       __imp_??2@YAPAXI@Z         00419124     MSVCRT:MSVCR100.dll
+ 0002:00000128       __imp____CxxFrameHandler3  00419128     MSVCRT:MSVCR100.dll
+ 0002:0000012c       __imp__strncpy             0041912c     MSVCRT:MSVCR100.dll
+ 0002:00000130       __imp__rand                00419130     MSVCRT:MSVCR100.dll
+ 0002:00000134       __imp___snprintf           00419134     MSVCRT:MSVCR100.dll
+ 0002:00000138       __imp__sprintf             00419138     MSVCRT:MSVCR100.dll
+ 0002:0000013c       __imp___getpid             0041913c     MSVCRT:MSVCR100.dll
+ 0002:0000013c       __imp__getpid              0041913c     MSVCRT:MSVCR100.dll
+ 0002:00000140       __imp_??0exception@std@@QAE@ABQBD@Z 00419140     MSVCRT:MSVCR100.dll
+ 0002:00000144       __imp_?what@exception@std@@UBEPBDXZ 00419144     MSVCRT:MSVCR100.dll
+ 0002:00000148       __imp_??1exception@std@@UAE@XZ 00419148     MSVCRT:MSVCR100.dll
+ 0002:0000014c       __imp__memcpy              0041914c     MSVCRT:MSVCR100.dll
+ 0002:00000150       __imp__memmove             00419150     MSVCRT:MSVCR100.dll
+ 0002:00000154       __imp___CxxThrowException@8 00419154     MSVCRT:MSVCR100.dll
+ 0002:00000158       __imp_??0exception@std@@QAE@ABV01@@Z 00419158     MSVCRT:MSVCR100.dll
+ 0002:0000015c       __imp__atoi                0041915c     MSVCRT:MSVCR100.dll
+ 0002:00000160       __imp___stricmp            00419160     MSVCRT:MSVCR100.dll
+ 0002:00000164       __imp__strstr              00419164     MSVCRT:MSVCR100.dll
+ 0002:00000168       __imp___time64             00419168     MSVCRT:MSVCR100.dll
+ 0002:0000016c       __imp__fclose              0041916c     MSVCRT:MSVCR100.dll
+ 0002:00000170       __imp__fscanf              00419170     MSVCRT:MSVCR100.dll
+ 0002:00000174       __imp___strnicmp           00419174     MSVCRT:MSVCR100.dll
+ 0002:00000178       __imp__feof                00419178     MSVCRT:MSVCR100.dll
+ 0002:0000017c       __imp__fgets               0041917c     MSVCRT:MSVCR100.dll
+ 0002:00000180       __imp__fopen               00419180     MSVCRT:MSVCR100.dll
+ 0002:00000184       __imp__srand               00419184     MSVCRT:MSVCR100.dll
+ 0002:00000188       __imp__signal              00419188     MSVCRT:MSVCR100.dll
+ 0002:0000018c       __imp__exit                0041918c     MSVCRT:MSVCR100.dll
+ 0002:00000190       __imp___beginthread        00419190     MSVCRT:MSVCR100.dll
+ 0002:00000194       __imp___localtime64        00419194     MSVCRT:MSVCR100.dll
+ 0002:00000198       __imp____iob_func          00419198     MSVCRT:MSVCR100.dll
+ 0002:0000019c       __imp__vfprintf            0041919c     MSVCRT:MSVCR100.dll
+ 0002:000001a0       __imp__fputs               004191a0     MSVCRT:MSVCR100.dll
+ 0002:000001a4       __imp__fflush              004191a4     MSVCRT:MSVCR100.dll
+ 0002:000001a8       __imp__fprintf             004191a8     MSVCRT:MSVCR100.dll
+ 0002:000001ac       __imp___endthread          004191ac     MSVCRT:MSVCR100.dll
+ 0002:000001b0       __imp___ftime64            004191b0     MSVCRT:MSVCR100.dll
+ 0002:000001b4       __imp__malloc              004191b4     MSVCRT:MSVCR100.dll
+ 0002:000001b8       __imp__free                004191b8     MSVCRT:MSVCR100.dll
+ 0002:000001bc       __imp___vsnprintf          004191bc     MSVCRT:MSVCR100.dll
+ 0002:000001bc       __imp__vsnprintf           004191bc     MSVCRT:MSVCR100.dll
+ 0002:000001c0       __imp___unlock             004191c0     MSVCRT:MSVCR100.dll
+ 0002:000001c4       __imp____dllonexit         004191c4     MSVCRT:MSVCR100.dll
+ 0002:000001c8       __imp___lock               004191c8     MSVCRT:MSVCR100.dll
+ 0002:000001cc       __imp___onexit             004191cc     MSVCRT:MSVCR100.dll
+ 0002:000001d0       __imp___amsg_exit          004191d0     MSVCRT:MSVCR100.dll
+ 0002:000001d4       __imp____getmainargs       004191d4     MSVCRT:MSVCR100.dll
+ 0002:000001d8       __imp___cexit              004191d8     MSVCRT:MSVCR100.dll
+ 0002:000001dc       __imp___exit               004191dc     MSVCRT:MSVCR100.dll
+ 0002:000001e0       __imp___XcptFilter         004191e0     MSVCRT:MSVCR100.dll
+ 0002:000001e4       __imp____initenv           004191e4     MSVCRT:MSVCR100.dll
+ 0002:000001e8       __imp___initterm           004191e8     MSVCRT:MSVCR100.dll
+ 0002:000001ec       __imp___initterm_e         004191ec     MSVCRT:MSVCR100.dll
+ 0002:000001f0       __imp___configthreadlocale 004191f0     MSVCRT:MSVCR100.dll
+ 0002:000001f4       __imp____setusermatherr    004191f4     MSVCRT:MSVCR100.dll
+ 0002:000001f8       __imp___commode            004191f8     MSVCRT:MSVCR100.dll
+ 0002:000001fc       __imp___fmode              004191fc     MSVCRT:MSVCR100.dll
+ 0002:00000200       __imp____set_app_type      00419200     MSVCRT:MSVCR100.dll
+ 0002:00000204       __imp___crt_debugger_hook  00419204     MSVCRT:MSVCR100.dll
+ 0002:00000208       __imp_?terminate@@YAXXZ    00419208     MSVCRT:MSVCR100.dll
+ 0002:0000020c       \177MSVCR100_NULL_THUNK_DATA 0041920c     MSVCRT:MSVCR100.dll
+ 0002:00000210       __imp__accept@12           00419210     wsock32:WSOCK32.dll
+ 0002:00000214       __imp__shutdown@8          00419214     wsock32:WSOCK32.dll
+ 0002:00000218       __imp__send@16             00419218     wsock32:WSOCK32.dll
+ 0002:0000021c       __imp__listen@8            0041921c     wsock32:WSOCK32.dll
+ 0002:00000220       __imp__gethostbyname@4     00419220     wsock32:WSOCK32.dll
+ 0002:00000224       __imp__WSAGetLastError@0   00419224     wsock32:WSOCK32.dll
+ 0002:00000228       __imp__setsockopt@20       00419228     wsock32:WSOCK32.dll
+ 0002:0000022c       __imp__bind@12             0041922c     wsock32:WSOCK32.dll
+ 0002:00000230       __imp__htons@4             00419230     wsock32:WSOCK32.dll
+ 0002:00000234       __imp__socket@12           00419234     wsock32:WSOCK32.dll
+ 0002:00000238       __imp__connect@12          00419238     wsock32:WSOCK32.dll
+ 0002:0000023c       __imp__ioctlsocket@12      0041923c     wsock32:WSOCK32.dll
+ 0002:00000240       __imp__recvfrom@24         00419240     wsock32:WSOCK32.dll
+ 0002:00000244       __imp__recv@16             00419244     wsock32:WSOCK32.dll
+ 0002:00000248       __imp__ntohl@4             00419248     wsock32:WSOCK32.dll
+ 0002:0000024c       __imp__sendto@24           0041924c     wsock32:WSOCK32.dll
+ 0002:00000250       __imp__WSACleanup@0        00419250     wsock32:WSOCK32.dll
+ 0002:00000254       __imp__WSAStartup@8        00419254     wsock32:WSOCK32.dll
+ 0002:00000258       __imp__closesocket@4       00419258     wsock32:WSOCK32.dll
+ 0002:0000025c       __imp__htonl@4             0041925c     wsock32:WSOCK32.dll
+ 0002:00000260       __imp__inet_ntoa@4         00419260     wsock32:WSOCK32.dll
+ 0002:00000264       __imp__ntohs@4             00419264     wsock32:WSOCK32.dll
+ 0002:00000268       \177WSOCK32_NULL_THUNK_DATA 00419268     wsock32:WSOCK32.dll
+ 0002:0000026c       ___xc_a                    0041926c     MSVCRT:cinitexe.obj
+ 0002:0000029c       ___xc_z                    0041929c     MSVCRT:cinitexe.obj
+ 0002:000002a0       ___xi_a                    004192a0     MSVCRT:cinitexe.obj
+ 0002:000002b0       ___xi_z                    004192b0     MSVCRT:cinitexe.obj
+ 0002:000002b8       ??_C@_06NLINOEAE@?5size?3?$AA@ 004192b8     client.obj
+ 0002:000002c0       ??_C@_0BB@FLAPKLHN@?5Sent?5opcode?3?50x?$AA@ 004192c0     client.obj
+ 0002:000002d4       ??_C@_0O@NPFKCNOE@Unknown?5Error?$AA@ 004192d4     client.obj
+ 0002:000002e4       ??_C@_07KAJBENLI@Error?3?5?$AA@ 004192e4     client.obj
+ 0002:000002f0       ??_C@_0HC@EGEOABAI@The?5world?5server?5?$CFs?5is?5full?5and?5@ 004192f0     client.obj
+ 0002:00000368       ??_C@_0EK@CHFKDNCB@You?5have?5been?5banned?5from?5the?5wo@ 00419368     client.obj
+ 0002:000003b8       ??_C@_0EN@NKKDILDI@You?5have?5been?5suspended?5from?5the@ 004193b8     client.obj
+ 0002:00000408       ??_C@_0BB@FDLILBAA@World?5is?5locked?4?$AA@ 00419408     client.obj
+ 0002:0000041c       ??_C@_0P@JFFOGACA@World?5is?5down?4?$AA@ 0041941c     client.obj
+ 0002:0000042c       ??_C@_0BN@EMLLGPFE@?5Received?5unknown?5opcode?3?50x?$AA@ 0041942c     client.obj
+ 0002:0000044c       ??_C@_0BA@HJPBKAHK@8?909?92001?514?325?$AA@ 0041944c     client.obj
+ 0002:0000045c       ??_C@_0N@BECEJAI@LoginVersion?$AA@ 0041945c     client.obj
+ 0002:00000470       ??_C@_0IG@LIGAELM@Error?51018?3?5You?5currently?5have?5a@ 00419470     client.obj
+ 0002:000004f8       ??_C@_02FIDLOBHM@me?$AA@   004194f8     client.obj
+ 0002:000004fc       ??_C@_0CB@KBMIAOID@Malformed?5OP_Reg_ChangeAcctLogin@ 004194fc     client.obj
+ 0002:00000520       ??_C@_0BC@NBGBAGDL@Welcome?5to?5EQEmu?$CB?$AA@ 00419520     client.obj
+ 0002:00000534       ??_C@_0M@MKCHNIGM@LoginBanner?$AA@ 00419534     client.obj
+ 0002:00000540       ??_C@_0BH@IEJJOAB@Worldserver?5not?5found?4?$AA@ 00419540     client.obj
+ 0002:00000558       ??_C@_0CJ@IJDAKKMD@ERROR?3?5OP_SessionKey?5while?5not?5l@ 00419558     client.obj
+ 0002:00000584       ??_C@_04HJMOFLDF@Free?$AA@ 00419584     client.obj
+ 0002:00000590       ??_C@_0EB@CGKGCIKK@Error?531337?3?5Can?8t?5change?5your?5p@ 00419590     client.obj
+ 0002:000005d4       ??_C@_06OJAIHGIC@unused?$AA@ 004195d4     client.obj
+ 0002:000005dc       ??_C@_05HBCKHFGF@LS?$CD?$CFi?$AA@ 004195dc     client.obj
+ 0002:000005e8       ??_C@_0GH@IAEGHMEE@This?5account?5has?5been?5SUSPENDED?4@ 004195e8     client.obj
+ 0002:00000650       ??_C@_0HC@PMDFFKKE@Your?5account?5has?5not?5been?5verifi@ 00419650     client.obj
+ 0002:000006c8       ??_C@_0GP@GIMOBPDA@Login?5requests?5from?5this?5IP?5addr@ 004196c8     client.obj
+ 0002:00000738       ??_C@_0FE@CHBDGMKP@Login?5requests?5from?5this?5IP?5addr@ 00419738     client.obj
+ 0002:0000078c       ??_C@_0CA@ODPPMCDK@Incorrect?5username?5or?5password?4?$AA@ 0041978c     client.obj
+ 0002:000007b0       ??_C@_0GE@IHDPEDEK@This?5account?5has?5been?5BANNED?4?5To@ 004197b0     client.obj
+ 0002:00000814       ??_C@_0BH@OGHCDCIJ@Malformed?5OP_LoginInfo?$AA@ 00419814     client.obj
+ 0002:0000082c       ??_C@_0DA@BCEGGMPK@Wrong?5size?3?5OP_LoginInfo?0?5size?$DN?$CF@ 0041982c     client.obj
+ 0002:0000085c       ??_C@_0BF@BPENLCO@?5Received?5opcode?3?50x?$AA@ 0041985c     client.obj
+ 0002:00000878       ??_7bad_alloc@std@@6B@     00419878     logindatabase.obj
+ 0002:00000880       ??_C@_0N@CGNLBCCG@?5WHERE?5id?$DN?$CFi?$AA@ 00419880     logindatabase.obj
+ 0002:00000890       ??_C@_0CE@IINGMEKN@UPDATE?5login_worldservers?5SET?5na@ 00419890     logindatabase.obj
+ 0002:000008b8       ??_C@_0ED@MAEEHABF@INSERT?5into?5login_stats?5?$CIplayers@ 004198b8     logindatabase.obj
+ 0002:000008fc       ??_C@_0BI@CFPLBAOH@invalid?5string?5position?$AA@ 004198fc     logindatabase.obj
+ 0002:00000914       ??_C@_0BA@JFNIOLAK@string?5too?5long?$AA@ 00419914     logindatabase.obj
+ 0002:00000924       ??_C@_0CA@LOEMOFPP@Error?5in?5GetLSLoginInfo?5query?5?8?$AA@ 00419924     logindatabase.obj
+ 0002:00000944       ??_C@_02KIDIFCCK@?8?5?$AA@ 00419944     logindatabase.obj
+ 0002:00000948       ??_C@_0GO@EOCHFNDH@SELECT?5id?0?5name?0?5password?0?5lsadm@ 00419948     logindatabase.obj
+ 0002:000009b8       ??_C@_0CC@GLCGAIJI@Error?5in?5GetLSAccountName?5query?5@ 004199b8     logindatabase.obj
+ 0002:000009e0       ??_C@_0EP@BDNCOIEF@Select?5id?0?5name?0?5lsadmin?0?5lsstat@ 004199e0     logindatabase.obj
+ 0002:00000a30       ??_C@_0CA@FPJFCAGN@Error?5in?5CheckWorldAuth?5query?5?8?$AA@ 00419a30     logindatabase.obj
+ 0002:00000a50       ??_C@_0GJ@MIJGAPHE@Select?5id?0?5password?0?5admin_id?0?5g@ 00419a50     logindatabase.obj
+ 0002:00000abc       ??_C@_0DE@JNALBMAK@SELECT?5id?5FROM?5active_accounts?5W@ 00419abc     logindatabase.obj
+ 0002:00000af0       ??_C@_0BM@IJGPOGIB@Error?5in?5CountUsers?5query?5?8?$AA@ 00419af0     logindatabase.obj
+ 0002:00000b0c       ??_C@_0DE@CKNKHELI@SELECT?5id?5FROM?5active_accounts?5W@ 00419b0c     logindatabase.obj
+ 0002:00000b40       ??_C@_0CC@EAKGMEHD@Invalid?5username?1password?5length@ 00419b40     logindatabase.obj
+ 0002:00000b64       ??_C@_0P@FBNCNPPG@?$FLINVALID?5PASS?$FN?$AA@ 00419b64     logindatabase.obj
+ 0002:00000b74       ??_C@_07HEBIJBG@?5Typed?3?$AA@ 00419b74     logindatabase.obj
+ 0002:00000b7c       ??_C@_0M@LLDFHANM@?5Expecting?3?$AA@ 00419b7c     logindatabase.obj
+ 0002:00000b88       ??_C@_04CGFJFPFD@none?$AA@ 00419b88     LWorld.obj
+ 0002:00000b90       ??_C@_0BP@HMJAHGNB@Error?5in?5LoadWorldList?5query?5?8?$AA@ 00419b90     LWorld.obj
+ 0002:00000bb0       ??_C@_07LHPMHBFD@?5Server?$AA@ 00419bb0     LWorld.obj
+ 0002:00000bb8       ??_C@_06LGMEBDBC@Server?$AA@ 00419bb8     LWorld.obj
+ 0002:00000bc0       ??_C@_02DKCKIIND@?$CFs?$AA@ 00419bc0     LWorld.obj
+ 0002:00000bc8       ??_C@_0FH@LMJIDENC@Select?5id?0?5account?0?5name?0?5admin_@ 00419bc8     LWorld.obj
+ 0002:00000c20       ??_C@_0O@GIGKLOHH@Ghost?5IP?5kick?$AA@ 00419c20     LWorld.obj
+ 0002:00000c30       ??_C@_06PJGIPCKE@NotMe?$CI?$AA@ 00419c30     LWorld.obj
+ 0002:00000c38       ??_C@_04OMAJLIMI@?$CJ?5?$DN?5?$AA@ 00419c38     LWorld.obj
+ 0002:00000c40       ??_C@_01JLIPDDHJ@?3?$AA@   00419c40     LWorld.obj
+ 0002:00000c44       ??_C@_02GFKOMOKH@?5?$CI?$AA@ 00419c44     LWorld.obj
+ 0002:00000c48       ??_C@_01PKGAHCOL@?$CJ?$AA@ 00419c48     LWorld.obj
+ 0002:00000c4c       ??_C@_0BG@HDPJBECD@?5?$CIit?5wasnt?5connected?$CJ?$AA@ 00419c4c     LWorld.obj
+ 0002:00000c64       ??_C@_0BJ@DKCAIACM@Removing?5GhostIP?5LWorld?$CI?$AA@ 00419c64     LWorld.obj
+ 0002:00000c80       ??_C@_0M@CCOBKDAK@?$CJ?5from?5ip?3?5?$AA@ 00419c80     LWorld.obj
+ 0002:00000c8c       ??_C@_07KNFGOPOE@?5port?3?5?$AA@ 00419c8c     LWorld.obj
+ 0002:00000c94       ??_C@_08MFJCKJJO@softkick?$AA@ 00419c94     LWorld.obj
+ 0002:00000ca0       ??_C@_0P@DCEJJCDI@Ghost?5Acc?5Kick?$AA@ 00419ca0     LWorld.obj
+ 0002:00000cb0       ??_C@_0BK@HBBANFJM@Removing?5GhostAcc?5LWorld?$CI?$AA@ 00419cb0     LWorld.obj
+ 0002:00000ccc       ??_C@_0L@KOLHEMGH@ChatServer?$AA@ 00419ccc     LWorld.obj
+ 0002:00000cd8       ??_C@_0BC@LLPNPGCF@?$CFi?5worlds?5listed?4?$AA@ 00419cd8     LWorld.obj
+ 0002:00000cec       ??_C@_0BB@KFAAONBH@?5?5?5Address?3?7?7?7?$CFs?$AA@ 00419cec     LWorld.obj
+ 0002:00000d00       ??_C@_0BJ@KBKCAHPA@?5?5?5IP?3?5?5?5?5?5?5?5?5?5?5?5?5?5?5?5?5?$CFs?$AA@ 00419d00     LWorld.obj
+ 0002:00000d1c       ??_C@_0BJ@KGMDAPID@?5?5?5Number?5of?5Players?3?5?$CFi?$AA@ 00419d1c     LWorld.obj
+ 0002:00000d38       ??_C@_0BJ@DJDJNMD@?5?5?5Number?5of?5Zones?3?5?5?5?$CFi?$AA@ 00419d38     LWorld.obj
+ 0002:00000d54       ??_C@_0BJ@MPHFLOEB@?5?5?5Account?3?5?5?5?5?5?5?5?5?5?5?5?$CFs?$AA@ 00419d54     LWorld.obj
+ 0002:00000d70       ??_C@_08NAIIIBAK@Name?3?5?$CFs?$AA@ 00419d70     LWorld.obj
+ 0002:00000d7c       ??_C@_0CH@DINNHJFP@TCP?5Init?$CI?$CJ?5called?5when?5already?5i@ 00419d7c     LWorld.obj
+ 0002:00000da4       ??_C@_0N@KMIFEDED@Adding?5Peer?$CI?$AA@ 00419da4     LWorld.obj
+ 0002:00000db4       ??_C@_03LPPJIELD@?$CJ?3?5?$AA@ 00419db4     LWorld.obj
+ 0002:00000db8       ??_C@_0CH@PFGBNGKJ@Error?3?5AddPeer?$CIchar?$CK?$CJ?3?5?$CBParseAdd@ 00419db8     LWorld.obj
+ 0002:00000de0       ??_C@_0BH@OLGHFPHB@?0?5Unknown?5Type?0?5Name?3?5?$AA@ 00419de0     LWorld.obj
+ 0002:00000df8       ??_C@_0BK@BDKKFGFB@?0?5Login?5Server?5?$CIin?$CJ?0?5IP?3?5?$AA@ 00419df8     LWorld.obj
+ 0002:00000e14       ??_C@_0L@JCNNMGPF@?$CJ?0?5AccID?3?5?$AA@ 00419e14     LWorld.obj
+ 0002:00000e20       ??_C@_0BK@DJKKHP@?0?5Login?5Server?5?$CInc?$CJ?0?5IP?3?5?$AA@ 00419e20     LWorld.obj
+ 0002:00000e3c       ??_C@_0BL@LFHMAHFL@?0?5Login?5Server?5?$CIout?$CJ?0?5IP?3?5?$AA@ 00419e3c     LWorld.obj
+ 0002:00000e58       ??_C@_0BE@IAPJDKPJ@?0?5Chat?5Server?0?5IP?3?5?$AA@ 00419e58     LWorld.obj
+ 0002:00000e6c       ??_C@_0N@MPHGDENJ@?0?5RemoteID?3?5?$AA@ 00419e6c     LWorld.obj
+ 0002:00000e7c       ??_C@_0BA@GPNJKFED@?0?5LinkWorldID?3?5?$AA@ 00419e7c     LWorld.obj
+ 0002:00000e8c       ??_C@_06EPLEAHCB@?0?5IP?3?5?$AA@ 00419e8c     LWorld.obj
+ 0002:00000e94       ??_C@_04MEDALJFE@ID?3?5?$AA@ 00419e94     LWorld.obj
+ 0002:00000e9c       ??_C@_08ICPLNKEC@?0?5Name?3?5?$AA@ 00419e9c     LWorld.obj
+ 0002:00000ea8       ??_C@_0O@FHEFAEHH@?0?5Local?0?5IP?3?5?$AA@ 00419ea8     LWorld.obj
+ 0002:00000eb8       ??_C@_0L@HNNEJOKF@?0?5Status?3?5?$AA@ 00419eb8     LWorld.obj
+ 0002:00000ec4       ??_C@_09OHABKODN@?0?5AccID?3?5?$AA@ 00419ec4     LWorld.obj
+ 0002:00000ed0       ??_C@_0BN@LNBJDKDH@?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$AA@ 00419ed0     LWorld.obj
+ 0002:00000ef0       ??_C@_0M@DPHBJGIJ@World?5List?3?$AA@ 00419ef0     LWorld.obj
+ 0002:00000efc       ??_C@_0BF@EADKLOJP@LWorld?5login?5error?0?5?$AA@ 00419efc     LWorld.obj
+ 0002:00000f14       ??_C@_0M@KLHMFCDJ@?4?5Account?$DN?8?$AA@ 00419f14     LWorld.obj
+ 0002:00000f20       ??_C@_01GEODFPGF@?8?$AA@   00419f20     LWorld.obj
+ 0002:00000f24       ??_C@_0BD@CCFEDNIP@Chat?5login?5error?0?5?$AA@ 00419f24     LWorld.obj
+ 0002:00000f38       ??_C@_0BK@MMLNFOMP@LoginServer?5login?5error?0?5?$AA@ 00419f38     LWorld.obj
+ 0002:00000f54       ??_C@_0BI@JKKIEECN@?3?5Peer?5connected?3?5?$CIin?$CJ?5?$AA@ 00419f54     LWorld.obj
+ 0002:00000f6c       ??_C@_0BI@HEAIHGK@Thown?5Error?3?5?$CFs?5?$CI?$CFs?3?$CFi?$CJ?$AA@ 00419f6c     LWorld.obj
+ 0002:00000f84       ??_C@_0O@HIFMKDPC@Fatal?5error?3?5?$AA@ 00419f84     LWorld.obj
+ 0002:00000f94       ??_C@_0DJ@IAAILCOH@LWorldList?3?3ConnectUplink?5called@ 00419f94     LWorld.obj
+ 0002:00000fd0       ??_C@_0L@INJCDDGB@LWorld?4cpp?$AA@ 00419fd0     LWorld.obj
+ 0002:00000fdc       ??_C@_07BAMMBJFH@?0?5line?5?$AA@ 00419fdc     LWorld.obj
+ 0002:00000fe4       ??_C@_06KLNFECJK@0?43?410?$AA@ 00419fe4     LWorld.obj
+ 0002:00000fec       ??_C@_0CD@JKDNGIED@Connected?5to?5Master?5Login?5server@ 00419fec     LWorld.obj
+ 0002:00001010       ??_C@_0CE@JMLEKCNI@LWorldList?3?3ConnectUplink?5failed@ 0041a010     LWorld.obj
+ 0002:00001034       ??_C@_0BM@FKMANEN@?3?5Attempting?5peer?5connect?3?5?$AA@ 0041a034     LWorld.obj
+ 0002:00001050       ??_C@_0CG@DEIOOEEG@?3?5Giving?5up?5on?5peer?5reconnect?3?5?$CI@ 0041a050     LWorld.obj
+ 0002:00001078       ??_C@_0EC@NKHHGHEO@Error?3?5ServerOP_UsertoWorldReq?5r@ 0041a078     LWorld.obj
+ 0002:000010bc       ??_C@_0DM@JEOKPMMB@Error?3?5ServerOP_UsertoWorldReq?5r@ 0041a0bc     LWorld.obj
+ 0002:000010f8       ??_C@_0BJ@EOMFHJNH@Unknown?5LoginSOPcode?3?50x?$AA@ 0041a0f8     LWorld.obj
+ 0002:00001114       ??_C@_0L@HDOBBGDD@Ghost?5kick?$AA@ 0041a114     LWorld.obj
+ 0002:00001120       ??_C@_0CP@JICOKLEB@Server?5?$CIfrom?5linked?5login?$CJ?5faile@ 0041a120     LWorld.obj
+ 0002:00001150       ??_C@_0CO@EFJHIDIL@Wrong?5size?5on?5ServerOP_WorldList@ 0041a150     LWorld.obj
+ 0002:00001180       ??_C@_0EC@FLBOPJOP@Error?3?5ServerOP_WorldListUpdate?5@ 0041a180     LWorld.obj
+ 0002:000011c4       ??_C@_0CO@NEGOEHBD@Error?3?5ServerOP_WorldListRemove?3@ 0041a1c4     LWorld.obj
+ 0002:000011f4       ??_C@_0CO@ECFIPNCI@Wrong?5size?5on?5ServerOP_WorldList@ 0041a1f4     LWorld.obj
+ 0002:00001228       ??_C@_0EC@IELLFMCI@Error?3?5ServerOP_WorldListRemove?5@ 0041a228     LWorld.obj
+ 0002:0000126c       ??_C@_0DO@MGPLLEIK@Error?3?5ServerOP_EncapPacket?5from@ 0041a26c     LWorld.obj
+ 0002:000012ac       ??_C@_0DH@BGMPPELM@Error?3?5ServerOP_ListWorlds?3?5Pack@ 0041a2ac     LWorld.obj
+ 0002:000012e4       ??_C@_0CK@DLCPLONI@Wrong?5size?5on?5ServerOP_PeerConne@ 0041a2e4     LWorld.obj
+ 0002:00001310       ??_C@_0N@JIFEEIGC@?0?5Expected?3?5?$AA@ 0041a310     LWorld.obj
+ 0002:00001320       ??_C@_0DN@DJEGFDEC@Error?3?5ServerOP_PeerConnect?5from@ 0041a320     LWorld.obj
+ 0002:00001360       ??_C@_0DO@CEANKHND@Error?3?5ServerOP_PeerConnect?5from@ 0041a360     LWorld.obj
+ 0002:000013a0       ??_C@_0EJ@BBNPCMAL@Error?3?5ServerOP_SystemwideMessag@ 0041a3a0     LWorld.obj
+ 0002:000013ec       ??_C@_0BB@CCLHECDD@Error?5message?3?5?8?$AA@ 0041a3ec     LWorld.obj
+ 0002:00001400       ??_C@_0CK@IEGLPGBE@?3?5World?5server?5responded?5with?5Fa@ 0041a400     LWorld.obj
+ 0002:0000142c       ??_C@_0BG@IOLJNLNF@Bad?5Login?5Password?3?5?$CD?$AA@ 0041a42c     LWorld.obj
+ 0002:00001444       ??_C@_0DF@DIAHOHFP@Login?5tried?5to?5connect?0?5but?5i?8m?5@ 0041a444     LWorld.obj
+ 0002:0000147c       ??_C@_0BC@CADKPAMI@Not?5a?5mesh?5server?$AA@ 0041a47c     LWorld.obj
+ 0002:00001490       ??_C@_0DH@OLGDDCEN@Login?5tried?5to?5connect?0?5but?5i?8m?5@ 0041a490     LWorld.obj
+ 0002:000014c8       ??_C@_0BE@PJNMBCCP@Not?5a?5master?5server?$AA@ 0041a4c8     LWorld.obj
+ 0002:000014dc       ??_C@_0DN@GHDMCBFF@Unnamed?5servers?5not?5allowed?5to?5c@ 0041a4dc     LWorld.obj
+ 0002:0000151c       ??_C@_0BA@PGGAJAAG@Bad?5Password?3?5?$CD?$AA@ 0041a51c     LWorld.obj
+ 0002:00001530       ??_C@_0EJ@BPKOAKLC@Bad?5server?5name?0?5name?5may?5not?5co@ 0041a530     LWorld.obj
+ 0002:0000157c       ??_C@_0CB@LJPGBKOG@Bad?5server?5name?4?5Unknown?5reason?4@ 0041a57c     LWorld.obj
+ 0002:000015a0       ??_C@_0BL@MHMGCBLM@Server?5failed?5name?5check?3?5?$AA@ 0041a5a0     LWorld.obj
+ 0002:000015bc       ??_C@_0BB@PIOANFGO@Server?5Name?5Here?$AA@ 0041a5bc     LWorld.obj
+ 0002:000015d0       ??_C@_0P@NKALCGHL@Unnamed?5server?$AA@ 0041a5d0     LWorld.obj
+ 0002:000015e0       ??_C@_0BH@IJKMAHCN@Unknown?5Server?5Type?3?5?$CD?$AA@ 0041a5e0     LWorld.obj
+ 0002:000015f8       ??_C@_0BE@GPJAMPDN@Unknown?5Server?5Type?$AA@ 0041a5f8     LWorld.obj
+ 0002:0000160c       ??_C@_0BF@FFNJHFKM@Bad?5Chat?5Password?3?5?$CD?$AA@ 0041a60c     LWorld.obj
+ 0002:00001624       ??_C@_0N@PDHKEEKO@Bad?5password?$AA@ 0041a624     LWorld.obj
+ 0002:00001634       ??_C@_0BH@PGNICPGL@Bad?5Version?5?$CIproto?$CJ?3?5?$CD?$AA@ 0041a634     LWorld.obj
+ 0002:0000164c       ??_C@_0BM@JDADCBKJ@Bad?5Version?5?$CIwrong?5size?$CJ?3?5?$CD?$AA@ 0041a64c     LWorld.obj
+ 0002:00001668       ??_C@_01CLKCMJKC@?5?$AA@   0041a668     LWorld.obj
+ 0002:0000166c       ??_C@_0BC@IOFLAFNG@Incorrect?5version?$AA@ 0041a66c     LWorld.obj
+ 0002:00001680       ??_C@_0M@MFACMHKH@Pack?5size?3?5?$AA@ 0041a680     LWorld.obj
+ 0002:0000168c       ??_C@_02IKAHHCAI@?$CFi?$AA@ 0041a68c     LWorld.obj
+ 0002:00001690       ??_C@_0BJ@CHBOHJON@?3?5Peer?5connected?3?5?$CIout?$CJ?5?$AA@ 0041a690     LWorld.obj
+ 0002:000016ac       ??_C@_0BB@BCFLGAKP@Removing?5LWorld?$CI?$AA@ 0041a6ac     LWorld.obj
+ 0002:000016c0       ??_C@_0BD@PJADBLG@?$CJ?5?$CIChat?$CJ?5from?5ip?3?5?$AA@ 0041a6c0     LWorld.obj
+ 0002:000016d4       ??_C@_0BE@KIGGCIFJ@?$CJ?5?$CILogin?$CJ?5from?5ip?3?5?$AA@ 0041a6d4     LWorld.obj
+ 0002:000016e8       ??_C@_08EKLIFFJE@?0?5port?3?5?$AA@ 0041a6e8     LWorld.obj
+ 0002:000016f4       ??_C@_0BC@NDBFDJDN@Invalid?5Command?4?6?$AA@ 0041a6f4     net.obj
+ 0002:00001708       ??_C@_0BD@FPNAFONN@v?5?$DN?5Login?5Version?6?$AA@ 0041a708     net.obj
+ 0002:0000171c       ??_C@_0BO@PKPOCCAC@l?5?$DN?5Listing?5of?5World?5Servers?6?$AA@ 0041a71c     net.obj
+ 0002:0000173c       ??_C@_0BF@FLLOAPGH@Available?5Commands?3?6?$AA@ 0041a73c     net.obj
+ 0002:00001754       ??_C@_0BO@ECOPFELP@?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?$DN?6?$AA@ 0041a754     net.obj
+ 0002:00001774       ??_C@_0M@CGHPENFL@Got?5signal?5?$AA@ 0041a774     net.obj
+ 0002:00001780       ??_C@_0CB@MAJONLDF@Incomplete?5LoginServer?4INI?5file?4@ 0041a780     net.obj
+ 0002:000017a4       ??_C@_0BG@FCLLFLAN@LoginServer?4ini?5read?4?$AA@ 0041a7a4     net.obj
+ 0002:000017bc       ??_C@_0L@GJMJAOEP@serverport?$AA@ 0041a7bc     net.obj
+ 0002:000017c8       ??_C@_0BG@GOBOFGLJ@Stats?5writing?5enabled?$AA@ 0041a7c8     net.obj
+ 0002:000017e0       ??_C@_0M@HBJHMMND@enablestats?$AA@ 0041a7e0     net.obj
+ 0002:000017ec       ??_C@_0P@DPAIEDMB@uplinkpassword?$AA@ 0041a7ec     net.obj
+ 0002:000017fc       ??_C@_0O@ILEDOEFJ@uplinkaccount?$AA@ 0041a7fc     net.obj
+ 0002:0000180c       ??_C@_0L@KHLMDDGN@uplinkport?$AA@ 0041a80c     net.obj
+ 0002:00001818       ??_C@_0O@MADHEICH@uplinkaddress?$AA@ 0041a818     net.obj
+ 0002:00001828       ??_C@_0FA@NFIKBNEF@?5?5?5?5?5?5?5Make?5sure?5your?5?8ServerMod@ 0041a828     net.obj
+ 0002:00001878       ??_C@_0EG@LMDKMDCH@Error?3?5?8uplinkpeer?8?5found?5in?5Log@ 0041a878     net.obj
+ 0002:000018c0       ??_C@_0L@IHDCMBHK@uplinkpeer?$AA@ 0041a8c0     net.obj
+ 0002:000018cc       ??_C@_04GONFKEIN@Mesh?$AA@ 0041a8cc     net.obj
+ 0002:000018d4       ??_C@_05FDIJKFCP@Slave?$AA@ 0041a8d4     net.obj
+ 0002:000018dc       ??_C@_06INNNFHKM@Master?$AA@ 0041a8dc     net.obj
+ 0002:000018e4       ??_C@_0DD@GLFCGEEG@?$FLLoginConfig?$FN?5block?5not?5found?5in@ 0041a8e4     net.obj
+ 0002:00001918       ??_C@_0L@NNOKEHGC@Standalone?$AA@ 0041a918     net.obj
+ 0002:00001924       ??_C@_0L@LKMLKBKO@servermode?$AA@ 0041a924     net.obj
+ 0002:00001930       ??_C@_0O@LMALBNE@?$CF?$FL?$FO?$DN?$FN?$DN?$CF?$FL?$FO?6?$FN?$AN?6?$AA@ 0041a930     net.obj
+ 0002:00001940       ??_C@_0BA@ELBOJHN@?$FLLoginConfig?$FN?$AN?6?$AA@ 0041a940     net.obj
+ 0002:00001950       ??_C@_0P@MFFLBHFP@?$FLLoginConfig?$FN?6?$AA@ 0041a950     net.obj
+ 0002:00001960       ??_C@_0CJ@GFEMODFO@Couldn?8t?5open?5the?5LoginServer?4in@ 0041a960     net.obj
+ 0002:0000198c       ??_C@_0BA@BOIOIKFK@LoginServer?4ini?$AA@ 0041a98c     net.obj
+ 0002:0000199c       ??_C@_01KDCPPGHE@r?$AA@    0041a99c     net.obj
+ 0002:000019a0       ??_C@_0BF@EMOAHFKE@Server?5mode?3?5Unknown?$AA@ 0041a9a0     net.obj
+ 0002:000019b8       ??_C@_0BN@ODOMEABD@EQNetworkServer?4Open?$CI?$CJ?5error?$AA@ 0041a9b8     net.obj
+ 0002:000019d8       ??_C@_0CA@FKFLHPJL@Login?5server?5listening?5on?5port?3?$AA@ 0041a9d8     net.obj
+ 0002:000019f8       ??_C@_0BC@KJBPLIIN@Server?5mode?3?5Mesh?$AA@ 0041a9f8     net.obj
+ 0002:00001a0c       ??_C@_0BD@FDEOGPDD@Server?5mode?3?5Slave?$AA@ 0041aa0c     net.obj
+ 0002:00001a20       ??_C@_0BE@JJNMMMCJ@Server?5mode?3?5Master?$AA@ 0041aa20     net.obj
+ 0002:00001a34       ??_C@_0BI@PFOKLDEG@Server?5mode?3?5Standalone?$AA@ 0041aa34     net.obj
+ 0002:00001a4c       ??_C@_0BN@IBPHJBFK@Could?5not?5set?5signal?5handler?$AA@ 0041aa4c     net.obj
+ 0002:00001a6c       ??_C@_06BIBHMBFB@qeynos?$AA@ 0041aa6c     database.obj
+ 0002:00001a74       ??_C@_0CE@GJBHIPOL@Could?5not?5connect?5to?5mysql?5serve@ 0041aa74     database.obj
+ 0002:00001a98       ??_C@_0CI@KBPDOHDF@Access?5to?5the?5mysql?5server?5was?5d@ 0041aa98     database.obj
+ 0002:00001ac0       ??_C@_0N@LEPKIKBG@?$CF?$FL?$FO?$DN?$FN?$DN?$CF?$FL?$FO?6?$FN?6?$AA@ 0041aac0     database.obj
+ 0002:00001ad0       ??_C@_0BF@HNJDOOPP@Couldn?8t?5open?5?8?$CFs?8?4?6?$AA@ 0041aad0     database.obj
+ 0002:00001ae8       ??_C@_0FG@ODHEIDAL@SELECT?5varname?0?5value?0?5unix_time@ 0041aae8     database.obj
+ 0002:00001b40       ??_C@_0BJ@KMGHDFBC@Incomplete?5DB?4INI?5file?4?6?$AA@ 0041ab40     database.obj
+ 0002:00001b5c       ??_C@_0BB@IGBJMGOH@Using?5database?5?8?$AA@ 0041ab5c     database.obj
+ 0002:00001b70       ??_C@_05NALDDAJO@?8?5at?5?$AA@ 0041ab70     database.obj
+ 0002:00001b78       ??_C@_0CH@INHBIBOJ@Failed?5to?5connect?5to?5database?3?5E@ 0041ab78     database.obj
+ 0002:00001ba0       ??_C@_0EB@NKLPEMPJ@Unknown?5?8compression?8?5setting?5in@ 0041aba0     database.obj
+ 0002:00001be4       ??_C@_03MCADLMAF@off?$AA@  0041abe4     database.obj
+ 0002:00001be8       ??_C@_0CH@FMAAFLDO@?$FLDatabase?$FN?5block?5not?5found?5in?5DB@ 0041abe8     database.obj
+ 0002:00001c10       ??_C@_0BD@NGHCJDLI@DB?5Compression?5on?4?$AA@ 0041ac10     database.obj
+ 0002:00001c24       ??_C@_02LIELOMNJ@on?$AA@   0041ac24     database.obj
+ 0002:00001c28       ??_C@_0M@DGJEMLOB@compression?$AA@ 0041ac28     database.obj
+ 0002:00001c34       ??_C@_04PJOLNDGD@data?$AA@ 0041ac34     database.obj
+ 0002:00001c3c       ??_C@_04BBDAIEHH@pass?$AA@ 0041ac3c     database.obj
+ 0002:00001c44       ??_C@_04CCHAHKJA@user?$AA@ 0041ac44     database.obj
+ 0002:00001c4c       ??_C@_04OODOLJMA@host?$AA@ 0041ac4c     database.obj
+ 0002:00001c54       ??_C@_0N@KAHGIPLO@?$FLDatabase?$FN?$AN?6?$AA@ 0041ac54     database.obj
+ 0002:00001c64       ??_C@_0M@NDPJLJDJ@?$FLDatabase?$FN?6?$AA@ 0041ac64     database.obj
+ 0002:00001c70       ??_C@_0BC@JEIKFDPB@Read?5README?4TXT?$CB?6?$AA@ 0041ac70     database.obj
+ 0002:00001c84       ??_C@_06JGPPPJAO@db?4ini?$AA@ 0041ac84     database.obj
+ 0002:00001c8c       ??_C@_0BP@BAGGMNOE@Error?5in?5LoadVariables?5query?5?8?$AA@ 0041ac8c     database.obj
+ 0002:00001cac       ??_C@_07COGNKMKN@?$CD?$CFi?3?5?$CFs?$AA@ 0041acac     dbcore.obj
+ 0002:00001cb4       ??_C@_0BM@HMIBIHPL@DBcore?3?3RunQuery?3?5No?5Result?$AA@ 0041acb4     dbcore.obj
+ 0002:00001cd0       ??_C@_0BB@LKFIIAJC@DB?5Query?5Error?5?$CD?$AA@ 0041acd0     dbcore.obj
+ 0002:00001ce4       ??_C@_02LMMGGCAJ@?3?5?$AA@ 0041ace4     dbcore.obj
+ 0002:00001ce8       ??_C@_0DL@NCDAFNKH@Database?5Error?3?5Lost?5connection?0@ 0041ace8     dbcore.obj
+ 0002:00001d24       ??_C@_05GCIPIGEI@Debug?$AA@ 0041ad24     debug.obj
+ 0002:00001d2c       ??_C@_05NAOIJFC@Error?$AA@ 0041ad2c     debug.obj
+ 0002:00001d34       ??_C@_06EFAGIKOH@Normal?$AA@ 0041ad34     debug.obj
+ 0002:00001d3c       ??_C@_06PGDKHFME@Status?$AA@ 0041ad3c     debug.obj
+ 0002:00001d44       ??_C@_0BB@LDPFHNGD@logs?1eqemu_debug?$AA@ 0041ad44     debug.obj
+ 0002:00001d58       ??_C@_0BB@NMHEHCHJ@logs?1eqemu_error?$AA@ 0041ad58     debug.obj
+ 0002:00001d6c       ??_C@_0L@EPEGKDBN@logs?1eqemu?$AA@ 0041ad6c     debug.obj
+ 0002:00001d78       ??_C@_0BB@MPNKKKEG@Starting?5Log?3?5?$CFs?$AA@ 0041ad78     debug.obj
+ 0002:00001d8c       ??_C@_0CP@EGFLNOHK@?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9?9@ 0041ad8c     debug.obj
+ 0002:00001dbc       ??_C@_0BK@IAJGGLNK@Failed?5to?5open?5log?5file?3?5?$AA@ 0041adbc     debug.obj
+ 0002:00001dd8       ??_C@_01MCMALHOG@a?$AA@    0041add8     debug.obj
+ 0002:00001ddc       ??_C@_0O@JHLKCGPJ@?$CFs?$CFs_?$CF04i?4log?$AA@ 0041addc     debug.obj
+ 0002:00001dec       ??_C@_01EEMJAFIK@?6?$AA@   0041adec     debug.obj
+ 0002:00001df0       ??_C@_05KJDPJACP@?$FL?$CFs?$FN?5?$AA@ 0041adf0     debug.obj
+ 0002:00001df8       ??_C@_0BP@GHFFCBEA@?$FL?$CF02d?4?$CF02d?4?5?9?5?$CF02d?3?$CF02d?3?$CF02d?$FN?5?$AA@ 0041adf8     debug.obj
+ 0002:00001e18       ??_C@_03NDEAONJP@?5?5?5?$AA@ 0041ae18     debug.obj
+ 0002:00001e1c       ??_C@_02KNHHEEKP@?5?5?$AA@ 0041ae1c     debug.obj
+ 0002:00001e20       ??_C@_05BFHEBJNP@?$CF02X?5?$AA@ 0041ae20     debug.obj
+ 0002:00001e28       ??_C@_02KFKPNHPM@?9?5?$AA@ 0041ae28     debug.obj
+ 0002:00001e30       ??_7EQNetworkPacket@@6B@   0041ae30     EQNetwork.obj
+ 0002:00001e38       ??_7EQNetworkFragmentGroup@@6B@ 0041ae38     EQNetwork.obj
+ 0002:00001e40       ??_7EQNetworkServer@@6B@   0041ae40     EQNetwork.obj
+ 0002:00001e44       ??_C@_0CN@IEFMLMNI@EQNetworkConnection?3?3QueuePacket@ 0041ae44     EQNetwork.obj
+ 0002:00001e74       ??_C@_0BI@HDKCIHMG@?4?4?2common?2EQNetwork?4cpp?$AA@ 0041ae74     EQNetwork.obj
+ 0002:00001e8c       ??_C@_0DC@IIEPIBOM@EQNetworkConnection?3?3FastQueuePa@ 0041ae8c     EQNetwork.obj
+ 0002:00001ec0       ??_C@_0EB@FPHCMOOJ@EQNetworkConnection?3?3Connect?$CI?$CJ?5c@ 0041aec0     EQNetwork.obj
+ 0002:00001f04       ??_C@_0BG@DGCBBBEI@Illegal?5packet?5length?$AA@ 0041af04     EQNetwork.obj
+ 0002:00001f20       ??_7EQNetworkFragmentGroupList@@6B@ 0041af20     EQNetwork.obj
+ 0002:00001f28       ??_7EQNetworkConnection@@6B@ 0041af28     EQNetwork.obj
+ 0002:00001f30       ??_C@_0EB@JIFDHAA@?$CF02x?$CF02x?$CF02x?$CF02x?$CF02x?$CF02x?$CF02x?$CF02x@ 0041af30     md5.obj
+ 0002:00001f74       ??_C@_01EFFIKLCJ@n?$AA@    0041af74     MiscFunctions.obj
+ 0002:00001f78       ??_C@_01EANLCPLP@y?$AA@    0041af78     MiscFunctions.obj
+ 0002:00001f7c       ??_C@_08BEHKFNNO@disabled?$AA@ 0041af7c     MiscFunctions.obj
+ 0002:00001f88       ??_C@_07MHHIKOPA@enabled?$AA@ 0041af88     MiscFunctions.obj
+ 0002:00001f90       ??_C@_07DBNODEFN@disable?$AA@ 0041af90     MiscFunctions.obj
+ 0002:00001f98       ??_C@_06OFNJOBDK@enable?$AA@ 0041af98     MiscFunctions.obj
+ 0002:00001fa0       ??_C@_02KAJCLHKP@no?$AA@   0041afa0     MiscFunctions.obj
+ 0002:00001fa4       ??_C@_03ICICOMAL@yes?$AA@  0041afa4     MiscFunctions.obj
+ 0002:00001fa8       ??_C@_05LAPONLG@false?$AA@ 0041afa8     MiscFunctions.obj
+ 0002:00001fb0       ??_C@_04LOAJBDKD@true?$AA@ 0041afb0     MiscFunctions.obj
+ 0002:00001fb8       ??_C@_0CH@FCAOFEHD@Unable?5to?5get?5the?5host?5name?4?5Err@ 0041afb8     MiscFunctions.obj
+ 0002:00001fe0       ??_C@_0BL@FCHGMHHG@ResolveIP?$CI?$CJ?3?5hostname?5?$DN?$DN?50?$AA@ 0041afe0     MiscFunctions.obj
+ 0002:00001ffc       ??_C@_03LGOGDKEL@?5?$HM?5?$AA@ 0041affc     packet_dump.obj
+ 0002:00002000       ??_C@_0BF@KIEKEKPI@Dumping?5Applayer?3?50x?$AA@ 0041b000     packet_dump.obj
+ 0002:00002018       ??_C@_0BJ@KPNMCCPI@Dumping?5ServerPacket?3?50x?$AA@ 0041b018     packet_dump.obj
+ 0002:00002034       ??_C@_05GDHACFMB@1?42?43?$AA@ 0041b034     packet_functions.obj
+ 0002:0000203c       ??_C@_0BB@EELAPGFL@Packet?5contents?3?$AA@ 0041b03c     packet_functions.obj
+ 0002:00002050       ??_C@_0CK@KIPBEPJF@Error?3?5InflatePacket?3?5inflate?$CI?$CJ?5@ 0041b050     packet_functions.obj
+ 0002:0000207c       ??_C@_02OCDGNCGI@?5?8?$AA@ 0041b07c     packet_functions.obj
+ 0002:00002080       ??_C@_0BL@MOLBKPNH@listen?$CI?$CJ?5failed?0?5Error?3?5?$CFd?$AA@ 0041b080     TCPConnection.obj
+ 0002:0000209c       ??_C@_0L@BEFHLMDM@bind?$CI?$CJ?3?5?$DM0?$AA@ 0041b09c     TCPConnection.obj
+ 0002:000020a8       ??_C@_0BJ@JDCGJPAD@socket?$CI?$CJ?3?5INVALID_SOCKET?$AA@ 0041b0a8     TCPConnection.obj
+ 0002:000020c4       ??_C@_0BO@HBPBPDCP@Listening?5socket?5already?5open?$AA@ 0041b0c4     TCPConnection.obj
+ 0002:000020e8       ??_7TCPConnection@@6B@     0041b0e8     TCPConnection.obj
+ 0002:00002100       ??_C@_0DN@EIDEALPO@Error?3?5TCPConnection?3?5RemoteID?5?$DN@ 0041b100     TCPConnection.obj
+ 0002:00002140       ??_C@_0BM@GLJKHFIK@?4?4?2common?2TCPConnection?4cpp?$AA@ 0041b140     TCPConnection.obj
+ 0002:0000215c       ??_C@_0DH@PIINFCEJ@TCPConnection?3?3Free?$CI?$CJ?5called?5on?5@ 0041b15c     TCPConnection.obj
+ 0002:00002194       ??_C@_0BB@NDAFJHND@?$AA?$CK?$CKPACKETMODE?$CK?$CK?$AN?$AA@ 0041b194     TCPConnection.obj
+ 0002:000021a8       ??_C@_0P@JGLKBMGI@?$CK?$CKPACKETMODE?$CK?$CK?$AA@ 0041b1a8     TCPConnection.obj
+ 0002:000021b8       ??_C@_0DO@CIIFGKAP@TCPConnection?3?3Connect?$CI?$CJ?3?5Alloca@ 0041b1b8     TCPConnection.obj
+ 0002:000021f8       ??_C@_0DG@LAHIGJLP@TCPConnection?3?3Connect?$CI?$CJ?3?5connec@ 0041b1f8     TCPConnection.obj
+ 0002:00002230       ??_C@_0EA@FHCCHOMH@TCPConnection?3?3Connect?$CI?$CJ?5call?5on@ 0041b230     TCPConnection.obj
+ 0002:00002270       ??_C@_0FA@OHPOAEAC@TCPConnection?3?3ProcessReceivedDa@ 0041b270     TCPConnection.obj
+ 0002:000022c0       ??_C@_0DB@IKFHBNBN@TCPConnection?3?3SendData?$CI?$CJ?3?5send?$CI@ 0041b2c0     TCPConnection.obj
+ 0002:000022f4       ??_C@_0CO@JCOALCHE@TCPConnection?3?3SendData?$CI?$CJ?3?5WTF?$CB?5@ 0041b2f4     TCPConnection.obj
+ 0002:00002324       ??_C@_0BO@IGEJOJI@TCPConnectionLoop?$CI?$CJ?3?5tmp?5?$DN?50?$CB?$AA@ 0041b324     TCPConnection.obj
+ 0002:00002348       ??_7TCPServer@@6B@         0041b348     TCPConnection.obj
+ 0002:00002350       ??_C@_0EF@CIMPLLNP@TCPConnection?3?3AsyncConnect?$CI?$CJ?5ca@ 0041b350     TCPConnection.obj
+ 0002:00002398       ??_C@_0DC@JINBPJOF@Switch?5to?5RelayServer?5mode?5on?5ou@ 0041b398     TCPConnection.obj
+ 0002:000023cc       ??_C@_0CN@OKBGGIBF@Switch?5to?5RelayServer?5mode?5by?5a?5@ 0041b3cc     TCPConnection.obj
+ 0002:000023fc       ??_C@_0DM@DGAMMPEL@Switch?5to?5RelayServer?5mode?5when?5@ 0041b3fc     TCPConnection.obj
+ 0002:00002438       ??_C@_0CI@IMFDLAEP@New?5RelayClient?3?5wrong?5size?0?5exp@ 0041b438     TCPConnection.obj
+ 0002:00002460       ??_C@_0DA@CCKJOIAM@New?5RelayClient?3?5illegal?5on?5outg@ 0041b460     TCPConnection.obj
+ 0002:00002490       ??_C@_0CJ@CALCAIAD@New?5RelayClient?3?5wrong?5size?0?5exp@ 0041b490     TCPConnection.obj
+ 0002:000024bc       ??_C@_0CN@KKHAKOIA@New?5RelayClient?5when?5not?5in?5Rela@ 0041b4bc     TCPConnection.obj
+ 0002:000024ec       ??_C@_0CG@CEBFCC@Delete?5RelayClient?3?5RelayLink?5?$CB?$DN@ 0041b4ec     TCPConnection.obj
+ 0002:00002514       ??_C@_0CL@INGFOIAK@Delete?5RelayClient?3?5wrong?5size?0?5@ 0041b514     TCPConnection.obj
+ 0002:00002540       ??_C@_0DA@PJGINCIE@Delete?5RelayClient?5when?5not?5in?5R@ 0041b540     TCPConnection.obj
+ 0002:00002570       ??_C@_0BK@JAGMJMLJ@TCPServerLoop?$CI?$CJ?3?5tmp?5?$DN?50?$CB?$AA@ 0041b570     TCPConnection.obj
+ 0002:0000258c       ??_C@_0CO@JEKLODDB@TCPConnection?3?3RecvData?$CI?$CJ?3?5Conne@ 0041b58c     TCPConnection.obj
+ 0002:000025bc       ??_C@_0CF@DCHHHEHM@TCPConnection?3?3RecvData?$CI?$CJ?3?5Error@ 0041b5bc     TCPConnection.obj
+ 0002:000025e8       ??_C@_0EE@GGHMLKEF@TCPConnection?3?3RecvData?$CI?$CJ?3?5recvb@ 0041b5e8     TCPConnection.obj
+ 0002:00002630       _deflate_copyright         0041b630     zlib:deflate.obj
+ 0002:00002f90       ??_C@_0BH@FGKKJGOC@incorrect?5length?5check?$AA@ 0041bf90     zlib:inflate.obj
+ 0002:00002fa8       ??_C@_0BF@MEIGEHBE@incorrect?5data?5check?$AA@ 0041bfa8     zlib:inflate.obj
+ 0002:00002fc0       ??_C@_0BO@ECPMAOGG@invalid?5distance?5too?5far?5back?$AA@ 0041bfc0     zlib:inflate.obj
+ 0002:00002fe0       ??_C@_0BG@LBKINIKP@invalid?5distance?5code?$AA@ 0041bfe0     zlib:inflate.obj
+ 0002:00002ff8       ??_C@_0BM@FFFLPBBC@invalid?5literal?1length?5code?$AA@ 0041bff8     zlib:inflate.obj
+ 0002:00003014       ??_C@_0BG@GMDFCBGP@invalid?5distances?5set?$AA@ 0041c014     zlib:inflate.obj
+ 0002:0000302c       ??_C@_0BK@BMMPFBBH@invalid?5bit?5length?5repeat?$AA@ 0041c02c     zlib:inflate.obj
+ 0002:00003048       ??_C@_0BM@IIMGAINC@invalid?5literal?1lengths?5set?$AA@ 0041c048     zlib:inflate.obj
+ 0002:00003064       ??_C@_0CE@GMIGFPBB@too?5many?5length?5or?5distance?5symb@ 0041c064     zlib:inflate.obj
+ 0002:00003088       ??_C@_0BJ@HDEPPGOH@invalid?5code?5lengths?5set?$AA@ 0041c088     zlib:inflate.obj
+ 0002:000030a4       ??_C@_0BN@LGAADGOK@invalid?5stored?5block?5lengths?$AA@ 0041c0a4     zlib:inflate.obj
+ 0002:000030c4       ??_C@_0BD@PJCBIDD@invalid?5block?5type?$AA@ 0041c0c4     zlib:inflate.obj
+ 0002:000030d8       ??_C@_0BE@GONKLEPM@header?5crc?5mismatch?$AA@ 0041c0d8     zlib:inflate.obj
+ 0002:000030ec       ??_C@_0BJ@BLBBCOMO@unknown?5header?5flags?5set?$AA@ 0041c0ec     zlib:inflate.obj
+ 0002:00003108       ??_C@_0BH@LIBMMIGA@incorrect?5header?5check?$AA@ 0041c108     zlib:inflate.obj
+ 0002:00003120       ??_C@_0BE@EMOGCLGO@invalid?5window?5size?$AA@ 0041c120     zlib:inflate.obj
+ 0002:00003134       ??_C@_0BL@IHKGDAEE@unknown?5compression?5method?$AA@ 0041c134     zlib:inflate.obj
+ 0002:00003798       __dist_code                0041c798     zlib:trees.obj
+ 0002:00003998       __length_code              0041c998     zlib:trees.obj
+ 0002:00005b88       ??_C@_0BF@CJFPCCEG@incompatible?5version?$AA@ 0041eb88     zlib:zutil.obj
+ 0002:00005ba0       ??_C@_0N@DFPGLBGC@buffer?5error?$AA@ 0041eba0     zlib:zutil.obj
+ 0002:00005bb0       ??_C@_0BE@OGGJBMCE@insufficient?5memory?$AA@ 0041ebb0     zlib:zutil.obj
+ 0002:00005bc4       ??_C@_0L@HAHMBNLP@data?5error?$AA@ 0041ebc4     zlib:zutil.obj
+ 0002:00005bd0       ??_C@_0N@MKKNPMJD@stream?5error?$AA@ 0041ebd0     zlib:zutil.obj
+ 0002:00005be0       ??_C@_0L@KIJFAKBJ@file?5error?$AA@ 0041ebe0     zlib:zutil.obj
+ 0002:00005beb       ??_C@_00CNPNBAHC@?$AA@     0041ebeb     zlib:zutil.obj
+ 0002:00005bec       ??_C@_0L@FNAOCBOG@stream?5end?$AA@ 0041ebec     zlib:zutil.obj
+ 0002:00005bf8       ??_C@_0BA@MOKMMFOD@need?5dictionary?$AA@ 0041ebf8     zlib:zutil.obj
+ 0002:00005c08       _z_errmsg                  0041ec08     zlib:zutil.obj
+ 0002:00005c30       _inflate_copyright         0041ec30     zlib:inftrees.obj
+ 0002:00005d64       ??_7type_info@@6B@         0041ed64     MSVCRT:ti_inst.obj
+ 0002:00005d70       __load_config_used         0041ed70     MSVCRT:loadcfg.obj
+ 0002:00005db8       ??_R4bad_alloc@std@@6B@    0041edb8     logindatabase.obj
+ 0002:00005dcc       ??_R3bad_alloc@std@@8      0041edcc     logindatabase.obj
+ 0002:00005ddc       ??_R2bad_alloc@std@@8      0041eddc     logindatabase.obj
+ 0002:00005de8       ??_R1A@?0A@EA@bad_alloc@std@@8 0041ede8     logindatabase.obj
+ 0002:00005e04       ??_R1A@?0A@EA@exception@std@@8 0041ee04     logindatabase.obj
+ 0002:00005e20       ??_R3exception@std@@8      0041ee20     logindatabase.obj
+ 0002:00005e30       ??_R2exception@std@@8      0041ee30     logindatabase.obj
+ 0002:00005e38       ??_R4EQNetworkPacket@@6B@  0041ee38     EQNetwork.obj
+ 0002:00005e4c       ??_R3EQNetworkPacket@@8    0041ee4c     EQNetwork.obj
+ 0002:00005e5c       ??_R2EQNetworkPacket@@8    0041ee5c     EQNetwork.obj
+ 0002:00005e64       ??_R1A@?0A@EA@EQNetworkPacket@@8 0041ee64     EQNetwork.obj
+ 0002:00005e80       ??_R4EQNetworkFragmentGroup@@6B@ 0041ee80     EQNetwork.obj
+ 0002:00005e94       ??_R3EQNetworkFragmentGroup@@8 0041ee94     EQNetwork.obj
+ 0002:00005ea4       ??_R2EQNetworkFragmentGroup@@8 0041eea4     EQNetwork.obj
+ 0002:00005eac       ??_R1A@?0A@EA@EQNetworkFragmentGroup@@8 0041eeac     EQNetwork.obj
+ 0002:00005ec8       ??_R4EQNetworkServer@@6B@  0041eec8     EQNetwork.obj
+ 0002:00005edc       ??_R3EQNetworkServer@@8    0041eedc     EQNetwork.obj
+ 0002:00005eec       ??_R2EQNetworkServer@@8    0041eeec     EQNetwork.obj
+ 0002:00005ef4       ??_R1A@?0A@EA@EQNetworkServer@@8 0041eef4     EQNetwork.obj
+ 0002:00005f10       ??_R4EQNetworkFragmentGroupList@@6B@ 0041ef10     EQNetwork.obj
+ 0002:00005f24       ??_R3EQNetworkFragmentGroupList@@8 0041ef24     EQNetwork.obj
+ 0002:00005f34       ??_R2EQNetworkFragmentGroupList@@8 0041ef34     EQNetwork.obj
+ 0002:00005f3c       ??_R1A@?0A@EA@EQNetworkFragmentGroupList@@8 0041ef3c     EQNetwork.obj
+ 0002:00005f58       ??_R4EQNetworkConnection@@6B@ 0041ef58     EQNetwork.obj
+ 0002:00005f6c       ??_R3EQNetworkConnection@@8 0041ef6c     EQNetwork.obj
+ 0002:00005f7c       ??_R2EQNetworkConnection@@8 0041ef7c     EQNetwork.obj
+ 0002:00005f84       ??_R1A@?0A@EA@EQNetworkConnection@@8 0041ef84     EQNetwork.obj
+ 0002:00005fa0       ??_R4TCPConnection@@6B@    0041efa0     TCPConnection.obj
+ 0002:00005fb4       ??_R3TCPConnection@@8      0041efb4     TCPConnection.obj
+ 0002:00005fc4       ??_R2TCPConnection@@8      0041efc4     TCPConnection.obj
+ 0002:00005fcc       ??_R1A@?0A@EA@TCPConnection@@8 0041efcc     TCPConnection.obj
+ 0002:00005fe8       ??_R4TCPServer@@6B@        0041efe8     TCPConnection.obj
+ 0002:00005ffc       ??_R3TCPServer@@8          0041effc     TCPConnection.obj
+ 0002:0000600c       ??_R2TCPServer@@8          0041f00c     TCPConnection.obj
+ 0002:00006014       ??_R1A@?0A@EA@TCPServer@@8 0041f014     TCPConnection.obj
+ 0002:00006030       ??_R4type_info@@6B@        0041f030     MSVCRT:ti_inst.obj
+ 0002:00006044       ??_R3type_info@@8          0041f044     MSVCRT:ti_inst.obj
+ 0002:00006054       ??_R2type_info@@8          0041f054     MSVCRT:ti_inst.obj
+ 0002:0000605c       ??_R1A@?0A@EA@type_info@@8 0041f05c     MSVCRT:ti_inst.obj
+ 0002:00006080       ___safe_se_handler_table   0041f080     <linker-defined>
+ 0002:0000614c       ___rtc_iaa                 0041f14c     MSVCRT:_initsect_.obj
+ 0002:00006150       ___rtc_izz                 0041f150     MSVCRT:_initsect_.obj
+ 0002:00006154       ___rtc_taa                 0041f154     MSVCRT:_initsect_.obj
+ 0002:00006158       ___rtc_tzz                 0041f158     MSVCRT:_initsect_.obj
+ 0002:000062e0       __TI2?AVbad_alloc@std@@    0041f2e0     logindatabase.obj
+ 0002:000062f0       __CTA2?AVbad_alloc@std@@   0041f2f0     logindatabase.obj
+ 0002:000062fc       __CT??_R0?AVbad_alloc@std@@@8??0bad_alloc@std@@QAE@ABV01@@Z12 0041f2fc     logindatabase.obj
+ 0002:00006318       __CT??_R0?AVexception@std@@@8??0exception@std@@QAE@ABV01@@Z12 0041f318     logindatabase.obj
+ 0002:00006f0c       __IMPORT_DESCRIPTOR_WSOCK32 0041ff0c     wsock32:WSOCK32.dll
+ 0002:00006f20       __IMPORT_DESCRIPTOR_LIBMYSQL 0041ff20     libmysql:LIBMYSQL.dll
+ 0002:00006f34       __IMPORT_DESCRIPTOR_LIBEAY32 0041ff34     libeay32:LIBEAY32.dll
+ 0002:00006f48       __IMPORT_DESCRIPTOR_KERNEL32 0041ff48     kernel32:KERNEL32.dll
+ 0002:00006f5c       __IMPORT_DESCRIPTOR_MSVCP100 0041ff5c     msvcprt:MSVCP100.dll
+ 0002:00006f70       __IMPORT_DESCRIPTOR_MSVCR100 0041ff70     MSVCRT:MSVCR100.dll
+ 0002:00006f84       __NULL_IMPORT_DESCRIPTOR   0041ff84     wsock32:WSOCK32.dll
+ 0003:00000000       ?verant_key@EQCrypto@@0PAEA 00421000     EQCrypto.obj
+ 0003:00000008       ??_R0?AVbad_alloc@std@@@8  00421008     logindatabase.obj
+ 0003:00000024       ??_R0?AVexception@std@@@8  00421024     logindatabase.obj
+ 0003:00000040       ?RunLoops@@3_NC            00421040     net.obj
+ 0003:00000048       ?CRC32Table@@3PAIA         00421048     crc32.obj
+ 0003:00000448       ?ZONE_NAME@@3PBDB          00421448     database.obj
+ 0003:0000046c       ?adlf@@3V?$AutoDelete@VEQEMuLog@@@@A 0042146c     debug.obj
+ 0003:00000470       ??_R0?AVEQNetworkPacket@@@8 00421470     EQNetwork.obj
+ 0003:00000490       ??_R0?AVEQNetworkFragmentGroup@@@8 00421490     EQNetwork.obj
+ 0003:000004b8       ??_R0?AVEQNetworkServer@@@8 004214b8     EQNetwork.obj
+ 0003:000004d8       ??_R0?AVEQNetworkFragmentGroupList@@@8 004214d8     EQNetwork.obj
+ 0003:00000504       ??_R0?AVEQNetworkConnection@@@8 00421504     EQNetwork.obj
+ 0003:00000528       ?check_table@@3PAKA        00421528     packet_functions.obj
+ 0003:00000928       ??_R0?AVTCPConnection@@@8  00421928     TCPConnection.obj
+ 0003:00000944       ??_R0?AVTCPServer@@@8      00421944     TCPConnection.obj
+ 0003:00000998       ___security_cookie         00421998     MSVCRT:gs_cookie.obj
+ 0003:0000099c       ___security_cookie_complement 0042199c     MSVCRT:gs_cookie.obj
+ 0003:000009a0       ??_R0?AVtype_info@@@8      004219a0     MSVCRT:ti_inst.obj
+ 0003:000009c0       ___native_dllmain_reason   004219c0     MSVCRT:natstart.obj
+ 0003:000009c4       ___native_vcclrit_reason   004219c4     MSVCRT:natstart.obj
+ 0003:000009c8       ___globallocalestatus      004219c8     MSVCRT:xthdloc.obj
+ 0003:000009cc       ___defaultmatherr          004219cc     MSVCRT:merr.obj
+ 0003:000009d0       ?eq_crypto@@3VEQCrypto@@A  004219d0     client.obj
+ 0003:00000a50       ?WriteXML_enabled@@3_NA    00421a50     net.obj
+ 0003:00000a58       ?database@@3VDatabase@@A   00421a58     net.obj
+ 0003:0001ada0       ?client_list@@3VClientList@@A 0043bda0     net.obj
+ 0003:0001ada8       ?eqns@@3VEQNetworkServer@@A 0043bda8     net.obj
+ 0003:0001ae10       ?net@@3VNetConnection@@A   0043be10     net.obj
+ 0003:0001b5a4       ?world_list@@3VLWorldList@@A 0043c5a4     net.obj
+ 0003:0001b5c4       ?LogFile@@3PAVEQEMuLog@@A  0043c5c4     debug.obj
+ 0003:0001b5cc       ?TrylockSupported@@3_NA    0043c5cc     Mutex.obj
+ 0003:0001b5cd       ?winsock@@3VInitWinsock@@A 0043c5cd     TCPConnection.obj
+ 0003:0001b5d0       ?current_time@@3IA         0043c5d0     timer.obj
+ 0003:0001b5d4       ?last_time@@3IA            0043c5d4     timer.obj
+ 0003:0001b91c       __dowildcard               0043c91c     MSVCRT:wildcard.obj
+ 0003:0001b920       __newmode                  0043c920     MSVCRT:_newmode.obj
+ 0003:0001b924       __commode                  0043c924     MSVCRT:xncommod.obj
+ 0003:0001b928       __fmode                    0043c928     MSVCRT:xtxtmode.obj
+ 0003:0001b92c       ___native_startup_state    0043c92c     <common>
+ 0003:0001b930       ___native_startup_lock     0043c930     <common>
+ 0003:0001b934       ___sse2_available          0043c934     <common>
+ 0003:0001b938       __NoHeapEnableTerminationOnCorruption 0043c938     <common>
+ 0003:0001b93c       ___dyn_tls_init_callback   0043c93c     <common>
+ 0003:0001b940       ___onexitend               0043c940     <common>
+ 0003:0001b944       ___onexitbegin             0043c944     <common>
+
+ entry point at        0001:0001661d
+
+ Static symbols
+
+ 0001:000004cb       __catch$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$0 004014cb f i client.obj
+ 0001:00002804       __catch$?_Copy@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXII@Z$0 00403804 f i logindatabase.obj
+ 0001:0000288c       __catch$?_Copy@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXII@Z$1 0040388c f i logindatabase.obj
+ 0001:00011560       _flush_pending             00412560 f   zlib:deflate.obj
+ 0001:000115b0       _read_buf                  004125b0 f   zlib:deflate.obj
+ 0001:00011620       _longest_match             00412620 f   zlib:deflate.obj
+ 0001:000117a0       _longest_match_fast        004127a0 f   zlib:deflate.obj
+ 0001:00011870       _fill_window               00412870 f   zlib:deflate.obj
+ 0001:00011950       _deflate_stored            00412950 f   zlib:deflate.obj
+ 0001:00011a80       _deflate_fast              00412a80 f   zlib:deflate.obj
+ 0001:00011da0       _deflate_slow              00412da0 f   zlib:deflate.obj
+ 0001:000122d0       _fixedtables               004132d0 f   zlib:inflate.obj
+ 0001:000122f0       _updatewindow              004132f0 f   zlib:inflate.obj
+ 0001:00013ca0       _init_block                00414ca0 f   zlib:trees.obj
+ 0001:00013d10       _pqdownheap                00414d10 f   zlib:trees.obj
+ 0001:00013de0       _gen_bitlen                00414de0 f   zlib:trees.obj
+ 0001:00014000       _scan_tree                 00415000 f   zlib:trees.obj
+ 0001:000140f0       _send_tree                 004150f0 f   zlib:trees.obj
+ 0001:00014600       _send_all_trees            00415600 f   zlib:trees.obj
+ 0001:00014860       _compress_block            00415860 f   zlib:trees.obj
+ 0001:00014c70       _set_data_type             00415c70 f   zlib:trees.obj
+ 0001:00014d40       _bi_reverse                00415d40 f   zlib:trees.obj
+ 0001:00014d60       _bi_windup                 00415d60 f   zlib:trees.obj
+ 0001:00014de0       _copy_block                00415de0 f   zlib:trees.obj
+ 0001:00014e70       _gen_codes                 00415e70 f   zlib:trees.obj
+ 0001:00014ef0       _build_tree                00415ef0 f   zlib:trees.obj
+ 0001:000150f0       _build_bl_tree             004160f0 f   zlib:trees.obj
+ 0001:00015470       _crc32_little              00416470 f   zlib:crc32.obj
+ 0001:0001638f       _pre_cpp_init              0041738f f   MSVCRT:crtexe.obj
+ 0001:000163da       ___tmainCRTStartup         004173da f   MSVCRT:crtexe.obj
+ 0001:00016563       _pre_c_init                00417563 f   MSVCRT:crtexe.obj
+ 0001:00016ba0       __unwindfunclet$??0Client@@QAE@PAVEQNetworkConnection@@@Z$0 00417ba0 f   client.obj
+ 0001:00016ba0       __unwindfunclet$?ProcessNetworkLayerPacket@TCPConnection@@AAEXPAVServerPacket@@@Z$0 00417ba0 f   client.obj
+ 0001:00016bab       __ehhandler$?ProcessNetworkLayerPacket@TCPConnection@@AAEXPAVServerPacket@@@Z 00417bab f   client.obj
+ 0001:00016bab       __ehhandler$??0Client@@QAE@PAVEQNetworkConnection@@@Z 00417bab f   client.obj
+ 0001:00016bd0       __unwindfunclet$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ$0 00417bd0 f   client.obj
+ 0001:00016bd8       __ehhandler$??1sentry@?$basic_ostream@DU?$char_traits@D@std@@@std@@QAE@XZ 00417bd8 f   client.obj
+ 0001:00016c00       __unwindfunclet$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$3 00417c00 f   client.obj
+ 0001:00016c08       __unwindfunclet$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$2 00417c08 f   client.obj
+ 0001:00016c10       __unwindfunclet$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z$4 00417c10 f   client.obj
+ 0001:00016c18       __ehhandler$??$?6U?$char_traits@D@std@@@std@@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@0@AAV10@PBD@Z 00417c18 f   client.obj
+ 0001:00016c40       __unwindfunclet$?WorldResponse@Client@@QAEXIC@Z$0 00417c40 f   client.obj
+ 0001:00016c4e       __unwindfunclet$?WorldResponse@Client@@QAEXIC@Z$1 00417c4e f   client.obj
+ 0001:00016c5c       __ehhandler$?WorldResponse@Client@@QAEXIC@Z 00417c5c f   client.obj
+ 0001:00016c90       __unwindfunclet$?Process@Client@@QAE_NXZ$11 00417c90 f   client.obj
+ 0001:00016c9e       __unwindfunclet$?Process@Client@@QAE_NXZ$7 00417c9e f   client.obj
+ 0001:00016cac       __unwindfunclet$?Process@Client@@QAE_NXZ$4 00417cac f   client.obj
+ 0001:00016cba       __unwindfunclet$?Process@Client@@QAE_NXZ$5 00417cba f   client.obj
+ 0001:00016cc8       __unwindfunclet$?Process@Client@@QAE_NXZ$6 00417cc8 f   client.obj
+ 0001:00016cd6       __unwindfunclet$?Process@Client@@QAE_NXZ$1 00417cd6 f   client.obj
+ 0001:00016ce4       __unwindfunclet$?Process@Client@@QAE_NXZ$9 00417ce4 f   client.obj
+ 0001:00016cf2       __unwindfunclet$?Process@Client@@QAE_NXZ$2 00417cf2 f   client.obj
+ 0001:00016d00       __unwindfunclet$?Process@Client@@QAE_NXZ$0 00417d00 f   client.obj
+ 0001:00016d0e       __unwindfunclet$?Process@Client@@QAE_NXZ$3 00417d0e f   client.obj
+ 0001:00016d1c       __unwindfunclet$?Process@Client@@QAE_NXZ$8 00417d1c f   client.obj
+ 0001:00016d2a       __ehhandler$?Process@Client@@QAE_NXZ 00417d2a f   client.obj
+ 0001:00016d60       __ehhandler$?_Copy@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEXII@Z 00417d60 f   logindatabase.obj
+ 0001:00016d80       __unwindfunclet$?CheckEQLogin@Database@@QAEIPBVAPPLAYER@@PADPAEPAHPA_NPAFI@Z$0 00417d80 f   logindatabase.obj
+ 0001:00016d88       __unwindfunclet$?CheckEQLogin@Database@@QAEIPBVAPPLAYER@@PADPAEPAHPA_NPAFI@Z$1 00417d88 f   logindatabase.obj
+ 0001:00016d93       __ehhandler$?CheckEQLogin@Database@@QAEIPBVAPPLAYER@@PADPAEPAHPA_NPAFI@Z 00417d93 f   logindatabase.obj
+ 0001:00016dc0       __unwindfunclet$??0LWorld@@QAE@PAVTCPConnection@@_NIG1@Z$0 00417dc0 f   LWorld.obj
+ 0001:00016dcb       __ehhandler$??0LWorld@@QAE@PAVTCPConnection@@_NIG1@Z 00417dcb f   LWorld.obj
+ 0001:00016df0       __unwindfunclet$?Message@LWorld@@QAAXPAD0ZZ$0 00417df0 f   LWorld.obj
+ 0001:00016dfe       __ehhandler$?Message@LWorld@@QAAXPAD0ZZ 00417dfe f   LWorld.obj
+ 0001:00016e30       __unwindfunclet$?Kick@LWorld@@QAEXPAD_N@Z$0 00417e30 f   LWorld.obj
+ 0001:00016e3b       __ehhandler$?Kick@LWorld@@QAEXPAD_N@Z 00417e3b f   LWorld.obj
+ 0001:00016e60       __unwindfunclet$??0LWorldList@@QAE@XZ$0 00417e60 f   LWorld.obj
+ 0001:00016e6b       __unwindfunclet$??0LWorldList@@QAE@XZ$1 00417e6b f   LWorld.obj
+ 0001:00016e76       __unwindfunclet$??0LWorldList@@QAE@XZ$2 00417e76 f   LWorld.obj
+ 0001:00016e81       __unwindfunclet$??0LWorldList@@QAE@XZ$3 00417e81 f   LWorld.obj
+ 0001:00016e8c       __ehhandler$??0LWorldList@@QAE@XZ 00417e8c f   LWorld.obj
+ 0001:00016eb0       __unwindfunclet$??1LWorldList@@QAE@XZ$0 00417eb0 f   LWorld.obj
+ 0001:00016ebb       __unwindfunclet$??1LWorldList@@QAE@XZ$1 00417ebb f   LWorld.obj
+ 0001:00016ec6       __ehhandler$??1LWorldList@@QAE@XZ 00417ec6 f   LWorld.obj
+ 0001:00016ef0       __unwindfunclet$?SendPacket@LWorldList@@QAEXPAVServerPacket@@PAVLWorld@@@Z$0 00417ef0 f   LWorld.obj
+ 0001:00016ef0       __unwindfunclet$?RecvData@EQNetworkServer@@AAEXPAEIIG@Z$0 00417ef0 f   LWorld.obj
+ 0001:00016efb       __ehhandler$?SendPacket@LWorldList@@QAEXPAVServerPacket@@PAVLWorld@@@Z 00417efb f   LWorld.obj
+ 0001:00016efb       __ehhandler$?RecvData@EQNetworkServer@@AAEXPAEIIG@Z 00417efb f   LWorld.obj
+ 0001:00016f20       __unwindfunclet$?AddPeer@LWorldList@@QAEXIG_N@Z$0 00417f20 f   LWorld.obj
+ 0001:00016f2b       __unwindfunclet$?AddPeer@LWorldList@@QAEXIG_N@Z$1 00417f2b f   LWorld.obj
+ 0001:00016f36       __ehhandler$?AddPeer@LWorldList@@QAEXIG_N@Z 00417f36 f   LWorld.obj
+ 0001:00016f60       __unwindfunclet$?SendPacket@LWorld@@QAEXPAVServerPacket@@@Z$0 00417f60 f   LWorld.obj
+ 0001:00016f60       __unwindfunclet$?UpdateWorldList@LWorld@@QAEXPAV1@@Z$0 00417f60 f   LWorld.obj
+ 0001:00016f60       __unwindfunclet$?Copy@APPLAYER@@QBEPAV1@XZ$0 00417f60 f   LWorld.obj
+ 0001:00016f60       __unwindfunclet$??1LWorld@@QAE@XZ$0 00417f60 f   LWorld.obj
+ 0001:00016f6b       __ehhandler$?Copy@APPLAYER@@QBEPAV1@XZ 00417f6b f   LWorld.obj
+ 0001:00016f6b       __ehhandler$?SendPacket@LWorld@@QAEXPAVServerPacket@@@Z 00417f6b f   LWorld.obj
+ 0001:00016f6b       __ehhandler$?UpdateWorldList@LWorld@@QAEXPAV1@@Z 00417f6b f   LWorld.obj
+ 0001:00016f6b       __ehhandler$??1LWorld@@QAE@XZ 00417f6b f   LWorld.obj
+ 0001:00016f90       __unwindfunclet$?ConnectUplink@LWorldList@@QAEXXZ$0 00417f90 f   LWorld.obj
+ 0001:00016f9e       __unwindfunclet$?ConnectUplink@LWorldList@@QAEXXZ$1 00417f9e f   LWorld.obj
+ 0001:00016fac       __ehhandler$?ConnectUplink@LWorldList@@QAEXXZ 00417fac f   LWorld.obj
+ 0001:00016fe0       __unwindfunclet$?Process@LWorld@@QAE_NXZ$0 00417fe0 f   LWorld.obj
+ 0001:00016feb       __unwindfunclet$?Process@LWorld@@QAE_NXZ$1 00417feb f   LWorld.obj
+ 0001:00016ff6       __unwindfunclet$?Process@LWorld@@QAE_NXZ$2 00417ff6 f   LWorld.obj
+ 0001:00017001       __unwindfunclet$?Process@LWorld@@QAE_NXZ$4 00418001 f   LWorld.obj
+ 0001:0001700c       __unwindfunclet$?Process@LWorld@@QAE_NXZ$5 0041800c f   LWorld.obj
+ 0001:00017017       __ehhandler$?Process@LWorld@@QAE_NXZ 00418017 f   LWorld.obj
+ 0001:00017040       __unwindfunclet$?Process@LWorldList@@QAEXXZ$0 00418040 f   LWorld.obj
+ 0001:0001704b       __ehhandler$?Process@LWorldList@@QAEXXZ 0041804b f   LWorld.obj
+ 0001:00017070       __unwindfunclet$_main$0    00418070 f   net.obj
+ 0001:0001707b       __ehhandler$_main          0041807b f   net.obj
+ 0001:000170a0       __unwindfunclet$??1Database@@QAE@XZ$0 004180a0 f   database.obj
+ 0001:000170a8       __ehhandler$??1Database@@QAE@XZ 004180a8 f   database.obj
+ 0001:000170d0       __unwindfunclet$??0Database@@QAE@XZ$0 004180d0 f   database.obj
+ 0001:000170db       __unwindfunclet$??0Database@@QAE@XZ$1 004180db f   database.obj
+ 0001:000170ec       __ehhandler$??0Database@@QAE@XZ 004180ec f   database.obj
+ 0001:00017120       __unwindfunclet$?LoadVariables@Database@@QAE_NXZ$0 00418120 f   database.obj
+ 0001:0001712b       __ehhandler$?LoadVariables@Database@@QAE_NXZ 0041812b f   database.obj
+ 0001:00017160       __unwindfunclet$?SendPacket@TCPConnection@@UAE_NPBVServerPacket@@I@Z$0 00418160 f   dbcore.obj
+ 0001:00017160       __unwindfunclet$?SendPacket@TCPConnection@@UAE_NPBUTCPNetPacket_Struct@1@@Z$0 00418160 f   dbcore.obj
+ 0001:00017160       __unwindfunclet$?Open@DBcore@@AAE_NPAIPAD@Z$0 00418160 f   dbcore.obj
+ 0001:00017160       __unwindfunclet$?RunQuery@DBcore@@QAE_NPBDIPADPAPAUst_mysql_res@@PAI33_N@Z$0 00418160 f   dbcore.obj
+ 0001:00017160       __unwindfunclet$?LoadVariables_result@Database@@QAE_NPAUst_mysql_res@@@Z$0 00418160 f   dbcore.obj
+ 0001:00017160       __unwindfunclet$?GetVariable@Database@@QAE_NPBDPADG@Z$0 00418160 f   dbcore.obj
+ 0001:00017160       __unwindfunclet$?Open@DBcore@@IAE_NPBD000PAIPAD_N3@Z$0 00418160 f   dbcore.obj
+ 0001:00017168       __ehhandler$?SendPacket@TCPConnection@@UAE_NPBVServerPacket@@I@Z 00418168 f   dbcore.obj
+ 0001:00017168       __ehhandler$?SendPacket@TCPConnection@@UAE_NPBUTCPNetPacket_Struct@1@@Z 00418168 f   dbcore.obj
+ 0001:00017168       __ehhandler$?RunQuery@DBcore@@QAE_NPBDIPADPAPAUst_mysql_res@@PAI33_N@Z 00418168 f   dbcore.obj
+ 0001:00017168       __ehhandler$?Open@DBcore@@AAE_NPAIPAD@Z 00418168 f   dbcore.obj
+ 0001:00017168       __ehhandler$?Open@DBcore@@IAE_NPBD000PAIPAD_N3@Z 00418168 f   dbcore.obj
+ 0001:00017168       __ehhandler$?LoadVariables_result@Database@@QAE_NPAUst_mysql_res@@@Z 00418168 f   dbcore.obj
+ 0001:00017168       __ehhandler$?GetVariable@Database@@QAE_NPBDPADG@Z 00418168 f   dbcore.obj
+ 0001:00017190       __unwindfunclet$??0EQEMuLog@@QAE@XZ$0 00418190 f   debug.obj
+ 0001:0001719b       __unwindfunclet$??0EQEMuLog@@QAE@XZ$1 0041819b f   debug.obj
+ 0001:000171a6       __ehhandler$??0EQEMuLog@@QAE@XZ 004181a6 f   debug.obj
+ 0001:000171d0       __unwindfunclet$?open@EQEMuLog@@AAE_NW4LogIDs@1@@Z$0 004181d0 f   debug.obj
+ 0001:000171db       __ehhandler$?open@EQEMuLog@@AAE_NW4LogIDs@1@@Z 004181db f   debug.obj
+ 0001:00017210       __unwindfunclet$??__ELogFile@@YAXXZ$0 00418210 f   debug.obj
+ 0001:0001721b       __ehhandler$??__ELogFile@@YAXXZ 0041821b f   debug.obj
+ 0001:00017240       __unwindfunclet$??0EQNetworkFragmentGroup@@QAE@GG@Z$0 00418240 f   EQNetwork.obj
+ 0001:0001724b       __ehhandler$??0EQNetworkFragmentGroup@@QAE@GG@Z 0041824b f   EQNetwork.obj
+ 0001:00017270       __unwindfunclet$??0EQNetworkServer@@QAE@G@Z$0 00418270 f   EQNetwork.obj
+ 0001:0001727e       __unwindfunclet$??0EQNetworkServer@@QAE@G@Z$1 0041827e f   EQNetwork.obj
+ 0001:0001728c       __unwindfunclet$??0EQNetworkServer@@QAE@G@Z$2 0041828c f   EQNetwork.obj
+ 0001:0001729a       __unwindfunclet$??0EQNetworkServer@@QAE@G@Z$3 0041829a f   EQNetwork.obj
+ 0001:000172a8       __ehhandler$??0EQNetworkServer@@QAE@G@Z 004182a8 f   EQNetwork.obj
+ 0001:000172d0       __unwindfunclet$?CloseSock@EQNetworkConnection@@QAEXXZ$0 004182d0 f   EQNetwork.obj
+ 0001:000172d8       __ehhandler$?CloseSock@EQNetworkConnection@@QAEXXZ 004182d8 f   EQNetwork.obj
+ 0001:00017300       __unwindfunclet$??1EQNetworkServer@@UAE@XZ$0 00418300 f   EQNetwork.obj
+ 0001:0001730b       __unwindfunclet$??1EQNetworkServer@@UAE@XZ$1 0041830b f   EQNetwork.obj
+ 0001:00017316       __unwindfunclet$??1EQNetworkServer@@UAE@XZ$2 00418316 f   EQNetwork.obj
+ 0001:00017321       __unwindfunclet$??1EQNetworkServer@@UAE@XZ$3 00418321 f   EQNetwork.obj
+ 0001:0001732c       __ehhandler$??1EQNetworkServer@@UAE@XZ 0041832c f   EQNetwork.obj
+ 0001:00017350       __unwindfunclet$??0EQNetworkConnection@@QAE@IG@Z$0 00418350 f   EQNetwork.obj
+ 0001:0001735b       __unwindfunclet$??0EQNetworkConnection@@QAE@IG@Z$1 0041835b f   EQNetwork.obj
+ 0001:00017366       __unwindfunclet$??0EQNetworkConnection@@QAE@IG@Z$14 00418366 f   EQNetwork.obj
+ 0001:00017371       __unwindfunclet$??0EQNetworkConnection@@QAE@IG@Z$15 00418371 f   EQNetwork.obj
+ 0001:0001737c       __unwindfunclet$??0EQNetworkConnection@@QAE@IG@Z$2 0041837c f   EQNetwork.obj
+ 0001:00017387       __unwindfunclet$??0EQNetworkConnection@@QAE@IG@Z$3 00418387 f   EQNetwork.obj
+ 0001:00017392       __unwindfunclet$??0EQNetworkConnection@@QAE@IG@Z$4 00418392 f   EQNetwork.obj
+ 0001:0001739d       __unwindfunclet$??0EQNetworkConnection@@QAE@IG@Z$5 0041839d f   EQNetwork.obj
+ 0001:000173ab       __unwindfunclet$??0EQNetworkConnection@@QAE@IG@Z$6 004183ab f   EQNetwork.obj
+ 0001:000173b9       __unwindfunclet$??0EQNetworkConnection@@QAE@IG@Z$7 004183b9 f   EQNetwork.obj
+ 0001:000173c7       __unwindfunclet$??0EQNetworkConnection@@QAE@IG@Z$8 004183c7 f   EQNetwork.obj
+ 0001:000173d5       __unwindfunclet$??0EQNetworkConnection@@QAE@IG@Z$9 004183d5 f   EQNetwork.obj
+ 0001:000173e3       __unwindfunclet$??0EQNetworkConnection@@QAE@IG@Z$10 004183e3 f   EQNetwork.obj
+ 0001:000173ee       __unwindfunclet$??0EQNetworkConnection@@QAE@IG@Z$11 004183ee f   EQNetwork.obj
+ 0001:000173f9       __unwindfunclet$??0EQNetworkConnection@@QAE@IG@Z$12 004183f9 f   EQNetwork.obj
+ 0001:00017404       __unwindfunclet$??0EQNetworkConnection@@QAE@IG@Z$13 00418404 f   EQNetwork.obj
+ 0001:0001740f       __ehhandler$??0EQNetworkConnection@@QAE@IG@Z 0041840f f   EQNetwork.obj
+ 0001:00017430       __unwindfunclet$??1EQNetworkConnection@@UAE@XZ$0 00418430 f   EQNetwork.obj
+ 0001:0001743b       __unwindfunclet$??1EQNetworkConnection@@UAE@XZ$1 0041843b f   EQNetwork.obj
+ 0001:00017446       __unwindfunclet$??1EQNetworkConnection@@UAE@XZ$2 00418446 f   EQNetwork.obj
+ 0001:00017451       __unwindfunclet$??1EQNetworkConnection@@UAE@XZ$3 00418451 f   EQNetwork.obj
+ 0001:0001745c       __unwindfunclet$??1EQNetworkConnection@@UAE@XZ$4 0041845c f   EQNetwork.obj
+ 0001:00017467       __unwindfunclet$??1EQNetworkConnection@@UAE@XZ$5 00418467 f   EQNetwork.obj
+ 0001:00017475       __unwindfunclet$??1EQNetworkConnection@@UAE@XZ$6 00418475 f   EQNetwork.obj
+ 0001:00017483       __unwindfunclet$??1EQNetworkConnection@@UAE@XZ$7 00418483 f   EQNetwork.obj
+ 0001:00017491       __unwindfunclet$??1EQNetworkConnection@@UAE@XZ$8 00418491 f   EQNetwork.obj
+ 0001:0001749f       __unwindfunclet$??1EQNetworkConnection@@UAE@XZ$9 0041849f f   EQNetwork.obj
+ 0001:000174ad       __ehhandler$??1EQNetworkConnection@@UAE@XZ 004184ad f   EQNetwork.obj
+ 0001:000174d0       __unwindfunclet$?GotPacket@EQNetworkFragmentGroupList@@QAEPAVEQNetworkFragmentGroup@@PAVEQNetworkPacket@@@Z$0 004184d0 f   EQNetwork.obj
+ 0001:000174db       __ehhandler$?GotPacket@EQNetworkFragmentGroupList@@QAEPAVEQNetworkFragmentGroup@@PAVEQNetworkPacket@@@Z 004184db f   EQNetwork.obj
+ 0001:00017500       __unwindfunclet$?Process@EQNetworkConnection@@IAEXI@Z$0 00418500 f   EQNetwork.obj
+ 0001:00017508       __ehhandler$?Process@EQNetworkConnection@@IAEXI@Z 00418508 f   EQNetwork.obj
+ 0001:00017530       __unwindfunclet$?RecvData@EQNetworkConnection@@QAEXPAEI@Z$1 00418530 f   EQNetwork.obj
+ 0001:00017530       __unwindfunclet$?ProcessPacket@EQNetworkConnection@@AAE_NPAVEQNetworkPacket@@_N@Z$0 00418530 f   EQNetwork.obj
+ 0001:0001753b       __unwindfunclet$?ProcessPacket@EQNetworkConnection@@AAE_NPAVEQNetworkPacket@@_N@Z$1 0041853b f   EQNetwork.obj
+ 0001:0001753b       __unwindfunclet$?RecvData@EQNetworkConnection@@QAEXPAEI@Z$2 0041853b f   EQNetwork.obj
+ 0001:00017546       __ehhandler$?ProcessPacket@EQNetworkConnection@@AAE_NPAVEQNetworkPacket@@_N@Z 00418546 f   EQNetwork.obj
+ 0001:00017546       __ehhandler$?RecvData@EQNetworkConnection@@QAEXPAEI@Z 00418546 f   EQNetwork.obj
+ 0001:00017570       __unwindfunclet$?Open@EQNetworkServer@@QAE_NG@Z$0 00418570 f   EQNetwork.obj
+ 0001:00017578       __ehhandler$?Open@EQNetworkServer@@QAE_NG@Z 00418578 f   EQNetwork.obj
+ 0001:000175a0       __unwindfunclet$?SendNetErrorPacket@TCPConnection@@AAEXPBD@Z$0 004185a0 f   TCPConnection.obj
+ 0001:000175ab       __ehhandler$?SendNetErrorPacket@TCPConnection@@AAEXPBD@Z 004185ab f   TCPConnection.obj
+ 0001:000175d0       __unwindfunclet$?RemoveRelay@TCPConnection@@IAEXPAV1@_N@Z$0 004185d0 f   TCPConnection.obj
+ 0001:000175db       __ehhandler$?RemoveRelay@TCPConnection@@IAEXPAV1@_N@Z 004185db f   TCPConnection.obj
+ 0001:00017600       __unwindfunclet$?Open@TCPServer@@QAE_NGPAD@Z$0 00418600 f   TCPConnection.obj
+ 0001:00017608       __ehhandler$?Open@TCPServer@@QAE_NGPAD@Z 00418608 f   TCPConnection.obj
+ 0001:00017630       __unwindfunclet$?ClearBuffers@TCPConnection@@AAEXXZ$0 00418630 f   TCPConnection.obj
+ 0001:00017638       __unwindfunclet$?ClearBuffers@TCPConnection@@AAEXXZ$1 00418638 f   TCPConnection.obj
+ 0001:00017640       __unwindfunclet$?ClearBuffers@TCPConnection@@AAEXXZ$2 00418640 f   TCPConnection.obj
+ 0001:00017648       __unwindfunclet$?ClearBuffers@TCPConnection@@AAEXXZ$3 00418648 f   TCPConnection.obj
+ 0001:00017650       __ehhandler$?ClearBuffers@TCPConnection@@AAEXXZ 00418650 f   TCPConnection.obj
+ 0001:00017670       __unwindfunclet$??0TCPConnection@@QAE@_NPAVTCPServer@@W4eTCPMode@@@Z$0 00418670 f   TCPConnection.obj
+ 0001:0001767b       __unwindfunclet$??0TCPConnection@@QAE@_NPAVTCPServer@@W4eTCPMode@@@Z$1 0041867b f   TCPConnection.obj
+ 0001:00017686       __unwindfunclet$??0TCPConnection@@QAE@_NPAVTCPServer@@W4eTCPMode@@@Z$2 00418686 f   TCPConnection.obj
+ 0001:00017691       __unwindfunclet$??0TCPConnection@@QAE@_NPAVTCPServer@@W4eTCPMode@@@Z$3 00418691 f   TCPConnection.obj
+ 0001:0001769f       __unwindfunclet$??0TCPConnection@@QAE@_NPAVTCPServer@@W4eTCPMode@@@Z$4 0041869f f   TCPConnection.obj
+ 0001:000176ad       __unwindfunclet$??0TCPConnection@@QAE@_NPAVTCPServer@@W4eTCPMode@@@Z$5 004186ad f   TCPConnection.obj
+ 0001:000176bb       __unwindfunclet$??0TCPConnection@@QAE@_NPAVTCPServer@@W4eTCPMode@@@Z$6 004186bb f   TCPConnection.obj
+ 0001:000176c9       __unwindfunclet$??0TCPConnection@@QAE@_NPAVTCPServer@@W4eTCPMode@@@Z$7 004186c9 f   TCPConnection.obj
+ 0001:000176d7       __unwindfunclet$??0TCPConnection@@QAE@_NPAVTCPServer@@W4eTCPMode@@@Z$8 004186d7 f   TCPConnection.obj
+ 0001:000176e5       __unwindfunclet$??0TCPConnection@@QAE@_NPAVTCPServer@@W4eTCPMode@@@Z$9 004186e5 f   TCPConnection.obj
+ 0001:000176f3       __unwindfunclet$??0TCPConnection@@QAE@_NPAVTCPServer@@W4eTCPMode@@@Z$10 004186f3 f   TCPConnection.obj
+ 0001:000176fe       __unwindfunclet$??0TCPConnection@@QAE@_NPAVTCPServer@@W4eTCPMode@@@Z$11 004186fe f   TCPConnection.obj
+ 0001:00017709       __ehhandler$??0TCPConnection@@QAE@_NPAVTCPServer@@W4eTCPMode@@@Z 00418709 f   TCPConnection.obj
+ 0001:00017730       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@IIG_N@Z$0 00418730 f   TCPConnection.obj
+ 0001:0001773b       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@IIG_N@Z$1 0041873b f   TCPConnection.obj
+ 0001:00017746       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@IIG_N@Z$2 00418746 f   TCPConnection.obj
+ 0001:00017751       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@IIG_N@Z$3 00418751 f   TCPConnection.obj
+ 0001:0001775f       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@IIG_N@Z$4 0041875f f   TCPConnection.obj
+ 0001:0001776d       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@IIG_N@Z$5 0041876d f   TCPConnection.obj
+ 0001:0001777b       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@IIG_N@Z$6 0041877b f   TCPConnection.obj
+ 0001:00017789       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@IIG_N@Z$7 00418789 f   TCPConnection.obj
+ 0001:00017797       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@IIG_N@Z$8 00418797 f   TCPConnection.obj
+ 0001:000177a5       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@IIG_N@Z$9 004187a5 f   TCPConnection.obj
+ 0001:000177b3       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@IIG_N@Z$10 004187b3 f   TCPConnection.obj
+ 0001:000177be       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@IIG_N@Z$11 004187be f   TCPConnection.obj
+ 0001:000177c9       __ehhandler$??0TCPConnection@@QAE@PAVTCPServer@@IIG_N@Z 004187c9 f   TCPConnection.obj
+ 0001:000177f0       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@PAV0@IIG@Z$0 004187f0 f   TCPConnection.obj
+ 0001:000177fb       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@PAV0@IIG@Z$1 004187fb f   TCPConnection.obj
+ 0001:00017806       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@PAV0@IIG@Z$2 00418806 f   TCPConnection.obj
+ 0001:00017811       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@PAV0@IIG@Z$3 00418811 f   TCPConnection.obj
+ 0001:0001781f       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@PAV0@IIG@Z$4 0041881f f   TCPConnection.obj
+ 0001:0001782d       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@PAV0@IIG@Z$5 0041882d f   TCPConnection.obj
+ 0001:0001783b       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@PAV0@IIG@Z$6 0041883b f   TCPConnection.obj
+ 0001:00017849       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@PAV0@IIG@Z$7 00418849 f   TCPConnection.obj
+ 0001:00017857       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@PAV0@IIG@Z$8 00418857 f   TCPConnection.obj
+ 0001:00017865       __unwindfunclet$??0TCPConnection@@QAE@PAVTCPServer@@PAV0@IIG@Z$9 00418865 f   TCPConnection.obj
+ 0001:00017873       __ehhandler$??0TCPConnection@@QAE@PAVTCPServer@@PAV0@IIG@Z 00418873 f   TCPConnection.obj
+ 0001:00017890       __unwindfunclet$?ProcessReceivedDataAsOldPackets@TCPConnection@@AAE_NPAD@Z$0 00418890 f   TCPConnection.obj
+ 0001:0001789b       __ehhandler$?ProcessReceivedDataAsOldPackets@TCPConnection@@AAE_NPAD@Z 0041889b f   TCPConnection.obj
+ 0001:000178c0       __unwindfunclet$?FatalError@Client@@QAEXPBD_N@Z$0 004188c0 f   TCPConnection.obj
+ 0001:000178c0       __unwindfunclet$?SendData@TCPConnection@@AAE_NPAD@Z$0 004188c0 f   TCPConnection.obj
+ 0001:000178cb       __ehhandler$?SendData@TCPConnection@@AAE_NPAD@Z 004188cb f   TCPConnection.obj
+ 0001:000178cb       __ehhandler$?FatalError@Client@@QAEXPBD_N@Z 004188cb f   TCPConnection.obj
+ 0001:000178f0       __unwindfunclet$??1TCPServer@@UAE@XZ$0 004188f0 f   TCPConnection.obj
+ 0001:000178fb       __unwindfunclet$??1TCPServer@@UAE@XZ$1 004188fb f   TCPConnection.obj
+ 0001:00017906       __unwindfunclet$??1TCPServer@@UAE@XZ$2 00418906 f   TCPConnection.obj
+ 0001:00017911       __unwindfunclet$??1TCPServer@@UAE@XZ$3 00418911 f   TCPConnection.obj
+ 0001:0001791c       __unwindfunclet$??1TCPServer@@UAE@XZ$4 0041891c f   TCPConnection.obj
+ 0001:00017927       __unwindfunclet$??1TCPServer@@UAE@XZ$5 00418927 f   TCPConnection.obj
+ 0001:00017935       __unwindfunclet$??1TCPServer@@UAE@XZ$6 00418935 f   TCPConnection.obj
+ 0001:00017943       __ehhandler$??1TCPServer@@UAE@XZ 00418943 f   TCPConnection.obj
+ 0001:00017960       __unwindfunclet$??1TCPConnection@@UAE@XZ$0 00418960 f   TCPConnection.obj
+ 0001:0001796b       __unwindfunclet$??1TCPConnection@@UAE@XZ$1 0041896b f   TCPConnection.obj
+ 0001:00017976       __unwindfunclet$??1TCPConnection@@UAE@XZ$2 00418976 f   TCPConnection.obj
+ 0001:00017981       __unwindfunclet$??1TCPConnection@@UAE@XZ$3 00418981 f   TCPConnection.obj
+ 0001:0001798f       __unwindfunclet$??1TCPConnection@@UAE@XZ$4 0041898f f   TCPConnection.obj
+ 0001:0001799d       __unwindfunclet$??1TCPConnection@@UAE@XZ$5 0041899d f   TCPConnection.obj
+ 0001:000179ab       __unwindfunclet$??1TCPConnection@@UAE@XZ$6 004189ab f   TCPConnection.obj
+ 0001:000179b9       __unwindfunclet$??1TCPConnection@@UAE@XZ$7 004189b9 f   TCPConnection.obj
+ 0001:000179c7       __unwindfunclet$??1TCPConnection@@UAE@XZ$8 004189c7 f   TCPConnection.obj
+ 0001:000179d5       __unwindfunclet$??1TCPConnection@@UAE@XZ$9 004189d5 f   TCPConnection.obj
+ 0001:000179e3       __ehhandler$??1TCPConnection@@UAE@XZ 004189e3 f   TCPConnection.obj
+ 0001:00017a00       __unwindfunclet$?ListenNewConnections@TCPServer@@AAEXXZ$0 00418a00 f   TCPConnection.obj
+ 0001:00017a08       __unwindfunclet$?ListenNewConnections@TCPServer@@AAEXXZ$1 00418a08 f   TCPConnection.obj
+ 0001:00017a13       __ehhandler$?ListenNewConnections@TCPServer@@AAEXXZ 00418a13 f   TCPConnection.obj
+ 0001:00017a40       __unwindfunclet$?ProcessReceivedDataAsPackets@TCPConnection@@AAE_NPAD@Z$0 00418a40 f   TCPConnection.obj
+ 0001:00017a4b       __ehhandler$?ProcessReceivedDataAsPackets@TCPConnection@@AAE_NPAD@Z 00418a4b f   TCPConnection.obj
+ 0001:00017a70       __unwindfunclet$??0TCPServer@@QAE@G_N@Z$0 00418a70 f   TCPConnection.obj
+ 0001:00017a7b       __unwindfunclet$??0TCPServer@@QAE@G_N@Z$1 00418a7b f   TCPConnection.obj
+ 0001:00017a86       __unwindfunclet$??0TCPServer@@QAE@G_N@Z$2 00418a86 f   TCPConnection.obj
+ 0001:00017a91       __unwindfunclet$??0TCPServer@@QAE@G_N@Z$3 00418a91 f   TCPConnection.obj
+ 0001:00017a9c       __unwindfunclet$??0TCPServer@@QAE@G_N@Z$4 00418a9c f   TCPConnection.obj
+ 0001:00017aa7       __unwindfunclet$??0TCPServer@@QAE@G_N@Z$5 00418aa7 f   TCPConnection.obj
+ 0001:00017ab5       __unwindfunclet$??0TCPServer@@QAE@G_N@Z$6 00418ab5 f   TCPConnection.obj
+ 0001:00017ac3       __ehhandler$??0TCPServer@@QAE@G_N@Z 00418ac3 f   TCPConnection.obj
+ 0001:00017ae0       ??__Eeq_crypto@@YAXXZ      00418ae0 f   client.obj
+ 0001:00017af0       ??__Edatabase@@YAXXZ       00418af0 f   net.obj
+ 0001:00017b10       ??__Eeqns@@YAXXZ           00418b10 f   net.obj
+ 0001:00017b30       ??__Enet@@YAXXZ            00418b30 f   net.obj
+ 0001:00017b40       ??__Eclient_list@@YAXXZ    00418b40 f   net.obj
+ 0001:00017b50       ??__Eworld_list@@YAXXZ     00418b50 f   net.obj
+ 0001:00017b70       ??__ELogFile@@YAXXZ        00418b70 f   debug.obj
+ 0001:00017be0       ??__Eadlf@@YAXXZ           00418be0 f   debug.obj
+ 0001:00017bf0       ??__ETrylockSupported@@YAXXZ 00418bf0 f   Mutex.obj
+ 0001:00017c00       ??__Ewinsock@@YAXXZ        00418c00 f   TCPConnection.obj
+ 0001:00017c20       ??__Fdatabase@@YAXXZ       00418c20 f   net.obj
+ 0001:00017c30       ??__Feqns@@YAXXZ           00418c30 f   net.obj
+ 0001:00017c40       ??__Fworld_list@@YAXXZ     00418c40 f   net.obj
+ 0001:00017c50       ??__Fclient_list@@YAXXZ    00418c50 f   net.obj
+ 0001:00017c70       ??__Fadlf@@YAXXZ           00418c70 f   debug.obj
+ 0001:00017ca0       ??__Fws@?1??ResolveIP@@YAIPBDPAD@Z@YAXXZ 00418ca0 f   MiscFunctions.obj
+ 0001:00017cb0       ??__Fwinsock@@YAXXZ        00418cb0 f   TCPConnection.obj

@@ -1,0 +1,39 @@
+APP=zone
+SF=../common/EQNetwork.o \
+   ../common/timer.o ../common/database.o ../common/packet_dump.o ../common/packet_functions.o \
+   ../common/unix.o ../common/packet_dump_file.o ../common/Mutex.o ../common/MiscFunctions.o \
+   zone.o entity.o mob.o client.o client_process.o npc.o net.o spawn2.o attack.o hate_list.o \
+   ../common/serverinfo.o ../common/moremath.o worldserver.o spells.o spawngroup.o loottables.o \
+   faction.o Map.o PlayerCorpse.o petitions.o WesQuests.o MobAI.o Object.o ../common/eqtime.o \
+   groups.o ../common/classes.o ../common/races.o ../common/TCPConnection.o forage.o \
+   ../common/crc32.o ../common/guilds.o ../common/EQEMuError.o ../common/md5.o ../common/dbcore.o \
+   ../common/dbasync.o zonedbasync.o parser.o ../common/EMuShareMem.o .obj/debug.o doors.o
+
+
+CC=gcc
+LINKER=gcc
+DFLAGS=-DDEBUG=1 -DSHAREMEM -DCATCH_CRASH
+WFLAGS=-Wall -Wuninitialized -Wwrite-strings -Wcast-qual -Wbad-function-cast -Wstrict-prototypes -Wno-deprecated -Wnested-externs -Wcomment -Wcast-align
+COPTS=$(WFLAGS) -O -ggdb -march=i686 -pthread -pipe -D_GNU_SOURCE -DINVERSEXY -DFX -DZONE $(DFLAGS) -I/usr/include/mysql -I/usr/mysql/include
+LINKOPTS=-rdynamic -L. -lstdc++ -lm -lz -L/usr/lib/mysql -L/usr/mysql/lib -lmysqlclient -ldl
+
+all: $(APP)
+
+
+$(APP): $(SF)
+	$(LINKER) $(COPTS) $(OBJS) $^ $(LINKOPTS) -o $@
+
+
+import_raw_items: import_raw_items.o
+	$(LINKER) $(COPTS) $^ $(LINKOPTS) -o $@
+
+clean:
+	rm -f $(SF) $(APP) import_raw_items.o import_raw_items
+
+%.o: %.cpp
+	$(CC) -c $(COPTS) $< -o $@
+
+.obj/debug.o: ../common/debug.cpp ../common/debug.h
+	mkdir -p .obj
+	$(CC) $(COPTS) -c ../common/debug.cpp -o .obj/debug.o
+

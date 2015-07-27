@@ -1,0 +1,358 @@
+Everquest Protocol Layer
+
+This is a rough draft document for the Everquest protocol used by 
+Verant Interactive.  It is a work in progress, and as such, if you 
+would like to contribute information please email me at
+xylor@openquest.dhs.org.
+
+General Information
+
+The EQ layer is used over the UDP layer.  UDP is a connectionless
+protocol, and packets sent using UDP are not guaranteed to reach
+their destination.  The EQ layer adds error checking, acknowledgements,
+sequencing, and fragmentation.
+
+Header Flags Map
+
+Each packet start with a header containing various flags and sequence
+information.  The first 16 bits of each packet containes the following
+flags (broken into 4 4-bit nibbles):
+
+           /=+=+=+=\/=+=+=+=\ /=+=+=+=\/=+=+=+=\
+           |8|4|2|1||8|4|2|1| |8|4|2|1||8|4|2|1|
+           \=+=+=+=/\=+=+=+=/ \=+=+=+=/\=+=+=+=/
+(8) SEQEnd -/ | | |  | | |                |   |
+(4) Closing --/ | |  | | |                |   |
+(2) SEQStart ---/ |  | | |                |   |
+(1) ASQ ----------/  | | |                |   |
+=============        | | |                |   |
+(8) Fragment --------/ | |                |   |
+(4) Closing -----------/ |                |   |
+(2) ARQ -----------------/                |   |
+(1) ?                                     |   |
+=============                             |   |
+(8) ?                                     |   |
+(4) ?                                     |   |
+(2) ?                                     |   |
+(1) ?                                     |   |
+=============                             |   |
+(8) ?                                     |   |
+(4) ARSP ---------------------------------/   |
+(2) ?                                         |
+(1) SpecARQ ----------------------------------/
+
+Full Packet Map
+
+The full header of each packet can be of varying sizes, depending
+on which bits are set in the Flags-word.
+
+/=======+=======+=(ARSP?)=+=(ARQ?)=\     /==========(Fragment?)=========\
+| Flags | dwSEQ | dwARSP  | dwARQ  | ... | dwFragSEQ | dwCurr | dwTotal | ...
+\= 16b =+= 16b =+== 16b ==+= 16b ==/     \=== 16b ===+= 16b ==+== 16b ==/
+
+    /==(ASQ?)==+=(ASQ && ARQ?)=\     /=(!ACKSize?)=\
+... | ASQ_high |    ASQ_low    | ... |  dwOpCode   | ...
+    \=== 8b ===+===== 8b ======/     \==== 16b ====/
+
+    /==(!ACKSize?)==\     /=======\
+... |  ..(data)..   | ... | CRC32 |
+    \===== ?b ======/     \= 32b =/
+
+
+Mapping Information
+
+As you can see, some header data is not present, depending on which flags
+are set.
+
+dwSEQ: Seqence number.
+
+This is always sent.  If the SEQStart bit is set, then this value
+is used as the new current sequence number.  If not, then this can
+be used to see if the packet is a resend.
+
+dwARSP: ACK Response.
+
+This is only sent if the ARSP bit is set in the Flags word.  This should
+equal the 16-bit dwARQ of the packet being responded to.
+
+dwARQ: ACK Request.
+
+This is only sent if the ARQ bit is set in the Flags word.  This 16-bit
+value should be used as the dwARSP in the packet used to respond.
+
+dwFragSEQ, dwCurr, dwTotal:  Fragmentation Information.
+
+These three 16-bit values are only set if the Fragment bit is set
+in the Flags word.  
+
+dwFragSEQ - Fragment Sequence this packet belongs to.
+dwCurr - Fragment number in this fragment sequence.
+dwTotal - Total number of fragments in this fragment sequence.
+
+ASQ_high: ?.
+
+This is only sent if the ASQ bit is set in the Flags word.  I'm still
+trying to figure out exactly what this is used for.
+
+ASQ_low: ?.
+
+This is only sent if the ASQ bit and ARQ bit are set in the Flags word.
+I'm still trying to figure out exactly what this is used for.
+
+dwOpCode: Op Code (Used for dispatching).
+
+This is only sent if the packet is not a pure acknowledgement or a
+pure request.
+
+CRC32: 32-bit CRC check.
+
+This is always sent.  It is used for error checking in tranmissions.
+See the Integrity_Task for more information.
+
+
+Pure ACKnowledgements
+
+A pure acknowledgement is sent if a ARQ is pending, but no packet is sent
+in a certain amount of time (around 0.1 seconds I think).  If a packet is
+sent out before this timeout has occured, the ARSP bit, and dwARSP is set
+to dwARQ from the requesting packet.  If no packets are sent out before
+the timeout occurs, then a pure acknowledgement packet is sent with only
+ARSP and dwARSP (no OpCode or data).
+
+Pure Requests
+
+A pure request seems to be used as a sort of 'ping' to see if the other
+side of the connection is still there.  In this case, ARQ, dwARQ, and 
+SpecARQ are set.  When SpecARQ is set, this requests that a reponse
+be sent immediately, without waiting for a timeout.
+
+
+Packet Resends
+
+If an ARQ is sent, then a ARSP is expected to be received in a certain
+amount of time (again not sure but I think its 0.1 seconds or so).  If
+no ARSP is receive when the timeout occurs, the packet is resent.
+
+
+Example Session
+
+Here is an example of a session between the client and the login server.
+
+(1) Client requests version information.
+23:57:05.755261 client.1538 > server.10002: 14
+0x0000   3200 0000 09b5 0100 5900 a361 6da7             2.......Y..am.
+
+Flags set:
+SEQStart - This is the start of the client sequence.
+ASQ - Not quite sure yet.
+ARQ - The client is request the client acknowledgement receipt of packet.
+
+Header Data:
+dwSEQ - 0x0000: The client is starting its sequence at 0x0000.
+dwARQ - 0x09bd: Use this word as dwARSP when responding.
+ASQ_high - 0x01: Not sure.
+ASQ_low - 0x00: Not sure.
+OpCode - 0x5900: Request Version.
+CRC32 - 0xa3616da7: Used to check for errors in transmission.
+
+(2) Server sends version information.
+23:57:05.756179 server.10002 > client.1538: 32
+0x0000   3204 0000 09bd 339a 0100 5900 322d 3234        2.....3...Y.2-24
+0x0010   2d32 3030 3120 3133 3a31 3700 5bee b95a        -2001.13:17.[..Z
+
+Flags set:
+SEQStart - This is the start of the server sequence.
+ASQ - Not sure.
+ARQ - The server is requesting ACK.
+ARSP - This is a response to an ARQ sent by the client.
+
+Header Data:
+dwSEQ - 0x0000: The server is starting its sequence at 0x0000.
+dwARSP - 0x09bd: Respond to ARQ 0x09bd.
+dwARQ - 0x339a: Use this word as dwARSP when responding.
+ASQ_high - 0x01: Not sure.
+ASQ_low - 0x00: Not sure.
+OpCode - 0x5900: Send Version.
+CRC32 - 0x5beeb95a: CRC check.
+
+Data:
+This sends a null terminated string: "2-24-2001.13:17" as its version.
+
+
+(3) Client sends login info.
+23:57:05.842104 client.1538 > server.10002: 61
+0x0000   1204 0001 339a 09be 0101 0100 4669 7a62        ....3..$....Fizb
+0x0010   616e 3100 1db5 28f1 02a5 cde2 a513 23da        an1...X2..b.V..!
+0x0020   19d5 5dae b12d e6af e53b ed50 6e6f 6e65        ...O.,...e..none
+0x0030   0000 0000 0000 0000 00e4 a6e1 e2               ...........m.
+
+Flags set:
+ASQ - Not sure.
+ARQ - ACK Request.
+ARSP - ACK Response.
+
+Header Data:
+dwSEQ - 0x0001: This is seqence number 0x0001 from the client.
+                Upon receiving, ignore any further packets <= dwSEQ.
+dwARSP - 0x339a: Response to ARQ 0x339a.
+dwARQ - 0x09be: Use this for responding.
+ASQ_high - 0x01: Not sure.
+ASQ_low - 0x01: Not sure.
+dwOpCode - 0x0100: Send Login Info.
+CRC32 - 0xe4a6e1e2: CRC Check.
+
+Data:
+The first thing sent is a null terminated username ("Fizban1" in this case).
+After that, a 24-byte password hash is sent.  The rest of the packet
+doesn't seem to change between logins (not sure what 'none' is for).
+
+(4) Server sends session id.
+23:57:05.84957 server.10002 > client.1538: 33
+0x0010   1204 0001 09be 339b 0101 0400 3132 3334        ......3.....1234
+0x0020   3536 3738 3900 756e 7573 6564 00b9 85f1        56789.unused....
+0x0030   98                                             .
+
+Flags set:
+ASQ - Not sure.
+ARQ - ACK Request.
+ARSP - ACK Response.
+
+Header data:
+dwSEQ - 0x0001: This is seqence number 0x0001 from the server.
+                Upon receiving, ignore any further packets <= dwSEQ.
+dwARSP - 0x09be: Response to ARQ 0x09be.
+dwARQ - 0x339b: Use this for responding.
+ASQ_high - 0x01: Not sure.
+ASQ_low - 0x01: Not sure.
+dwOpCode - 0x0400: Send Login Info.
+CRC32 - 0xb985f1: CRC Check.
+
+Data:
+The first thing sent is a string which contains the session id.
+In this case it is "123456789".  The string 'unused' is always
+sent, it seems.
+
+
+(5) Client sends pure acknowledement.
+23:57:06.293296 client.1552 > xylor.10002: 10
+0x0000   0004 0002 339b d470 fcf1                       ....3..p..
+
+Flags set:
+ARSP - This is only a response to an ARQ.
+
+Header Data:
+dwSEQ - 0x0002: This is client sequence number 0x0002.
+dwARSP - 0x339b: This is a response to ARQ 0x339b.
+CRC32 - 0xd470fcf1: CRC Check.
+
+dwARSP - 0x339a: Response to ARQ 0x339a.
+dwARQ - 0x09be: Use this for responding.
+
+
+(6) Client requests update.
+23:57:06.578329 client.1552 > xylor.10002: 14
+0x0000   1200 0003 09bf 0102 5200 2346 be93             ........R.#F..
+
+Flags set:
+ASQ - Not sure.
+ARQ - ACK Request.
+
+Header Data:
+dwSEQ - 0x0003: This is client sequence number 0x0003.
+dwARQ - 0x09bf: Use this for responding.
+ASQ_high - 0x01: Not sure.
+ASQ_low - 0x02: Not sure.
+dwOpCode - 0x5200: Request update.
+CRC32 - 0x2346be93: CRC Check.
+
+Data:
+N/A
+
+(7) Client requests server list.
+23:57:06.578861 client.1552 > xylor.10002: 18
+0x0000   1200 0004 09c0 0103 4600 0000 0000 365f        ........F.....6_
+0x0010   e8ce                                           ..
+
+Flags set:
+ASQ - Not Sure.
+ARQ - ACK Request.
+
+Header Data:
+dwSEQ - 0x0004: This is client sequence number 0x0004.
+dwARQ - 0x09bf: Use this for responding.
+ASQ_high - 0x01: Not sure.
+ASQ_low - 0x02: Not sure.
+dwOpCode - 0x4600: Request server list.
+CRC32 - 0x365fe8ce: CRC Check.
+
+Data:
+Not sure.
+
+
+(8) Server sends update.
+23:57:06.586646 xylor.10002 > client.1552: 47
+0x0000   1204 0002 09bf 339c 0102 5200 0100 0000        ......3...R.....
+0x0010   4f70 656e 5175 6573 7420 456d 756c 6174        OpenQuest.Emulat
+0x0020   6f72 202d 2058 796c 6f72 0076 07fb 58          or.-.Xylor.v..X
+
+Flags set:
+ASQ - Not sure.
+ARQ - ACK Request.
+ARSP - ACK Response.
+
+Header Data:
+dwSEQ - Server sequence number 0x0002.
+dwARSP - Responding to ARQ 0x09bf.
+dwARQ - Use this for responding.
+ASQ_high - 0x01: Not sure.
+ASQ_low - 0x02: Not sure.
+dwOpCodes - 0x5200: Send update.
+CRC32 - 0x7607fb58: CRC Check.
+
+Data:
+First 32-bits seems to be flags of some sort.  After that is a 
+null terminated Banner that is shown on the server selection screen.
+
+(9) Server sends server list.
+23:57:06.587935 xylor.10002 > client.1552: 63
+0x0000   1204 0003 09c0 339d 0103 4600 0100 0000        ......3...F.....
+0x0010   4f70 656e 5175 6573 7420 5465 7374 2057        OpenQuest.Test.W
+0x0020   6f72 6c64 006f 7065 6e71 7565 7374 2e64        orld.openquest.d
+0x0030   6873 2e6f 7267 00e8 0300 007f 93b9 cd          hs.org.........
+
+Flags set:
+ASQ - Not sure.
+ARQ - ACK Request.
+ARSP - ACK Response.
+
+Header Data:
+dwSEQ - 0x0003: Server sequence number 0x0003.
+dwARSP - 0x09c0: Reponding to ARQ number 0x09c0.
+dwARQ - 0x339d: Use this for responding.
+ASQ_high - 0x01: Not sure.
+ASQ_low - 0x03: Not sure.
+dwOpCode - 0x4600: Send server list.
+CRC32 - 0x7f93b9cd: CRC Check.
+
+Data:
+A list of servers to list on the selection screen.  The chat server
+also seems to be sent in this packet.  The format seems to be
+32-bits first (number of people on server?), null terminated 
+server-name string, null terminated hostname, and 32-bit value (flags?).
+
+(10) Client sends pure acknowledement.
+23:57:06.633771 client.1552 > xylor.10002: 10
+0x0000   0004 0005 339d 385c 4f41                       ....3.8\OA
+
+Flags set:
+ARSP - ACK Response only.
+
+Header data:
+dwSEQ - Client sequence number 0x0005.
+dwARSP - Responding to ARQ 0x339d.
+CRC32 - 0x385c4f41: CRC Check.
+
+Data:
+N/A
+
+

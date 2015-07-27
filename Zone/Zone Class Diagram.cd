@@ -1,0 +1,1362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="tHateEntry" Collapsed="true">
+    <Position X="13.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACABAAgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Source\hate_list.cpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Database" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UNRiAdAAPMCYONUWAKjkbgVFCDEgSoKETE5EAwBEYOc=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\database.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EQTime" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEEQAAAAAAAAAEAAAAAIIAAAQECAAgMBIDBAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\EQTime.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ListElement&lt;TYPE&gt;" Collapsed="true">
+    <Position X="18.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIAIBEAAAAAAAAAAABQAAAgAgAAIAAABQAAYAAEA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\linked_list.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedList&lt;TYPE&gt;" Collapsed="true">
+    <Position X="15.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAABBAAAAAAAAUABQAAAACAAQAAAAAAAABAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\linked_list.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LinkedListIterator&lt;TYPE&gt;" Collapsed="true">
+    <Position X="17" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAIECBABAAAAgAAAAAAAAwAgQAAIFAAAAAAACA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\linked_list.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mutex" Collapsed="true">
+    <Position X="22.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAEAAAAAAAAAAAAABAAAAAAAIAAAAgAAAAAQA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\Mutex.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LockMutex" Collapsed="true">
+    <Position X="20.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\Mutex.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyQueueNode&lt;T&gt;" Collapsed="true">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAAIAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\queue.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyQueue&lt;T&gt;" Collapsed="true">
+    <Position X="24" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAgAAAAAAAAAAAAIgCgAAAAAAAAAAoAAAAAgA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\queue.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Seperator2" Collapsed="true">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAABCAAAAAAAAAAAAAAgAAAAAAAAQ=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\seperator-2.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Seperator3" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAACAAAgAAAAAAAAAAAAAAAAACAg=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\seperator-2.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Seperator4" Collapsed="true">
+    <Position X="10" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAECBA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\seperator-2.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Seperator" Collapsed="true">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAEAEAAAAACAACAAgAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\seperator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ServerPacket" Collapsed="true">
+    <Position X="11.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAEAAAAAAAAAAIAABAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\EQC\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Timer" Collapsed="true">
+    <Position X="15.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAkAAggADAAAJAAQACCCAAAACEAAAQAAAQgAEEEBAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\timer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EQC::Common::Network::EQPacket" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAIAQAAAIAAAAIAgAAgAI4ACIAAkQABgEAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\EQPacket.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EQC::Common::Network::EQPacketManager" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAgIFBAgIAQCBCAAEIAAAgJoAQBBAgAAgEAgiAQgM=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\EQPacketManager.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EQC::Common::Network::Fragment" Collapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABEQAAAACAAIAAAAAAAAAAAAIAAAAQAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\Fragment.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EQC::Common::Network::FragmentGroup" Collapsed="true">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>RAIhBAAAAAAAAAgABAQAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\FragmentGroup.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EQC::Common::Network::FragmentGroupList" Collapsed="true">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAABAAAAABAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\FragmentGroupList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EQC::Common::DatabaseHandler" Collapsed="true">
+    <Position X="27" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAABAAABAAAAAAAAAAgBICgAAAAAAAAFAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\DatabaseHandler.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="GuildManageStatus_Struct" Collapsed="true">
+    <Position X="24" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAEAAQIAAAAAAAAAAA=</HashCode>
+      <FileName>Source\guild_process.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="GuildInviteAccept_Struct" Collapsed="true">
+    <Position X="22.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="npcDecayTimes_Struct" Collapsed="true">
+    <Position X="6.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAEAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\database.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CharacterSelect_Struct" Collapsed="true">
+    <Position X="11.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAgAAAAAAgAAQAAUEAAACAAAAoAQAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerZoneEntry_Struct" Collapsed="true">
+    <Position X="10" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAUDAmAAAAAAAgAAAEAAgAAYBAekIAGAAABwDwCQAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NewZone_Struct" Collapsed="true">
+    <Position X="4.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAEAIIgAAAAAIgAAACEAQAAAEAAAAAADAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="MemorizeSpell_Struct" Collapsed="true">
+    <Position X="13.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAABA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CastOn_Struct" Collapsed="true">
+    <Position X="3" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAABACAAAAAIAAAAAAAAAAAAAgAAAACAJAAAAQAABA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="InterruptCast_Struct" Collapsed="true">
+    <Position X="18.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAACA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ManaChange_Struct" Collapsed="true">
+    <Position X="11.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQBA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SwapSpell_Struct" Collapsed="true">
+    <Position X="3" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="BeginCast_Struct" Collapsed="true">
+    <Position X="13.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAgBA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Buff_Struct" Collapsed="true">
+    <Position X="20.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAADoAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CastSpell_Struct" Collapsed="true">
+    <Position X="4.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAgAAAAAACAAARABA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SpawnAppearance_Struct" Collapsed="true">
+    <Position X="6.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAABAAACEQAAAAQAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SpellBuff_Struct" Collapsed="true">
+    <Position X="15.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAJgAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>c:\EQC\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SpellBuffFade_Struct" Collapsed="true">
+    <Position X="17" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAgAAAAAFAgAAAgAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="PlayerProfile_Struct" Collapsed="true">
+    <Position X="15.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IEAFBVKMABIqRkgAgUAIiACADAeMgCaiIgBhITAAbmA=</HashCode>
+      <FileName>c:\EQC\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ClientTarget_Struct" Collapsed="true">
+    <Position X="17" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAgA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Spawn_Struct" Collapsed="true">
+    <Position X="4.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ISQAAEqCUgAQAgQgCNQIgACIFYuEAESAAAAACEAQkAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NewSpawn_Struct" Collapsed="true">
+    <Position X="3" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DeleteSpawn_Struct" Collapsed="true">
+    <Position X="13.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ChannelMessage_Struct" Collapsed="true">
+    <Position X="10" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAABABAAAAAAgEAAAAAAAAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="WearChange_Struct" Collapsed="true">
+    <Position X="10" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAEBAAEAAACAAgAAIBAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="BindWound_Struct" Collapsed="true">
+    <Position X="15.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAABAAAAAABAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DropItem_Struct" Collapsed="true">
+    <Position X="22.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAYGAAAAAAAgEAgAAAAAAIAAAQAAAQQAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Object_Struct" Collapsed="true">
+    <Position X="8.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IACAAoAAAAEAACAAIAUAAQAAAAAAAAAgAAAgAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ClickObject_Struct" Collapsed="true">
+    <Position X="15.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAEAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Beg_Struct" Collapsed="true">
+    <Position X="11.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABEBAAAAAAAAAIIAAAAAAAAAAAAAIAAAAAAgAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DropCoins_Struct" Collapsed="true">
+    <Position X="20.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIEAAAAAAEgAAAAAAgBgIAAAAAAAQQAAAg=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ZoneChange_Struct" Collapsed="true">
+    <Position X="13.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAABAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Attack_Struct" Collapsed="true">
+    <Position X="6.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAgAAAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Action_Struct" Collapsed="true">
+    <Position X="4.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAIAIAIAAAAAAAABAAAAAQCAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Consider_Struct" Collapsed="true">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAABAAAAAAAAAAAAAAAAAAAAAAAAAAIAAEAAgAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ConsentRequest_Struct" Collapsed="true">
+    <Position X="22.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ConsentResponse_Struct" Collapsed="true">
+    <Position X="24" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAIAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Death_Struct" Collapsed="true">
+    <Position X="11.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAgAEgABAAAAAAAAABAAAAAAAAAAgAABA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SpawnPositionUpdate_Struct" Collapsed="true">
+    <Position X="10" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IQAAAALQAIAQAAAgCAAAAAAAAAAAAAAAAAAAAAAAkAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SpawnPositionUpdates_Struct" Collapsed="true">
+    <Position X="11.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SpawnHPUpdate_Struct" Collapsed="true">
+    <Position X="8.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAgAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Stamina_Struct" Collapsed="true">
+    <Position X="18.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAIAAAAAAAAAI=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Resurrect_Struct" Collapsed="true">
+    <Position X="18.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAABAAEAAgAAAAAAAAAAIAQAEAAAPABAABgAQAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SpecialMesg_Struct" Collapsed="true">
+    <Position X="13.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQCA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LevelUpdate_Struct" Collapsed="true">
+    <Position X="3" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ExpUpdate_Struct" Collapsed="true">
+    <Position X="11.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Item_Struct" Collapsed="true">
+    <Position X="22.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAQFQAAAgAAIAAwAAAABAVAAAwAEAAAgAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SummonedItem_Struct" Collapsed="true">
+    <Position X="22.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Consume_Struct" Collapsed="true">
+    <Position X="4.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAAgAACAQACAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="MoveItem_Struct" Collapsed="true">
+    <Position X="22.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAEAAAEAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="MoveCoin_Struct" Collapsed="true">
+    <Position X="20.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAAAIAAAAAgAAAAAAAAAAAEAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Surname_Struct" Collapsed="true">
+    <Position X="24" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAABAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="MoneyOnCorpse_Struct" Collapsed="true">
+    <Position X="18.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAUAIAAAAAAAAAAAAAAgAAAAAAAACAgAAAAQACAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ItemOnCorpse_Struct" Collapsed="true">
+    <Position X="24" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LootingItem_Struct" Collapsed="true">
+    <Position X="8.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAgAAAABAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="GMZoneRequest_Struct" Collapsed="true">
+    <Position X="10" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAACAAAAAAAAAAAICAAAAAAQAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="GMSummon_Struct" Collapsed="true">
+    <Position X="6.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAACAABgAAAAAAAACAABgAQQAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="GMSurname_Struct" Collapsed="true">
+    <Position X="8.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAABAABAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Duel_Struct" Collapsed="true">
+    <Position X="24" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DuelResponse_Struct" Collapsed="true">
+    <Position X="3" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAECAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CombatAbility_Struct" Collapsed="true">
+    <Position X="18.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Instill_Doubt_Struct" Collapsed="true">
+    <Position X="17" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQgYCAQAAAAQAAAAgBAAAIAAgAAAAAAAQAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="PickPockets_Struct" Collapsed="true">
+    <Position X="13.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAIAAAAAAAAAAAAAAAgAAAQBEQACAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="UseAbility_Struct" Collapsed="true">
+    <Position X="8.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="GiveItem_Struct" Collapsed="true">
+    <Position X="17" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAACQAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CancelTrade_Struct" Collapsed="true">
+    <Position X="24" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Random_Struct" Collapsed="true">
+    <Position X="17" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LFG_Struct" Collapsed="true">
+    <Position X="4.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEACAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="GMGoto_Struct" Collapsed="true">
+    <Position X="22.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="TimeOfDay_Struct" Collapsed="true">
+    <Position X="4.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAkAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAiAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Merchant_Click_Struct" Collapsed="true">
+    <Position X="15.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIEAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Merchant_Purchase_Struct" Collapsed="true">
+    <Position X="17" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAEA4AMAAAAAAAAgAACAAAAAAAAAgBA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Item_Shop_Struct" Collapsed="true">
+    <Position X="20.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAQCAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Illusion_Struct" Collapsed="true">
+    <Position X="11.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAEAAAAABAAAAAAQAgAAAAAQEAgAAAAAAAAAAABA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CPlayerItems_packet_Struct" Collapsed="true">
+    <Position X="8.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="CPlayerItems_Struct" Collapsed="true">
+    <Position X="10" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SkillUpdate_Struct" Collapsed="true">
+    <Position X="22.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAACACAAAAAAQAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ZoneUnavail_Struct" Collapsed="true">
+    <Position X="15.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="GroupInvite_Struct" Collapsed="true">
+    <Position X="15.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAABAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="GroupUpdate_Struct" Collapsed="true">
+    <Position X="18.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAABIAAAAAAAAAAAAAAAAAEAAAACAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="GroupFollow_Struct" Collapsed="true">
+    <Position X="13.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="GroupInviteDecline_Struct" Collapsed="true">
+    <Position X="17" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAABAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="GroupDisband_Struct" Collapsed="true">
+    <Position X="11.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAACCAAAAAQAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ChangeLooks_Struct" Collapsed="true">
+    <Position X="6.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAACAgAAAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Trade_Window_Struct" Collapsed="true">
+    <Position X="6.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Give_Struct" Collapsed="true">
+    <Position X="15.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="PetitionClientUpdate_Struct" Collapsed="true">
+    <Position X="11.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAkAAAQAAAAAAAAACAAAAAAAAAAACQAQAAAAAAgAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Petition_Struct" Collapsed="true">
+    <Position X="10" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAEAAAAAAAAABCAAAAQAABBAAAQEAJACgAAgAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Bug_Report_Struct" Collapsed="true">
+    <Position X="22.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAQIAAAAAAAAAAAAAAAAAAAAAAAIAAQA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Who_All_Struct" Collapsed="true">
+    <Position X="11.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIEAAAAAAABAAAAQAAAAAAAAAAACAAAAAAABAIAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Stun_Struct" Collapsed="true">
+    <Position X="20.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Combine_Struct" Collapsed="true">
+    <Position X="20.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAABAAA4AcAAAAAAAAAAAAAIAAAAAAAAAI=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Emote_Text" Collapsed="true">
+    <Position X="4.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAACA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Social_Action_Struct" Collapsed="true">
+    <Position X="24" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAQAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="InspectRequest_Struct" Collapsed="true">
+    <Position X="15.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="InspectAnswer_Struct" Collapsed="true">
+    <Position X="13.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAQAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SetDataRate_Struct" Collapsed="true">
+    <Position X="15.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SetServerFilter_Struct" Collapsed="true">
+    <Position X="17" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SetServerFilterAck_Struct" Collapsed="true">
+    <Position X="18.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="GMName_Struct" Collapsed="true">
+    <Position X="4.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAECACAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="GMDelCorpse_Struct" Collapsed="true">
+    <Position X="18.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAABAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="GMKick_Struct" Collapsed="true">
+    <Position X="24" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAABAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="GMKill_Struct" Collapsed="true">
+    <Position X="3" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAABAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="GMEmoteZone_Struct" Collapsed="true">
+    <Position X="20.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="BookText_Struct" Collapsed="true">
+    <Position X="18.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="BookRequest_Struct" Collapsed="true">
+    <Position X="17" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Door_Struct" Collapsed="true">
+    <Position X="15.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAABAAAEgAAAAAAQEAIIAAAAAAQAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DoorSpawns_Struct" Collapsed="true">
+    <Position X="18.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ClickDoor_Struct" Collapsed="true">
+    <Position X="13.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAABEAAAAAAAAABQAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="DoorOpen_Struct" Collapsed="true">
+    <Position X="17" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LSAuth_Struct" Collapsed="true">
+    <Position X="10" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAgAAAEAEAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LoginInfo_Struct" Collapsed="true">
+    <Position X="6.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAACAAQAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="EnterWorld_Struct" Collapsed="true">
+    <Position X="6.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NameApproval_Struct" Collapsed="true">
+    <Position X="24" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAgAAAACAABgEAAAAAAACAQAACAQAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ConsumeAlcohol_Struct" Collapsed="true">
+    <Position X="6.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAACAAQAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerMOTD_Struct" Collapsed="true">
+    <Position X="20.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ChangeWeather_Struct" Collapsed="true">
+    <Position X="8.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABCAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="BackSlashTarget_Struct" Collapsed="true">
+    <Position X="10" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAgAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="BackSlashAssist_Struct" Collapsed="true">
+    <Position X="8.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAgAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="EQPACKET_HDR_INFO" Collapsed="true">
+    <Position X="8.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABgAAAKAAEAgAAAkAAACAACgABAAAAAAAAAAggAAAAg=</HashCode>
+      <FileName>c:\EQC\Common\Include\EQPacket.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="FRAGMENT_INFO" Collapsed="true">
+    <Position X="13.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAQAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\EQC\Common\Include\EQPacket.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_0093_1" Collapsed="true">
+    <Position X="0.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\EQPacketManager.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ACK_INFO" Collapsed="true">
+    <Position X="3" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIIAAAIAAAwAAAAAA=</HashCode>
+      <FileName>c:\EQC\Common\Include\EQPacketManager.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="eqTimeOfDay" Collapsed="true">
+    <Position X="10" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\EQTime.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="st_queue" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAABAAAAAgAACQAAAAAAAAAAAAAAgAQAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\queues.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SPackSendQueue" Collapsed="true">
+    <Position X="3" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerZoneStateChange_struct" Collapsed="true">
+    <Position X="13.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAABAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerChannelMessage_Struct" Collapsed="true">
+    <Position X="22.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAIBAAAAAAgAAAAAAAgAAAIAAAAAEAAAAAAAACA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerEmoteMessage_Struct" Collapsed="true">
+    <Position X="4.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAAAAACA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerClientList_Struct" Collapsed="true">
+    <Position X="24" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAEAAAAAAAgAEAgAAARAQAAEEAACAAAQAAAAAACA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerZonePlayer_Struct" Collapsed="true">
+    <Position X="11.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAIAAAAAAAAACABAAAAQAAAEAAAAAAAAAACAAAQ=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerKickPlayer_Struct" Collapsed="true">
+    <Position X="10" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgBAAAAAAAAEAAAAAAAAAACAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerGuildCommand_Struct" Collapsed="true">
+    <Position X="8.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAIAAAAAAAAAIAIAAAAAAAEAAQAAAAAAAEAAACA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerLSInfo_Struct" Collapsed="true">
+    <Position X="17" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAIEAAAAAAAAQggAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerLSStatus_Struct" Collapsed="true">
+    <Position X="18.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerLSClientAuth" Collapsed="true">
+    <Position X="15.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAEAAAAAEAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerSystemwideMessage" Collapsed="true">
+    <Position X="3" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAEAAAAABAAAAAAAAAAAAACA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerConnectInfo" Collapsed="true">
+    <Position X="3" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerGMGoto_Struct" Collapsed="true">
+    <Position X="6.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAAAAAEAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerMultiLineMsg_Struct" Collapsed="true">
+    <Position X="22.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAACA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerLock_Struct" Collapsed="true">
+    <Position X="13.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="SetServerMotd_Struct" Collapsed="true">
+    <Position X="20.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerUptime_Struct" Collapsed="true">
+    <Position X="6.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerPetitionUpdate_Struct" Collapsed="true">
+    <Position X="24" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerWhoAll_Struct" Collapsed="true">
+    <Position X="8.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAIAAAAABAAAAQAAAAAAAAEAACAAAAAAABAIAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerKillPlayer_Struct" Collapsed="true">
+    <Position X="11.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAABAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ServerUpdateGM_Struct" Collapsed="true">
+    <Position X="4.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="RezzPlayer_Struct" Collapsed="true">
+    <Position X="20.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\servertalk.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="EQC::Common::Network::GuildRankLevel_Struct" Collapsed="true">
+    <Position X="3" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAEAAAAAAAAABEAEAAAQAAAAABACAAAAAAAAAAIAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\GuildNetwork.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="EQC::Common::Network::Guild_Struct" Collapsed="true">
+    <Position X="4.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\GuildNetwork.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="EQC::Common::Network::GuildsListEntry_Struct" Collapsed="true">
+    <Position X="8.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgABAAEAAACAQAAAAQAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\GuildNetwork.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="EQC::Common::Network::GuildsList_Struct" Collapsed="true">
+    <Position X="6.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\GuildNetwork.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="EQC::Common::Network::GuildUpdate_Struct" Collapsed="true">
+    <Position X="10" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\GuildNetwork.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="EQC::Common::Network::GuildCommand_Struct" Collapsed="true">
+    <Position X="20.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABEAAAAQAAAAAAAAAAAAAAAAAAQAAAIAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\GuildNetwork.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="int8" Collapsed="true">
+    <Position X="6.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\types.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="int16" Collapsed="true">
+    <Position X="3" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\types.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="int32" Collapsed="true">
+    <Position X="4.75" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\types.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="uint8" Collapsed="true">
+    <Position X="18.75" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\types.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="sint8" Collapsed="true">
+    <Position X="11.75" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\types.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="uint16" Collapsed="true">
+    <Position X="15.25" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\types.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="sint16" Collapsed="true">
+    <Position X="8.25" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\types.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="uint32" Collapsed="true">
+    <Position X="17" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\types.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="sint32" Collapsed="true">
+    <Position X="10" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\types.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ulong" Collapsed="true">
+    <Position X="20.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\types.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ushort" Collapsed="true">
+    <Position X="22.25" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\types.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="uchar" Collapsed="true">
+    <Position X="13.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\types.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="MySendPacketStruct" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\EQPacketManager.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="QUEUE" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\queues.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Enum Name="SKILLTYPE" Collapsed="true">
+    <Position X="10" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAgIEAAAAAAAAAAACAAAAAAAAAABAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CONSUMEFOODTYPE" Collapsed="true">
+    <Position X="3" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="HOWCONSUMEDTYPE" Collapsed="true">
+    <Position X="8.25" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\eq_packet_structs.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="direction" Collapsed="true">
+    <Position X="4.75" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\linked_list.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="EQC::Common::Network::GUILDRANK" Collapsed="true">
+    <Position X="6.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAIQAAAAACAAAAQAAAAAAAAAgg=</HashCode>
+      <FileName>c:\Projects\EQ\eqclassic\Common\Include\GuildNetwork.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

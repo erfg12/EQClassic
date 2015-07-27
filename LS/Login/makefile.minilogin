@@ -1,0 +1,28 @@
+APP=minilogin
+SF=../common/EQNetwork.o \
+   ../common/timer.o ../common/packet_dump.o \
+   ../common/Mutex.o ../common/unix.o ../common/MiscFunctions.o \
+   ../common/TCPConnection.o ../common/packet_functions.o \
+   ../common/dbcore.o ../common/debug.o ../common/md5.o ../common/crc32.o \
+   logindatabase.o client.o net.o LWorld.o
+
+#CC=/home/per/gcc-2.95.2/gcc/g++
+#LINKER=/home/per/gcc-2.95.2/gcc/g++
+CC=gcc
+LINKER=gcc
+WFLAGS=-Wall -Wuninitialized -Wwrite-strings -Wcast-qual -Wbad-function-cast -Wstrict-prototypes -Wno-deprecated -Wnested-externs -Wcomment -Wcast-align
+COPTS=$(WFLAGS) -g -march=i686 -O3 -pthread -pipe -DFX -D_GNU_SOURCE -DINVERSEXY -I/usr/include/mysql -DMINILOGIN
+#COPTS=-O3 -fomit-frame-pointer -m486 -Wall -pipe -DFX
+LINKOPTS=-L. -lstdc++ -lm -L/usr/lib/mysql -lmysqlclient -lz
+
+all: $(APP)
+
+$(APP): $(SF)
+	$(LINKER) $(COPTS) $(OBJS) $^ $(LINKOPTS) -o $@
+
+clean:
+	rm $(SF) $(APP)
+
+%.o: %.cpp
+	$(CC) -c $(COPTS) $< -o $@
+	

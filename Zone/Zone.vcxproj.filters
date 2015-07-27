@@ -1,0 +1,573 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common Headers">
+      <UniqueIdentifier>{b6c7e678-8879-4e9c-812c-0673cd168482}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EQC">
+      <UniqueIdentifier>{bbb04db9-e6e2-4af5-a0d0-98b6c3b58235}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EQC\Headers">
+      <UniqueIdentifier>{9ed82729-2c1e-4cd4-a594-0ead842bb5c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EQC\Sources">
+      <UniqueIdentifier>{2dc0f55d-2cfc-40ec-be9a-bce3ab29ac05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zone Headers">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Zone Headers\Spells">
+      <UniqueIdentifier>{fc2d8b36-166f-4bdc-b5ff-af5b451323fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zone Headers\Quests">
+      <UniqueIdentifier>{0d62ffba-5852-4498-8059-0db1b8b132b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zone Headers\Opcode Packet Tester">
+      <UniqueIdentifier>{bd4127be-0928-4aa4-b3f2-df9ad2a320ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zone Headers\Client">
+      <UniqueIdentifier>{8bd2a2f5-0296-4f3e-baf8-ece64e85cb65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Sources">
+      <UniqueIdentifier>{ff508d66-8a14-47ff-bfb7-c4b653212f4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zone Sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Zone Sources\Active Skills">
+      <UniqueIdentifier>{7f353aa0-eefe-40e8-91af-767f38f79e1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zone Sources\Spells">
+      <UniqueIdentifier>{50ab7a06-f34c-4935-abbb-491b6e0a254a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zone Sources\Client">
+      <UniqueIdentifier>{a17e8dd1-3296-484c-936d-a803d0668a65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zone Sources\Guilds">
+      <UniqueIdentifier>{8ead53e5-009d-4fbe-8135-f4a0b2c7da39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zone Sources\Quests">
+      <UniqueIdentifier>{15aaab57-0f41-4171-a68c-0182b4479447}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zone Sources\Opcode Packet Tester">
+      <UniqueIdentifier>{f3b7a5d0-4be0-4f97-bf85-a5ae08e36812}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Zone Sources\Perl Mappings">
+      <UniqueIdentifier>{3b56d7ba-4fdb-42f8-8ea6-4be4d69192b7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\Include\classes.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\config.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\container.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\database.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\DatabaseHandler.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\deity.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\eq_opcodes.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\eq_packet_structs.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\EQCheckTable.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\EQFragment.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\EQPacket.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\EQPacketManager.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\Fragment.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\FragmentGroup.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\FragmentGroupList.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\GuildNetwork.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\inventory.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\Item.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\item_fieldlist.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\languages.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\linked_list.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\Logger.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\MiscFunctions.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\moremath.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\Mutex.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\packet_dump.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\packet_dump_file.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\packet_functions.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\queue.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\queues.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\races.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="randomize.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\seperator-2.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\seperator.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\servertalk.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\timer.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\types.h">
+      <Filter>Common Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EQC\Include\EQCException.hpp">
+      <Filter>EQC\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EQC\Include\EQCUtils.hpp">
+      <Filter>EQC\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EQC\Include\PacketUtils.hpp">
+      <Filter>EQC\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\boats.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ClientList.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Debug.hpp">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\entity.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\EntityList.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\faction.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\forage.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\groups.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\hate_list.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\loottable.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\map.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\mob.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\net.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\nodes.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\npc.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\NpcAI.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\object.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PetitionManager.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\petitions.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PlayerCorpse.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="priorityqueue.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\projectile.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\skills.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\spawn2.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\spawngroup.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\watermap.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\worldserver.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\zone.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\zonedump.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\ZoneGuildManager.h">
+      <Filter>Zone Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\spdat.h">
+      <Filter>Zone Headers\Spells</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Spell.hpp">
+      <Filter>Zone Headers\Spells</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\SpellsHandler.hpp">
+      <Filter>Zone Headers\Spells</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\embparser.h">
+      <Filter>Zone Headers\Quests</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\embperl.h">
+      <Filter>Zone Headers\Quests</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\event_codes.h">
+      <Filter>Zone Headers\Quests</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\features.h">
+      <Filter>Zone Headers\Quests</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\questmgr.h">
+      <Filter>Zone Headers\Quests</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\perlpacket.h">
+      <Filter>Zone Headers\Opcode Packet Tester</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\client.h">
+      <Filter>Zone Headers\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Client_Commands.h">
+      <Filter>Zone Headers\Client</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\EQC\Sources\EQCException.cpp">
+      <Filter>EQC\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EQC\Sources\EQCUtils.cpp">
+      <Filter>EQC\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EQC\Sources\PacketUtils.cpp">
+      <Filter>EQC\Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\classes.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\container.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\database.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\DatabaseHandler.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\EQFragment.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\EQPacket.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\EQPacketManager.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\Fragment.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\FragmentGroup.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\FragmentGroupList.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\GuildDatabase.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\Item.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\languages.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\Logger.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\MiscFunctions.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\moremath.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\Mutex.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\packet_dump.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\packet_dump_file.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\packet_functions.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\PlayerPacketFactory.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\races.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\ServerPacketFactory.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\timer.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\attack.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\boats.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Debug.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\entity.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\EntityList.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\faction.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\forage.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\groups.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\hate_list.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\loottables.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Map.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\mob.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\net.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="nodes.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\npc.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\NpcAI.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\object.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\PetitionManager.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\petitions.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\PlayerCorpse.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\priorityqueue.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\projectile.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\spawn2.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\spawngroup.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Tradeskills.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\watermap.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\WorldServer.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\WorldServer_Process.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\zone.cpp">
+      <Filter>Zone Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Beg.cpp">
+      <Filter>Zone Sources\Active Skills</Filter>
+    </ClCompile>
+    <ClCompile Include="BindWound.cpp">
+      <Filter>Zone Sources\Active Skills</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Fishing.cpp">
+      <Filter>Zone Sources\Active Skills</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\InstillDoubt.cpp">
+      <Filter>Zone Sources\Active Skills</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Mend.cpp">
+      <Filter>Zone Sources\Active Skills</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Spell.cpp">
+      <Filter>Zone Sources\Spells</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SpellBonuses.cpp">
+      <Filter>Zone Sources\Spells</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SpellData.cpp">
+      <Filter>Zone Sources\Spells</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SpellEffects.cpp">
+      <Filter>Zone Sources\Spells</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\spells.cpp">
+      <Filter>Zone Sources\Spells</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SpellsHandler.cpp">
+      <Filter>Zone Sources\Spells</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\client.cpp">
+      <Filter>Zone Sources\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Client_Commands.cpp">
+      <Filter>Zone Sources\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Client_Messaging.cpp">
+      <Filter>Zone Sources\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Client_Packet.cpp">
+      <Filter>Zone Sources\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Client_Process.cpp">
+      <Filter>Zone Sources\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ClientList.cpp">
+      <Filter>Zone Sources\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\guild_process.cpp">
+      <Filter>Zone Sources\Guilds</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\ZoneGuildManager.cpp">
+      <Filter>Zone Sources\Guilds</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ZoneGuildManager_Packets.cpp">
+      <Filter>Zone Sources\Guilds</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ZoneGuildManager_Process.cpp">
+      <Filter>Zone Sources\Guilds</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\ZoneGuildManager_WorldProcess.cpp">
+      <Filter>Zone Sources\Guilds</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\embparser.cpp">
+      <Filter>Zone Sources\Quests</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\embperl.cpp">
+      <Filter>Zone Sources\Quests</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\questmgr.cpp">
+      <Filter>Zone Sources\Quests</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\perl_perlpacket.cpp">
+      <Filter>Zone Sources\Opcode Packet Tester</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\perlpacket.cpp">
+      <Filter>Zone Sources\Opcode Packet Tester</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\perl_client.cpp">
+      <Filter>Zone Sources\Perl Mappings</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\perl_entity.cpp">
+      <Filter>Zone Sources\Perl Mappings</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\perl_mob.cpp">
+      <Filter>Zone Sources\Perl Mappings</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\perl_npc.cpp">
+      <Filter>Zone Sources\Perl Mappings</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\World\World Class Diagram.cd" />
+    <None Include="Zone Class Diagram.cd" />
+  </ItemGroup>
+</Project>

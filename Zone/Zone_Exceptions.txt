@@ -1,0 +1,48 @@
+--------------------------------------------------
+Exception occurred in c:\programming projects\eq\working\zone\source\client_process.cpp:1561!
+-Playername: "Aamaden"
+-Function: void Client::ProcessOP_SpawnAppearance()
+-Description: sa->spawn_id != GetID()  -  Probably a hacker?
+
+--------------------------------------------------
+Exception occurred in c:\programming projects\eq\eqclassic\zone\source\client_process.cpp:1490!
+-Playername: "Aamaden"
+-Function: void Client::ProcessOP_SpawnAppearance()
+-Description: sa->spawn_id != GetID()  -  Probably a hacker?
+
+--------------------------------------------------
+Exception occurred in c:\programming projects\eq\eqclassic\zone\source\client_process.cpp:1290!
+-Playername: "Aamaden"
+-Function: void Client::ProcessOP_MoveItem()
+-Description: Moving an inexistant item! Probably a hacker?
+
+--------------------------------------------------
+Exception occurred in c:\programming projects\eq\eqclassic\zone\source\client_process.cpp:1290!
+-Playername: "Aamaden"
+-Function: void Client::ProcessOP_MoveItem()
+-Description: Moving an inexistant item! Probably a hacker?
+
+--------------------------------------------------
+Exception occurred in c:\programming projects\eq\eqclassic\zone\source\client_process.cpp:1496!
+-Playername: "Kindayael"
+-Function: void Client::ProcessOP_SpawnAppearance()
+-Description: sa->spawn_id != GetID()  -  Probably a hacker?
+
+--------------------------------------------------
+Exception occurred in c:\programming projects\eq\eqclassic\zone\source\client_process.cpp:2821!
+-Playername: "Faen"
+-Function: void Client::ProcessOP_ShopRequest()
+-Description: Current item not found on NPC.
+
+--------------------------------------------------
+Exception occurred in c:\programming projects\eq\eqclassic\zone\source\client_process.cpp:2821!
+-Playername: "Faen"
+-Function: void Client::ProcessOP_ShopRequest()
+-Description: Current item not found on NPC.
+
+--------------------------------------------------
+Exception occurred in c:\programming projects\eq\eqclassic\zone\source\entity.cpp:54!
+-Playername: "Radeby's corpse1"
+-Function: Client* Entity::CastToClient()
+-Description: Casting to a client while it's not a client!
+

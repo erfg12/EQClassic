@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EQC::World::Client" Collapsed="true">
+    <Position X="4" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwAAABAACAQoAQEABhCIBAECIQEIAAkALABjIBEUAAQ=</HashCode>
+      <FileName>Include\client.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EQC::World::ClientList" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIIAAgAAAAAAAABAAgAAAAAAAAAAAAAAAgAAABAAAAA=</HashCode>
+      <FileName>Include\ClientList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EQC::World::LoginServer" Collapsed="true">
+    <Position X="8.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QhASAICABAAABAEgAwAAAAQABAGQABgCIAIiAAkAIAA=</HashCode>
+      <FileName>Include\LoginServer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ClientListEntry" Collapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUBIMAAACAAIhEACgEAAQASAAEUABAAAgYAwgIgACA=</HashCode>
+      <FileName>Include\ClientListEntry.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZoneServer" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>5oAQKwCAZAAAgAEADgIKwAAAIgAkAAgKogAmgBEIABA=</HashCode>
+      <FileName>Include\zoneserver.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EQC::World::Network::ClientNetwork" Collapsed="true">
+    <Position X="5.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAGAQAABAAhKAABgAACQAAAAAEAAADAAAAAAg=</HashCode>
+      <FileName>Include\ClientNetwork.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EQC::World::Network::Console" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgCAAAAgQAQAAAEgAmECAQACAAEEAIoEJAQiAAEgAAA=</HashCode>
+      <FileName>Include\console.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EQC::World::Network::ConsoleList" Collapsed="true">
+    <Position X="7" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgIAAgAAAAAAAAIAQAAAAAAAAAAAAAAAAAAQgAAAAAA=</HashCode>
+      <FileName>Source\ConsoleList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EQC::World::Network::NetConnection" Collapsed="true">
+    <Position X="5.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAUAAhBCgAgAAAAgAAAAEAAAEEICABEwQAA=</HashCode>
+      <FileName>Include\net.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EQC::World::Network::TCPConnection" Collapsed="true">
+    <Position X="1.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIIAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Include\TCPConnection.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EQC::World::Network::ZSList" Collapsed="true">
+    <Position X="7" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>4gIQAgAAAAABFBAAAoACQAAAABAACACACAAAQAACAgA=</HashCode>
+      <FileName>Source\ZSList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

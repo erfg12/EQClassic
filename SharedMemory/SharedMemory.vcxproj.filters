@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="SharedMem Sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="SharedMem Includes">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Common Sources">
+      <UniqueIdentifier>{62f6a71a-703d-4a18-ad79-27a1ce03e321}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common Includes">
+      <UniqueIdentifier>{f5b24851-7c9d-478b-81ec-371e6dffac78}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\DLLMain.cpp">
+      <Filter>SharedMem Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SharedMemory.cpp">
+      <Filter>SharedMem Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SharedMemoryItems.cpp">
+      <Filter>SharedMem Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\database.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\DatabaseHandler.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EQC\Sources\EQCException.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EQC\Sources\EQCUtils.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\Item.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\Logger.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\MiscFunctions.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Common\Source\Mutex.cpp">
+      <Filter>Common Sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include\SharedMemory.hpp">
+      <Filter>SharedMem Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EQC\Include\EQCException.hpp">
+      <Filter>Common Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EQC\Include\EQCUtils.hpp">
+      <Filter>Common Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\Item.h">
+      <Filter>Common Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\Logger.h">
+      <Filter>Common Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\Mutex.h">
+      <Filter>Common Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Common\Include\types.h">
+      <Filter>Common Includes</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

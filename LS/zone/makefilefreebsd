@@ -1,0 +1,28 @@
+APP=zone
+SF=../common/crc32.o ../common/EQNetwork.o \
+   ../common/crc32/o ../common/guilds.o ../common/timer.o ../common/database.o ../common/packet_dump.o ../common/packet_functions.o \
+   ../common/unix.o ../common/packet_dump_file.o ../common/Mutex.o ../common/MiscFunctions.o \
+   zone.o entity.o mob.o client.o client_process.o npc.o net.o spawn2.o attack.o hate_list.o \
+   ../common/serverinfo.o ../common/moremath.o worldserver.o spells.o spawngroup.o loottables.o \
+   faction.o Map.o PlayerCorpse.o petitions.o WesQuests.o NpcAI.o Object.o ../common/eqtime.o \
+   groups.o ../common/classes.o ../common/races.o ../common/TCPConnection.o forage.o
+
+CC=gcc
+LINKER=gcc
+WFLAGS=-Wall -Wuninitialized -Wwrite-strings -Wcast-qual -Wbad-function-cast -Wstrict-prototypes -Wno-deprecated -Wnested-externs -Wcomment -Wcast-align
+COPTS=$(WFLAGS) -O -ggdb -march=i686 -pipe -DFREEBSD -D_THREAD_SAFE -D__USE_UNIX98 -D_GNU_SOURCE -DINVERSEXY -DFX -I/usr/include/mysql -I/usr/local/include/mysql -I/usr/local/include/pthread/linuxthreads
+LINKOPTS=-L. -L/usr/local/lib -lstdc++ -lm -lz -L/usr/lib/mysql -L/usr/local/lib/mysql -lmysqlclient -llthread -llgcc_r
+
+all: $(APP)
+
+$(APP): $(SF)
+	$(LINKER) $(COPTS) $(OBJS) $^ $(LINKOPTS) -o $@
+
+import_raw_items: import_raw_items.o
+	$(LINKER) $(COPTS) $^ $(LINKOPTS) -o $@
+
+clean:
+	rm -f $(SF) $(APP) import_raw_items.o import_raw_items
+
+%.o: %.cpp
+	$(CC) -c $(COPTS) $< -o $@

@@ -1,0 +1,33 @@
+APP=login
+SF=../common/EQNetwork.o \
+   ../common/timer.o ../common/database.o ../common/packet_dump.o \
+   ../common/Mutex.o ../common/unix.o ../common/MiscFunctions.o \
+   ../common/TCPConnection.o ../common/packet_functions.o \
+   ../common/debug.o ../common/dbcore.o ../common/crc32.o ../common/md5.o \
+   ../EQCrypto/LoginPackets.o  \
+   logindatabase.o client.o net.o LWorld.o EQCrypto.o
+SFc=../EQCrypto/cbc_enc.o ../EQCrypto/ecb_enc.o ../EQCrypto/set_key.o
+
+#CC=/home/per/gcc-2.95.2/gcc/g++
+#LINKER=/home/per/gcc-2.95.2/gcc/g++
+CC=gcc
+LINKER=gcc
+WFLAGS=-Wall -Wuninitialized -Wwrite-strings -Wcast-qual -Wbad-function-cast -Wstrict-prototypes -Wno-deprecated -Wnested-externs -Wcomment -Wcast-align
+COPTS=$(WFLAGS) -g -march=i686 -O3 -pthread -pipe -DFX -D_GNU_SOURCE -DINVERSEXY -I/usr/include/mysql -DLOGINCRYPTO
+#COPTS=-O3 -fomit-frame-pointer -m486 -Wall -pipe -DFX
+LINKOPTS=-L. -lstdc++ -lm -L/usr/lib/mysql -lmysqlclient -lz
+
+all: $(APP)
+
+$(APP): $(SF)
+	$(CC) -c $(COPTS) ../EQCrypto/cbc_enc.c -o ../EQCrypto/cbc_enc.o
+	$(CC) -c $(COPTS) ../EQCrypto/ecb_enc.c -o ../EQCrypto/ecb_enc.o
+	$(CC) -c $(COPTS) ../EQCrypto/set_key.c -o ../EQCrypto/set_key.o
+	$(LINKER) $(COPTS) $(OBJS) $^ $(SFc) $(LINKOPTS) -o $@
+
+clean:
+	rm $(SF) $(APP) $(SFc)
+
+%.o: %.cpp
+	$(CC) -c $(COPTS) $< -o $@
+	

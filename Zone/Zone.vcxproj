@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CBF13C64-09E2-4317-8E3D-7510AC446975}</ProjectGuid>
+    <RootNamespace>Zone</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\Build\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Intermediate\Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\Build\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Intermediate\Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>
+      </Command>
+    </PreBuildEvent>
+    <CustomBuildStep>
+      <Command>
+      </Command>
+    </CustomBuildStep>
+    <ClCompile>
+      <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>C:\Perl\lib\CORE;C:\Program Files %28x86%29\MySQL\MySQL Server 5.1\include;..\Dependencies\zlib\include;../Common/Include;./Include;../EQC/Include;../SharedMemory/Include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>EMBPERL;EQC_SHAREDMEMORY;WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;ZONE;CATCH_CRASH;_EQDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level1</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <PreLinkEvent>
+      <Command>
+      </Command>
+    </PreLinkEvent>
+    <Link>
+      <AdditionalDependencies>WS2_32.lib;MySQLClient.lib;Zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\build\debug\Zone.exe</OutputFile>
+      <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\MySQL\MySQL Server 5.1\lib\debug;C:\Perl\lib\CORE;C:\Program Files %28x86%29\MySQL\MySQL Server 5.1\lib;..\Dependencies\zlib\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Perl\lib\CORE;C:\mysql\include;..\Dependencies\zlib\include;../Common/Include;./Include;../EQC/Include;../SharedMemory/Include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>EQC_SHAREDMEMORY;EMBPERL;WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;ZONE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>WS2_32.lib;libmysql.lib;Zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>C:\mysql\lib\opt;C:\Perl\lib\CORE;C:\mysql\lib;..\Dependencies\zlib\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <OutputFile>..\build\release\Zone.exe</OutputFile>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Common\Include\classes.h" />
+    <ClInclude Include="..\Common\Include\config.h" />
+    <ClInclude Include="..\Common\Include\container.h" />
+    <ClInclude Include="..\Common\Include\database.h" />
+    <ClInclude Include="..\Common\Include\DatabaseHandler.h" />
+    <ClInclude Include="..\Common\Include\deity.h" />
+    <ClInclude Include="..\Common\Include\eq_opcodes.h" />
+    <ClInclude Include="..\Common\Include\eq_packet_structs.h" />
+    <ClInclude Include="..\Common\Include\EQCheckTable.h" />
+    <ClInclude Include="..\Common\Include\EQFragment.h" />
+    <ClInclude Include="..\Common\Include\EQPacket.h" />
+    <ClInclude Include="..\Common\Include\EQPacketManager.h" />
+    <ClInclude Include="..\Common\Include\Fragment.h" />
+    <ClInclude Include="..\Common\Include\FragmentGroup.h" />
+    <ClInclude Include="..\Common\Include\FragmentGroupList.h" />
+    <ClInclude Include="..\Common\Include\GuildNetwork.h" />
+    <ClInclude Include="..\Common\Include\inventory.h" />
+    <ClInclude Include="..\Common\Include\Item.h" />
+    <ClInclude Include="..\Common\Include\item_fieldlist.h" />
+    <ClInclude Include="..\Common\Include\languages.h" />
+    <ClInclude Include="..\Common\Include\linked_list.h" />
+    <ClInclude Include="..\Common\Include\Logger.h" />
+    <ClInclude Include="..\Common\Include\MiscFunctions.h" />
+    <ClInclude Include="..\Common\Include\moremath.h" />
+    <ClInclude Include="..\Common\Include\Mutex.h" />
+    <ClInclude Include="..\Common\Include\packet_dump.h" />
+    <ClInclude Include="..\Common\Include\packet_dump_file.h" />
+    <ClInclude Include="..\Common\Include\packet_functions.h" />
+    <ClInclude Include="..\Common\Include\queue.h" />
+    <ClInclude Include="..\Common\Include\queues.h" />
+    <ClInclude Include="..\Common\Include\races.h" />
+    <ClInclude Include="randomize.h" />
+    <ClInclude Include="..\Common\Include\seperator-2.h" />
+    <ClInclude Include="..\Common\Include\seperator.h" />
+    <ClInclude Include="..\Common\Include\servertalk.h" />
+    <ClInclude Include="..\Common\Include\timer.h" />
+    <ClInclude Include="..\Common\Include\types.h" />
+    <ClInclude Include="..\EQC\Include\EQCException.hpp" />
+    <ClInclude Include="..\EQC\Include\EQCUtils.hpp" />
+    <ClInclude Include="..\EQC\Include\PacketUtils.hpp" />
+    <ClInclude Include="Include\boats.h" />
+    <ClInclude Include="Include\ClientList.h" />
+    <ClInclude Include="Include\Debug.hpp" />
+    <ClInclude Include="Include\entity.h" />
+    <ClInclude Include="Include\EntityList.h" />
+    <ClInclude Include="Include\faction.h" />
+    <ClInclude Include="Include\forage.h" />
+    <ClInclude Include="Include\groups.h" />
+    <ClInclude Include="Include\hate_list.h" />
+    <ClInclude Include="Include\loottable.h" />
+    <ClInclude Include="Include\map.h" />
+    <ClInclude Include="Include\mob.h" />
+    <ClInclude Include="Include\net.h" />
+    <ClInclude Include="Include\nodes.h" />
+    <ClInclude Include="Include\npc.h" />
+    <ClInclude Include="Include\NpcAI.h" />
+    <ClInclude Include="Include\object.h" />
+    <ClInclude Include="Include\PetitionManager.h" />
+    <ClInclude Include="Include\petitions.h" />
+    <ClInclude Include="Include\PlayerCorpse.h" />
+    <ClInclude Include="priorityqueue.h" />
+    <ClInclude Include="Include\projectile.h" />
+    <ClInclude Include="Include\skills.h" />
+    <ClInclude Include="Include\spawn2.h" />
+    <ClInclude Include="Include\spawngroup.h" />
+    <ClInclude Include="Include\watermap.h" />
+    <ClInclude Include="Include\worldserver.h" />
+    <ClInclude Include="Include\zone.h" />
+    <ClInclude Include="Include\zonedump.h" />
+    <ClInclude Include="Include\ZoneGuildManager.h" />
+    <ClInclude Include="Include\spdat.h" />
+    <ClInclude Include="Include\Spell.hpp" />
+    <ClInclude Include="Include\SpellsHandler.hpp" />
+    <ClInclude Include="Include\embparser.h" />
+    <ClInclude Include="Include\embperl.h" />
+    <ClInclude Include="Include\event_codes.h" />
+    <ClInclude Include="Include\features.h" />
+    <ClInclude Include="Include\questmgr.h" />
+    <ClInclude Include="Include\perlpacket.h" />
+    <ClInclude Include="Include\client.h" />
+    <ClInclude Include="Include\Client_Commands.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\EQC\Sources\EQCException.cpp" />
+    <ClCompile Include="..\EQC\Sources\EQCUtils.cpp" />
+    <ClCompile Include="..\EQC\Sources\PacketUtils.cpp" />
+    <ClCompile Include="..\Common\Source\classes.cpp" />
+    <ClCompile Include="..\Common\Source\container.cpp" />
+    <ClCompile Include="..\Common\Source\database.cpp" />
+    <ClCompile Include="..\Common\Source\DatabaseHandler.cpp" />
+    <ClCompile Include="..\Common\Source\EQFragment.cpp" />
+    <ClCompile Include="..\Common\Source\EQPacket.cpp" />
+    <ClCompile Include="..\Common\Source\EQPacketManager.cpp" />
+    <ClCompile Include="..\Common\Source\Fragment.cpp" />
+    <ClCompile Include="..\Common\Source\FragmentGroup.cpp" />
+    <ClCompile Include="..\Common\Source\FragmentGroupList.cpp" />
+    <ClCompile Include="..\Common\Source\GuildDatabase.cpp" />
+    <ClCompile Include="..\Common\Source\Item.cpp" />
+    <ClCompile Include="..\Common\Source\languages.cpp" />
+    <ClCompile Include="..\Common\Source\Logger.cpp" />
+    <ClCompile Include="..\Common\Source\MiscFunctions.cpp" />
+    <ClCompile Include="..\Common\Source\moremath.cpp" />
+    <ClCompile Include="..\Common\Source\Mutex.cpp" />
+    <ClCompile Include="..\Common\Source\packet_dump.cpp" />
+    <ClCompile Include="..\Common\Source\packet_dump_file.cpp" />
+    <ClCompile Include="..\Common\Source\packet_functions.cpp" />
+    <ClCompile Include="..\Common\Source\PlayerPacketFactory.cpp" />
+    <ClCompile Include="..\Common\Source\races.cpp" />
+    <ClCompile Include="..\Common\Source\ServerPacketFactory.cpp" />
+    <ClCompile Include="..\Common\Source\timer.cpp" />
+    <ClCompile Include="Source\attack.cpp" />
+    <ClCompile Include="Source\boats.cpp" />
+    <ClCompile Include="Source\Debug.cpp" />
+    <ClCompile Include="Source\entity.cpp" />
+    <ClCompile Include="Source\EntityList.cpp" />
+    <ClCompile Include="Source\faction.cpp" />
+    <ClCompile Include="Source\forage.cpp" />
+    <ClCompile Include="Source\groups.cpp" />
+    <ClCompile Include="Source\hate_list.cpp" />
+    <ClCompile Include="Source\loottables.cpp" />
+    <ClCompile Include="Source\Map.cpp" />
+    <ClCompile Include="Source\mob.cpp" />
+    <ClCompile Include="Source\net.cpp" />
+    <ClCompile Include="nodes.cpp" />
+    <ClCompile Include="Source\npc.cpp" />
+    <ClCompile Include="Source\NpcAI.cpp" />
+    <ClCompile Include="Source\object.cpp" />
+    <ClCompile Include="Source\PetitionManager.cpp" />
+    <ClCompile Include="Source\petitions.cpp" />
+    <ClCompile Include="Source\PlayerCorpse.cpp" />
+    <ClCompile Include="Source\priorityqueue.cpp" />
+    <ClCompile Include="Source\projectile.cpp" />
+    <ClCompile Include="Source\spawn2.cpp" />
+    <ClCompile Include="Source\spawngroup.cpp" />
+    <ClCompile Include="Source\Tradeskills.cpp" />
+    <ClCompile Include="Source\watermap.cpp" />
+    <ClCompile Include="Source\WorldServer.cpp" />
+    <ClCompile Include="Source\WorldServer_Process.cpp" />
+    <ClCompile Include="Source\zone.cpp" />
+    <ClCompile Include="Beg.cpp" />
+    <ClCompile Include="BindWound.cpp" />
+    <ClCompile Include="Source\Fishing.cpp" />
+    <ClCompile Include="Source\InstillDoubt.cpp" />
+    <ClCompile Include="Source\Mend.cpp" />
+    <ClCompile Include="Source\Spell.cpp" />
+    <ClCompile Include="Source\SpellBonuses.cpp" />
+    <ClCompile Include="Source\SpellData.cpp" />
+    <ClCompile Include="Source\SpellEffects.cpp" />
+    <ClCompile Include="Source\spells.cpp" />
+    <ClCompile Include="Source\SpellsHandler.cpp" />
+    <ClCompile Include="Source\client.cpp" />
+    <ClCompile Include="Source\Client_Commands.cpp" />
+    <ClCompile Include="Source\Client_Messaging.cpp" />
+    <ClCompile Include="Source\Client_Packet.cpp" />
+    <ClCompile Include="Source\Client_Process.cpp" />
+    <ClCompile Include="Source\ClientList.cpp" />
+    <ClCompile Include="Source\guild_process.cpp" />
+    <ClCompile Include="Include\ZoneGuildManager.cpp" />
+    <ClCompile Include="Source\ZoneGuildManager_Packets.cpp" />
+    <ClCompile Include="Source\ZoneGuildManager_Process.cpp" />
+    <ClCompile Include="Source\ZoneGuildManager_WorldProcess.cpp" />
+    <ClCompile Include="Source\embparser.cpp" />
+    <ClCompile Include="Source\embperl.cpp" />
+    <ClCompile Include="Source\questmgr.cpp" />
+    <ClCompile Include="Source\perl_perlpacket.cpp" />
+    <ClCompile Include="Source\perlpacket.cpp" />
+    <ClCompile Include="Source\perl_client.cpp" />
+    <ClCompile Include="Source\perl_entity.cpp" />
+    <ClCompile Include="Source\perl_mob.cpp" />
+    <ClCompile Include="Source\perl_npc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\World\World Class Diagram.cd" />
+    <None Include="Zone Class Diagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SharedMemory\SharedMemory.vcxproj">
+      <Project>{95f4756a-ffe9-4591-92a5-f2e48c3cea3c}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

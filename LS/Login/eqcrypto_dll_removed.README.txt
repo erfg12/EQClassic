@@ -1,0 +1,42 @@
+Removal of requirement of EQCrypto.dll.  
+
+This means we have the encryption key for our client.  Guard this key
+very carefully, it's basically all that stands between problems with man 
+in the middle attacks against our login server.  Also, it may not have 
+been changed for the client used by EQEmu.  Please respect our heritage 
+to their work and do not share this key.
+
+The removal of the DLL was done very quickly and very poorly.  It seems 
+to have worked well enough for my limited testing, but the code has 
+become MORE unreadable now.  I plan on completely re-writting this login 
+server to better suit our needs but for now it's what we have.
+
+The encryption used is DES-cdc with a rotating vector.  We're using 
+OpenSSL for this funtionality as it's fast as lightning and easy to 
+use.  This means there are some new steps to getting the build 
+environment set up.
+
+Install OpenSSL for Windows:
+    http://www.slproweb.com/products/Win32OpenSSL.html
+    
+    You will need the Win32 OpenSSL v0.9.8k (7MB installer) and probably 
+    the Visual C++ 2008 Redistributables from that site since the 
+    jack-ass is building from a weird version of Visual Studio.
+    
+Add folders to directories:
+    The installer will ask where you want it.  I put it in C:\OpenSSL 
+    (the default.  You will need to add the bin, include and lib/VC 
+    folders to the directories in Visual Studio (tools, options, you 
+    know...)
+    
+Add linker dependancies to project:
+    I think I got the file set up so it will work, but just in case, add 
+    ssleay32MT.lib and libeay32MT.lib to the list of libraries for the 
+    Release configuration. (it's under linker, input)
+    
+That should get the build done correctly.  I know the code is a little 
+hackity hacked together, but I wanted to get that damn DLL out of our 
+lives as quickly as possible, who knows what it's doing in there.  Also, 
+naming my PC "athlon" pisses me off.
+
+-Andy B (neorab) <neorab@gmail.com> Sun, 3 May 2009

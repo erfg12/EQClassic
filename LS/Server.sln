@@ -1,0 +1,25 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C++ Express 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Login", "Login\Login.vcxproj", "{45A9BD5C-76D5-4739-9EE9-467901C8D795}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		MiniLogin|Win32 = MiniLogin|Win32
+		PublicLogin|Win32 = PublicLogin|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45A9BD5C-76D5-4739-9EE9-467901C8D795}.Debug|Win32.ActiveCfg = Debug|Win32
+		{45A9BD5C-76D5-4739-9EE9-467901C8D795}.Debug|Win32.Build.0 = Debug|Win32
+		{45A9BD5C-76D5-4739-9EE9-467901C8D795}.MiniLogin|Win32.ActiveCfg = MiniLogin|Win32
+		{45A9BD5C-76D5-4739-9EE9-467901C8D795}.MiniLogin|Win32.Build.0 = MiniLogin|Win32
+		{45A9BD5C-76D5-4739-9EE9-467901C8D795}.PublicLogin|Win32.ActiveCfg = PublicLogin|Win32
+		{45A9BD5C-76D5-4739-9EE9-467901C8D795}.PublicLogin|Win32.Build.0 = PublicLogin|Win32
+		{45A9BD5C-76D5-4739-9EE9-467901C8D795}.Release|Win32.ActiveCfg = Release|Win32
+		{45A9BD5C-76D5-4739-9EE9-467901C8D795}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
