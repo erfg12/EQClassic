@@ -59,7 +59,7 @@
       </PrecompiledHeader>
       <WarningLevel>TurnOffAllWarnings</WarningLevel>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>C:\Perl\lib\CORE;..\Dependencies\zlib\include;C:\Program Files %28x86%29\MySQL\MySQL Server 5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Perl512\lib\CORE;..\Dependencies\zlib\include;C:\Program Files %28x86%29\MySQL\MySQL Server 5.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions> /I"../Common/Include" /I"./Include" /I"../EQC/Include" /I"../SharedMemory/Include/" %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>

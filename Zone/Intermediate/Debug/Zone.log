@@ -1,10 +1,18 @@
-﻿Build started 7/27/2015 2:00:17 PM.
-     1>Project "C:\Users\jake.CUTTING\Desktop\OpenEQC Source\Zone\Zone.vcxproj" on node 4 (Build target(s)).
+﻿Build started 7/28/2015 12:31:19 PM.
+     1>Project "C:\Users\jake.CUTTING\Documents\GitHub\EQTrilogy-Old\Zone\Zone.vcxproj" on node 3 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Perl\lib\CORE /I"C:\Program Files (x86)\MySQL\MySQL Server 5.1\include" /I..\Dependencies\zlib\include /I../Common/Include /I./Include /I../EQC/Include /I../SharedMemory/Include/ /Zi /nologo /W1 /WX- /Od /Oy- /D EMBPERL /D EQC_SHAREDMEMORY /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_DEPRECATE /D ZONE /D CATCH_CRASH /D _EQDEBUG /D _UNICODE /D UNICODE /Gm- /EHsc /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Intermediate\Debug\\" /Fd".\Intermediate\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt /MP Source\spawn2.cpp
-         spawn2.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IC:\Perl512\lib\CORE /I"C:\Program Files (x86)\MySQL\MySQL Server 5.1\include" /I..\Dependencies\zlib\include /I../Common/Include /I./Include /I../EQC/Include /I../SharedMemory/Include/ /Zi /nologo /W1 /WX- /Od /Oy- /D EMBPERL /D EQC_SHAREDMEMORY /D WIN32 /D _DEBUG /D _CONSOLE /D _CRT_SECURE_NO_DEPRECATE /D ZONE /D CATCH_CRASH /D _EQDEBUG /D _UNICODE /D UNICODE /Gm- /EHsc /MTd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Intermediate\Debug\\" /Fd".\Intermediate\Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt /MP Source\Client_Messaging.cpp Source\embparser.cpp Source\embperl.cpp
+         Client_Messaging.cpp
+         embparser.cpp
+         embperl.cpp
+     1>C:\Perl512\lib\CORE\sys/socket.h(34): warning C4005: 'ENOTSOCK' : macro redefinition (Source\embperl.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\errno.h(120) : see previous definition of 'ENOTSOCK'
+     1>C:\Perl512\lib\CORE\sys/socket.h(34): warning C4005: 'ENOTSOCK' : macro redefinition (Source\embparser.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\errno.h(120) : see previous definition of 'ENOTSOCK'
+     1>C:\Perl512\lib\CORE\sys/socket.h(34): warning C4005: 'ENOTSOCK' : macro redefinition (Source\Client_Messaging.cpp)
+                 C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\include\errno.h(120) : see previous definition of 'ENOTSOCK'
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\build\debug\Zone.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\MySQL\MySQL Server 5.1\lib\debug" /LIBPATH:C:\Perl\lib\CORE /LIBPATH:"C:\Program Files (x86)\MySQL\MySQL Server 5.1\lib" /LIBPATH:..\Dependencies\zlib\lib WS2_32.lib MySQLClient.lib Zlib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBCMT /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"..\Build\Debug\Zone.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"..\Build\Debug\Zone.lib" /MACHINE:X86 /SAFESEH .\Intermediate\Debug\EQCException.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"..\build\debug\Zone.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Program Files (x86)\MySQL\MySQL Server 5.1\lib\debug" /LIBPATH:C:\Perl512\lib\CORE /LIBPATH:"C:\Program Files (x86)\MySQL\MySQL Server 5.1\lib" /LIBPATH:..\Dependencies\zlib\lib WS2_32.lib MySQLClient.lib Zlib.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:LIBCMT /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"..\Build\Debug\Zone.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE:NO /IMPLIB:"..\Build\Debug\Zone.lib" /MACHINE:X86 /SAFESEH .\Intermediate\Debug\EQCException.obj
          .\Intermediate\Debug\EQCUtils.obj
          .\Intermediate\Debug\PacketUtils.obj
          .\Intermediate\Debug\classes.obj
@@ -91,10 +99,10 @@
          .\Intermediate\Debug\perl_entity.obj
          .\Intermediate\Debug\perl_mob.obj
          .\Intermediate\Debug\perl_npc.obj
-         "C:\Users\jake.CUTTING\Desktop\OpenEQC Source\Build\Debug\SharedMemory.lib"
-         Zone.vcxproj -> C:\Users\jake.CUTTING\Desktop\OpenEQC Source\Zone\..\Build\Debug\Zone.exe
-     1>Done Building Project "C:\Users\jake.CUTTING\Desktop\OpenEQC Source\Zone\Zone.vcxproj" (Build target(s)).
+         "C:\Users\jake.CUTTING\Documents\GitHub\EQTrilogy-Old\Build\Debug\SharedMemory.lib"
+         Zone.vcxproj -> C:\Users\jake.CUTTING\Documents\GitHub\EQTrilogy-Old\Zone\..\Build\Debug\Zone.exe
+     1>Done Building Project "C:\Users\jake.CUTTING\Documents\GitHub\EQTrilogy-Old\Zone\Zone.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.61
+Time Elapsed 00:00:03.31

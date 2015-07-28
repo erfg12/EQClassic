@@ -63,6 +63,22 @@ void Client::Message(MessageFormat Type, const string& rMessage)
 
 ///////////////////////////////////////////////////
 
+bool isAlphabetic(string check)
+{
+	bool verify = true;
+	for (int i = 0; i < check.length(); i++)
+	{
+		if (check[i] >= 'a' && check[i] <= 'z' || check[i] >= 'A' && check[i] <= 'Z')
+			verify = true;
+		else
+		{
+			verify = false;
+			break;
+		}
+	}
+	return verify;
+}
+
 void Client::ChannelMessageReceived(int8 chan_num, int8 language, char* message, char* targetname) 
 {
 	if(!message)
@@ -182,6 +198,9 @@ void Client::ChannelMessageReceived(int8 chan_num, int8 language, char* message,
 		}
 		else if (chan_num == MessageChannel_TELL) // 7 = tell
 		{
+			if (strlen(targetname) <= 0 || !isAlphabetic(targetname)) //newage: sanitization check
+				return;
+
 			//Cofruben: better in a constant!
 			const int MessageRange = 2000;
 			char npcNameSuffix[] = "_CHARM";

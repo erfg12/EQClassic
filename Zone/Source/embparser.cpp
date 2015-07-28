@@ -784,7 +784,7 @@ int PerlembParser::LoadScript(int npcid, const char * zone, Mob* activater)
 			filefound = true;
 		}
 
-	    EQC::Common::Log(EQCLog::Debug, CP_QUESTS,"	tried '%s': %d", filename.c_str(), filefound);
+	    //EQC::Common::Log(EQCLog::Debug, CP_QUESTS,"	tried '%s': %d", filename.c_str(), filefound);
 
 		tmpname[0] = 0;
 		//if there is no file for the NPC's ID, try for the NPC's name
@@ -892,6 +892,8 @@ int PerlembParser::LoadScript(int npcid, const char * zone, Mob* activater)
 		fclose(tmpf);
 	}
 
+	EQC::Common::Log(EQCLog::Debug, CP_QUESTS, "Trying to find packagename '%s'", packagename.c_str());
+
 //  todo: decide whether or not to delete the package to allow for script refreshes w/o restarting the server
 //  remember to guard against deleting the default package, on a similar note... consider deleting packages upon zone change
 //	try { perl->eval(std::string("delete_package(\"").append(packagename).append("\");").c_str()); }
@@ -912,6 +914,7 @@ int PerlembParser::LoadScript(int npcid, const char * zone, Mob* activater)
 	if(!isloaded(packagename.c_str()))
 	{
 		//the npc has no qst file, attach the defaults
+		EQC::Common::Log(EQCLog::Error, CP_QUESTS, "the npc has no qst file, attach the defaults");
 		std::string setdefcmd = "$";
 			setdefcmd += packagename;
 			setdefcmd += "::isdefault = 1;";
