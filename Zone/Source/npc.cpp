@@ -1776,8 +1776,8 @@ bool NPC::TeleportToLocation(float x, float y, float z)
 	if(debugFlag)
 		if(target && target->IsClient() && target->CastToClient()->GetDebugMe())
 			target->Message(YELLOW, "Debug(WARNING): %s could not find a path to your location. It will teleport to your current location in %i (%i / %i) seconds.", this->GetName(), (delay / 1000), distance, unitsPerSecond);
-		else
-			cout<<"Debug(WARNING): "<<this->GetName()<<" could not find a path to its destination. It will teleport to its destination in "<<(delay / 1000)<<" ("<<distance<<" / "<<unitsPerSecond<<") seconds."<<endl;
+		//else //newage: maybe later, it's kinda annoying.
+			//cout<<"Debug(WARNING): "<<this->GetName()<<" could not find a path to its destination. It will teleport to its destination in "<<(delay / 1000)<<" ("<<distance<<" / "<<unitsPerSecond<<") seconds."<<endl;
 	return true;
 }
 

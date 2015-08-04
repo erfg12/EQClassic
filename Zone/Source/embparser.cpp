@@ -713,18 +713,17 @@ void PerlembParser::ReloadQuests() {
 			perl = new Embperl;
 		else
 			perl->Reinit();
-		// FIXME: map_funs is broken.
-		//map_funs();
+		map_funs();
 		
 	}
 	catch(const char * msg) {
-		EQC::Common::Log(EQCLog::Error,CP_QUESTS,"Error re-initializing perlembed: %s", msg);
-		if(perl != NULL) {			
+		if(perl != NULL) {	
+			delete perl;
 			perl = NULL;
-		}		
+		}
+		EQC::Common::Log(EQCLog::Error, CP_QUESTS, "Error re-initializing perlembed: %s", msg);
 		throw msg;
 	}
-	
 	try {
 		LoadScript(0, NULL);
 	}
@@ -788,7 +787,7 @@ int PerlembParser::LoadScript(int npcid, const char * zone, Mob* activater)
 
 		tmpname[0] = 0;
 		//if there is no file for the NPC's ID, try for the NPC's name
-		if(! filefound) {
+		if(!filefound) {
 			//revert to just path
 			filename = bnfilename;
 			const NPCType *npct = Database::Instance()->GetNPCType(npcid);
@@ -839,19 +838,19 @@ int PerlembParser::LoadScript(int npcid, const char * zone, Mob* activater)
 		}
 
 	#ifdef QUEST_TEMPLATES_BYNAME
-		bool filefound2 = false;
+
 		tmpf = fopen(filename.c_str(), "r");
 		if(tmpf != NULL) {
 			fclose(tmpf);
-			filefound2 = true;
+			filefound = true;
 		}
 
-		EQC::Common::Log(EQCLog::Debug,CP_QUESTS,"Quest File '%s' exists: %d", filename.c_str(), filefound2);
+		EQC::Common::Log(EQCLog::Debug,CP_QUESTS,"Quest File '%s' exists: %d", filename.c_str(), filefound);
 
 		//if there is no file for the NPC's ID or name,
 		//try for the NPC's name in the templates directory
 		//only works if we have gotten the NPC's name above
-		if(! filefound && ! filefound2) {
+		if(!filefound) {
 			if(tmpname[0] != 0) {
 				//revert to just path
 				filename = "quests/";
@@ -887,6 +886,7 @@ int PerlembParser::LoadScript(int npcid, const char * zone, Mob* activater)
 			setdefcmd += "::isloaded = 1;";
 		perl->eval(setdefcmd.c_str());
 		hasQuests[npcid] = questDefault;
+		EQC::Common::Log(EQCLog::Debug, CP_QUESTS, "NPC doesnt have a quest file.", packagename.c_str());
 		return(1);
 	} else {
 		fclose(tmpf);
@@ -900,6 +900,7 @@ int PerlembParser::LoadScript(int npcid, const char * zone, Mob* activater)
 //	catch(...) {/*perl balked at us trynig to delete a non-existant package... no big deal.*/}
 
 	try {
+		EQC::Common::Log(EQCLog::Debug, CP_QUESTS, "Trying eval_file function.");
 		perl->eval_file(packagename.c_str(), filename.c_str());
 	}
 	catch(const char * err)
@@ -907,11 +908,11 @@ int PerlembParser::LoadScript(int npcid, const char * zone, Mob* activater)
 		//try to reduce some of the console spam...
 		//todo: tweak this to be more accurate at deciding what to filter (we don't want to gag legit errors)
 //		if(!strstr(err,"No such file or directory"))
-			EQC::Common::Log(EQCLog::Error,CP_QUESTS,"WARNING: error compiling quest file %s: %s (reverting to default questfile)", filename.c_str(), err);
+		EQC::Common::Log(EQCLog::Error,CP_QUESTS,"WARNING: error compiling quest file %s: %s (reverting to default questfile)", filename.c_str(), err);
 	}
 
 	//todo: change this to just read eval_file's %cache - duh!
-	if(!isloaded(packagename.c_str()))
+	/*if(!isloaded(packagename.c_str()))
 	{
 		//the npc has no qst file, attach the defaults
 		EQC::Common::Log(EQCLog::Error, CP_QUESTS, "the npc has no qst file, attach the defaults");
@@ -924,7 +925,7 @@ int PerlembParser::LoadScript(int npcid, const char * zone, Mob* activater)
 			setdefcmd += "::isloaded = 1;";
 		perl->eval(setdefcmd.c_str());
 		curmode = questDefault;
-	}
+	}*/
 
 	hasQuests[npcid] = curmode;
 	return(1);
@@ -1127,7 +1128,7 @@ void PerlembParser::SendCommands(const char * pkgprefix, const char *event, int3
 	{
 		//try to reduce some of the console spam...
 		//todo: tweak this to be more accurate at deciding what to filter (we don't want to gag legit errors)
-		//if(!strstr(err,"Undefined subroutine"))
+		if(!strstr(err,"Undefined subroutine"))
 			EQC::Common::Log(EQCLog::Error,CP_QUESTS,"Script error: %s::%s - %s", pkgprefix, event, err);
 		return;
 	}

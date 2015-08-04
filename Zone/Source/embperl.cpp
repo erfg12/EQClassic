@@ -390,17 +390,13 @@ void Embperl::dosub(const char * subname, const std::vector<std::string> * args,
 			XPUSHs(sv_2mortal(newSVpv(i->c_str(), i->length())));
 		}
 	}
-	
 	PUTBACK;                      /* make local stack pointer global */
 	int result = call_pv(subname, mode); /*eval our code*/
-	
 	SPAGAIN;                        /* refresh stack pointer         */
-
-	//if(SvTRUE(ERRSV))
-	//{
-	//	err = true;
-	//}
-	
+	if(SvTRUE(ERRSV))
+	{
+		err = true;
+	}
 	FREETMPS;                       /* free temp values        */
 	LEAVE;                       /* ...and the XPUSHed "mortal" args.*/
 	

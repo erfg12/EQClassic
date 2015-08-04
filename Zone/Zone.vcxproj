@@ -60,7 +60,7 @@
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>C:\Perl512\lib\CORE;C:\Program Files %28x86%29\MySQL\MySQL Server 5.1\include;..\Dependencies\zlib\include;../Common/Include;./Include;../EQC/Include;../SharedMemory/Include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>EMBPERL;EQC_SHAREDMEMORY;WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;ZONE;CATCH_CRASH;_EQDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>EMBPERL;EQC_SHAREDMEMORY;WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;ZONE;CATCH_CRASH;_EQDEBUG=5;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <ExceptionHandling>Sync</ExceptionHandling>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
