@@ -17,7 +17,9 @@ You may need to make updates the the location of includes and lib folders for My
   - C:\Program Files (x85)\MySQL\MySQL Server 5.1\lib
   - C:\Program Files (x85)\MySQL\MySQL Server 5.1\lib\debug
 - ActivePerl
-  - C:\perl\lib\Core
+  - C:\Perl512\lib\Core
+
+The source assumes your perl 5.12 core is installed in the C:\Perl512 directory. Please install Perl to this directory.
   
 Known Issues
 ---
