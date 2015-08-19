@@ -4,7 +4,7 @@ Build Dependencies
 ---
 - MySQL 5.1 (http://dev.mysql.com/downloads/mysql/5.1.html)
   - Install with Developer option
-- ActivePerl 5.16 (http://eqemu.github.io/downloads/ActivePerl-5.16.3.1604-MSWin32-x86-298023.msi)
+- ActivePerl 5.12 (http://eqemu.github.io/downloads/ActivePerl-5.12.3.1204-MSWin32-x86-294330.msi)
 - OpenSSL (This is bundled with project, in Dependencies folder)
 - zlib (in Dependencies folder)
 
@@ -18,3 +18,9 @@ You may need to make updates the the location of includes and lib folders for My
   - C:\Program Files (x85)\MySQL\MySQL Server 5.1\lib\debug
 - ActivePerl
   - C:\perl\lib\Core
+  
+Known Issues
+---
+- You have to compile this source using ActivePerl 5.12 but the server needs 5.14 (x64) for quests to work. Just rename the Perl514.dll to Perl512.dll when running the server.
+- NPCs will not spawn without the map files being present in the /maps/maps folder.
+- NPCs will not roam unless specified in the database their roam range, and nodes placed in game.
