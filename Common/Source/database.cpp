@@ -3679,6 +3679,7 @@ bool Database::DecrementCorpseRotTimer(int32 accountid)
 		if (RunQuery(query2, MakeAnyLenString(&query2, "SELECT id,time FROM player_corpses WHERE accountid = %i", accountid), errbuf2, &result)){
 			row = mysql_fetch_row(result);
 			if (atoi(row[1]) < 2142){
+				if (!RunQuery(query2, MakeAnyLenString(&query2, "DELETE from player_corpses WHERE id='%i'", atoi(row[0])), errbuf2)) {
 					cerr << "Error deleting corpse '" << query2 << "' " << errbuf2 << endl;
 					safe_delete_array(query2);
 					mysql_free_result(result);
