@@ -89,6 +89,18 @@ bool Client::Process()
 				GetFearDestination(GetX(), GetY(), GetZ());
 		}
 
+		if (camp_timer->Check()){
+			Save();
+
+			//if (admin < 100)
+			//	return;
+
+			//APPLAYER* SpawnApperance = this->SendAppearancePacket(this->GetID(), 0x10, 0);
+			this->SendAppearancePacket(0, SAT_Camp, 0, false); // The orginal code did not set spawn_id.... so i;ve left this one here
+
+			PMClose();
+		}
+
 		//Yeahlight: PC is charmed
 		if(IsCharmed() && charmPositionUpdate_timer->Check())
 		{
@@ -1417,15 +1429,8 @@ void Client::ProcessOP_ZoneChange(APPLAYER* pApp)
 //Yeahlight: TODO: What?? What does any of this mean? We only PMClose() GMs? Why?
 void Client::ProcessOP_Camp(APPLAYER* pApp)
 {
-	Save();
-
-	if(admin < 100)
-		return;
-
-	//APPLAYER* SpawnApperance = this->SendAppearancePacket(this->GetID(), 0x10, 0);
-	this->SendAppearancePacket(0, SAT_Camp, 0, false); // The orginal code did not set spawn_id.... so i;ve left this one here
-
-	PMClose();
+	camp_timer->Start(29000, true);
+	return;
 	//QueuePacket(0);
 }
 

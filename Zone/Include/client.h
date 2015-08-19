@@ -652,6 +652,8 @@ private:
 	Timer*	stunned_timer;
 	bool	stunned;
 
+	Timer*	camp_timer;
+
 	int32	myNetworkFootprint;
 
 	bool	debugMe;

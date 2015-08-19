@@ -1873,7 +1873,7 @@ Item_Struct* Database::GetItemNonBlob(sint32 itemID) {
 	// Retrieve all items from database
 	// use inline function to automatically expand all fieldnames
 	char query2[] = "select source,"
-#define F(x) ""#x","
+#define F(x) "`" #x "`,"
 #include "item_fieldlist.h"
 #undef F
 		"updated"
@@ -3663,7 +3663,7 @@ bool Database::DecrementCorpseRotTimer(int32 accountid)
 		char *query2 = 0;
 		safe_delete_array(query);
 		//Yeahlight: This account is logged in, so accelerate their corpse timers beyond normal rot time and decrement the rez timer at the standard rate
-		if(mysql_num_rows(result) > 0)
+		/*if(mysql_num_rows(result) > 0)
 		{
 			if(!RunQuery(query2, MakeAnyLenString(&query2, "UPDATE player_corpses SET time = time - %i, reztime = reztime - %i WHERE accountid = %i", PC_CORPSE_INCREMENT_DECAY_TIMER, (PC_CORPSE_INCREMENT_DECAY_TIMER/7), accountid), errbuf2))
 			{
@@ -3675,13 +3675,27 @@ bool Database::DecrementCorpseRotTimer(int32 accountid)
 		}
 		//Yeahlight: This account is not logged, so decrement their corpse timers at the standard rate
 		else
-		{
-			if(!RunQuery(query2, MakeAnyLenString(&query2, "UPDATE player_corpses SET time = time - %i WHERE accountid = %i", (PC_CORPSE_INCREMENT_DECAY_TIMER/7), accountid), errbuf2))
-			{
-				cerr << "Error in DecrementCorpseRotTimer(3) query '" << query2 << "' " << errbuf2 << endl;
-				safe_delete_array(query2);
-				mysql_free_result(result);
-				return false;
+		{*/
+		if (RunQuery(query2, MakeAnyLenString(&query2, "SELECT id,time FROM player_corpses WHERE accountid = %i", accountid), errbuf2, &result)){
+			row = mysql_fetch_row(result);
+			if (atoi(row[1]) < 2142){
+					cerr << "Error deleting corpse '" << query2 << "' " << errbuf2 << endl;
+					safe_delete_array(query2);
+					mysql_free_result(result);
+					return false;
+				}
+				else {
+					EQC::Common::Log(EQCLog::Status, CP_DATABASE, "Deleting corpse from DB where ID = %i", atoi(row[0]));
+				}
+			}
+			else {
+				if (!RunQuery(query2, MakeAnyLenString(&query2, "UPDATE player_corpses SET time = time - %i WHERE accountid = %i", (PC_CORPSE_INCREMENT_DECAY_TIMER / 7), accountid), errbuf2))
+				{
+					cerr << "Error in DecrementCorpseRotTimer(3) query '" << query2 << "' " << errbuf2 << endl;
+					safe_delete_array(query2);
+					mysql_free_result(result);
+					return false;
+				}
 			}
 		}
 		safe_delete_array(query2);

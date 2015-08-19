@@ -183,6 +183,9 @@ Client::Client(int32 in_ip, int16 in_port, int in_send_socket)
 	stunned_timer->Disable();
 	stunned = false;
 
+	camp_timer = new Timer(29000);
+	camp_timer->Disable();
+
 	myNetworkFootprint = 0;
 	debugMe = false; // Harakiri default false, YL debug is annoying =p
 	myEyeOfZomm = NULL;

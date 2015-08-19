@@ -452,7 +452,7 @@ void PerlembParser::EventCommon(QuestEventID event, int32 objid, const char * da
 				MakeAnyLenString(&hi_decl, "push (@{$%s{%d}},%d);",hashname.c_str(),itemid,slot);
 //Father Nitwit: this is annoying
 #if EQDEBUG >= 7
-				EQC::Common::Log(EQCLog::Debug,CP_QUESTS,  "declare hasitem : %s",hi_decl);
+				//EQC::Common::Log(EQCLog::Debug,CP_QUESTS,  "declare hasitem : %s",hi_decl); //newage: It is, Father Nitwit!
 #endif
 				perl->eval(hi_decl);
 				safe_delete_array(hi_decl);
@@ -900,7 +900,6 @@ int PerlembParser::LoadScript(int npcid, const char * zone, Mob* activater)
 //	catch(...) {/*perl balked at us trynig to delete a non-existant package... no big deal.*/}
 
 	try {
-		EQC::Common::Log(EQCLog::Debug, CP_QUESTS, "Trying eval_file function.");
 		perl->eval_file(packagename.c_str(), filename.c_str());
 	}
 	catch(const char * err)
