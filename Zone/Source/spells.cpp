@@ -59,8 +59,9 @@ void Mob::CastSpell(Spell* spell, TSpellID target_id, int16 slot, int32 cast_tim
 
 	CAST_CLIENT_DEBUG_PTR(this)->Log(CP_SPELL, "Mob::CastSpell: Casting %s", spell->GetSpellName());
 
+	//newage: some part of this makes casting spells unusable
 	//Yeahlight: Prevents a very well known exploit which allows a client to use an instant clicky item to bypass the recovery time of the global spellbar cooldown
-	if(IsClient() && slot < SLOT_ITEMSPELL)
+	/*if(IsClient() && slot < SLOT_ITEMSPELL)
 	{
 		//Yeahlight: Cooldown timer has expired, so we need to reset it to 1ms to avoid a rare issue with fizzle reestablishing a repeat of an extended cooldown timer
 		if(CastToClient()->spellCooldown_timer->Check())
@@ -82,7 +83,7 @@ void Mob::CastSpell(Spell* spell, TSpellID target_id, int16 slot, int32 cast_tim
 		Message(DARK_BLUE, "Your %s spell is not ready yet...", spell->GetSpellName());
 		EnableSpellBar(0);
 		return;
-	}
+	}*/
 
 	Mob* spellTarget = entity_list.GetMob(target_id);
 	int32 mana_required	= spell->GetSpellManaRequired();

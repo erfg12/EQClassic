@@ -3352,6 +3352,7 @@ bool Database::LoadDoors()
             return false;
     }
 
+	//newage: NOTE: Come back to this later for a possible kelethin lift fix?
     MakeAnyLenString(&query, "SELECT id,doorid,zone,name,pos_x,pos_y,pos_z,heading,opentype,guild,lockpick,keyitem,triggerdoor,triggertype,liftheight from doors");//WHERE zone='%s'", zone_name
 	if (RunQuery(query, strlen(query), errbuf, &result))
 	{

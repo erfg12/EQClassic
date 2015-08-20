@@ -538,7 +538,7 @@ void command_help(Client *c, const Seperator *sep)
 void command_goto(Client *c, const Seperator *sep)
 {
 		if (sep->arg[1][0] == 0 && c->GetTarget() != 0) {
-			c->MovePC(0, c->GetTarget()->GetX(), c->GetTarget()->GetY(), c->GetTarget()->GetZ());
+			c->MovePC(0, c->GetTarget()->GetX(), c->GetTarget()->GetY(), c->GetTarget()->GetZ(), false, false);
 		}
 		else if (!(sep->IsNumber(1) && sep->IsNumber(2) && sep->IsNumber(3))) {
 			c->Message(BLACK, "Usage: #goto [x y z].");
@@ -2289,6 +2289,23 @@ void Client::ProcessCommand(char* message)
 				strcpy(s->zonename, sep.arg[1]);
 			worldserver.SendPacket(pack);
 			safe_delete(pack);//delete pack;
+		}
+	}
+	if (strcasecmp(sep.arg[0], "#cdtimer") == 0 && admin >= EQC_Alpha_Tester) {
+		if (sep.arg[1][0] == 0) {
+			Message(BLACK, "Spell CD Timer is %i", spellCooldown_timer);
+		}
+		else {
+			Message(BLACK, "resetting timer...", atoi(sep.arg[1]));
+			spellCooldown_timer = new Timer(1);
+			spellCooldown_timer->Start(0);
+			spellCooldown_timer->Disable();
+			EnableSpellBar(1);
+			for (int i = 0; i < 8; i++){
+				pp.spell_memory[i] = pp.spell_memory[i];
+				SetSpellRecastTimer(i, 0);
+				//pp.spell_memory[i] = 0xffff;
+			}
 		}
 	}
 	if (strcasecmp(sep.arg[0], "#zonebootup") == 0 && admin >= 150) {

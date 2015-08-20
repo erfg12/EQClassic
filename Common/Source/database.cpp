@@ -3440,7 +3440,9 @@ bool Database::loadZoneLines(vector<zoneLine_Struct*>* zone_line_data, char* zon
 	MYSQL_RES *result;
 	MYSQL_ROW row;
 
-	if(RunQuery(query, MakeAnyLenString(&query, "SELECT zone,x,y,z,target_zone,target_x,target_y,target_z,'range',heading,id,maxZDiff,keepX,keepY,keepZ FROM zone_line_nodes WHERE zone = '%s'", zoneName), errbuf, &result))
+	EQC::Common::Log(EQCLog::Debug, CP_DATABASE, "LOADING ZONE LINES FROM %s", zoneName);
+
+	if(RunQuery(query, MakeAnyLenString(&query, "SELECT zone,x,y,z,target_zone,target_x,target_y,target_z,'range',heading,id FROM zone_points WHERE zone = '%s'", zoneName), errbuf, &result))
 	{
 		safe_delete_array(query);//delete[] query;
 
@@ -3460,10 +3462,12 @@ bool Database::loadZoneLines(vector<zoneLine_Struct*>* zone_line_data, char* zon
 			zoneLine->range = atoi(row[8]);
 			zoneLine->heading = (int8)atof(row[9]);
 			zoneLine->id = atoi(row[10]);
-			zoneLine->maxZDiff = atoi(row[11]);
+			/*zoneLine->maxZDiff = atoi(row[11]);
 			zoneLine->keepX = atoi(row[12]);
 			zoneLine->keepY = atoi(row[13]);
-			zoneLine->keepZ = atoi(row[14]);
+			zoneLine->keepZ = atoi(row[14]);*/
+
+			EQC::Common::Log(EQCLog::Debug, CP_DATABASE, "Adding zone line x:%f y:%f z:%f to:%s", (float)atof(row[1]), (float)atof(row[2]), (float)atof(row[3]), row[4]);
 
 			zone_line_data->push_back(zoneLine);
 		}

@@ -183,7 +183,7 @@ Client::Client(int32 in_ip, int16 in_port, int in_send_socket)
 	stunned_timer->Disable();
 	stunned = false;
 
-	camp_timer = new Timer(29000);
+	camp_timer = new Timer(30000);
 	camp_timer->Disable();
 
 	myNetworkFootprint = 0;
@@ -239,12 +239,13 @@ Client::Client(int32 in_ip, int16 in_port, int in_send_socket)
 	projectileStressTestCounter = 0;
 
 	spellCooldown_timer = new Timer(1);
+	//spellCooldown_timer->Disable();
 
 	reservedPrimaryAttack = false;
 	reservedSecondaryAttack = false;
 
-	for(int i = 0; i < 8; i++)
-		spellRecastTimers[i] = 0;//pp.spellSlotRefresh[i];
+	//for(int i = 0; i < 8; i++)
+	//	spellRecastTimers[i] = 0;//pp.spellSlotRefresh[i];
 }
 
 Client::~Client()

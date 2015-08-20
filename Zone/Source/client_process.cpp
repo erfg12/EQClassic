@@ -1429,7 +1429,7 @@ void Client::ProcessOP_ZoneChange(APPLAYER* pApp)
 //Yeahlight: TODO: What?? What does any of this mean? We only PMClose() GMs? Why?
 void Client::ProcessOP_Camp(APPLAYER* pApp)
 {
-	camp_timer->Start(29000, true);
+	camp_timer->Start(30000);
 	return;
 	//QueuePacket(0);
 }
