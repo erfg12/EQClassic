@@ -3452,10 +3452,10 @@ bool Database::loadZoneLines(vector<zoneLine_Struct*>* zone_line_data, char* zon
 			memset(zoneLine, 0, sizeof(zoneLine_Struct));
 			
 			strcpy(zoneLine->zone, row[1]);
-			zoneLine->x = (float)atof(row[2]); //x and y are switched around
-			zoneLine->y = (float)atof(row[3]);
+			zoneLine->x = (float)atof(row[3]);
+			zoneLine->y = (float)atof(row[2]);
 			zoneLine->z = (float)atof(row[4]);
-			strcpy(zoneLine->target_zone, row[5]);
+			strcpy(zoneLine->target_zone, row[5]); //this becomes target_zone_id later
 			zoneLine->target_x = (float)atof(row[7]);
 			zoneLine->target_y = (float)atof(row[6]);
 			zoneLine->target_z = (float)atof(row[8]);
@@ -3682,7 +3682,7 @@ bool Database::DecrementCorpseRotTimer(int32 accountid)
 		{*/
 		if (RunQuery(query2, MakeAnyLenString(&query2, "SELECT id,time FROM player_corpses WHERE accountid = %i", accountid), errbuf2, &result)){
 			row = mysql_fetch_row(result);
-			if (atoi(row[1]) < 2142){
+			if (atoi(row[1]) < 2142){ //newage: check if the corpse is below the minimum. If so, delete it.
 				if (!RunQuery(query2, MakeAnyLenString(&query2, "DELETE from player_corpses WHERE id='%i'", atoi(row[0])), errbuf2)) {
 					cerr << "Error deleting corpse '" << query2 << "' " << errbuf2 << endl;
 					safe_delete_array(query2);
