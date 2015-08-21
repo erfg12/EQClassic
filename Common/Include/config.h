@@ -45,7 +45,7 @@ const int WORLD_PORT = 9000;
 #define TOTAL_RACES	13
 
 // Used in arrays for char creation validation, must be the total name of classes
-#define TOTAL_CLASSES 15 
+#define TOTAL_CLASSES 14 //newage: There's only 14, 15 would be beastlord but this stops at velious
 
 // The MAXIMUM a playerable char can obtain - Including GM's - Dark-Prince 22/12/2007
 #define MAX_PLAYERLEVEL 60

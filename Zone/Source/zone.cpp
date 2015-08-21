@@ -222,7 +222,7 @@ bool Zone::Init() {
 		cout<<"PREPROCESSEDGRID load failed"<<endl;
 
 	if (!Database::Instance()->LoadPatrollingNodes(zoneID))
-		cout<<"PATROLLINGNODE load failed"<<endl;
+		cout << "PATROLLINGNODE load failed" << endl;
 
 	spawn_group_list = new SpawnGroupList();
 	if (!Database::Instance()->PopulateZoneLists(short_name, &zone_point_list, spawn_group_list))
@@ -1452,14 +1452,19 @@ bool Database::LoadPatrollingNodes(int16 zoneID)
 	{
 		safe_delete_array(query);
 		counter = 0;
-		while(row = mysql_fetch_row(result))
+		while (row = mysql_fetch_row(result))
 		{
-			zone->patrollingNodes[counter].gridID = atoi(row[0]);
-			zone->patrollingNodes[counter].number = atoi(row[1]);
-			zone->patrollingNodes[counter].x = atof(row[2]);
-			zone->patrollingNodes[counter].y = atof(row[3]);
-			zone->patrollingNodes[counter].z = atof(row[4]);
-			zone->patrollingNodes[counter].pause = atoi(row[5]);
+			if (counter > 25000)
+				cerr << "ERROR: Reached max number of patrolling nodes (25000). Currently at " << counter << endl;
+			else {
+				//cout << "LOADING PATROLLING NODE ID:" << atoi(row[0]) << " NUM:" << atoi(row[1]) << " COUNTER:" << counter << endl; //newage: good for debugging
+				zone->patrollingNodes[counter].gridID = atoi(row[0]);
+				zone->patrollingNodes[counter].number = atoi(row[1]);
+				zone->patrollingNodes[counter].x = (float)atof(row[2]);
+				zone->patrollingNodes[counter].y = (float)atof(row[3]);
+				zone->patrollingNodes[counter].z = (float)atof(row[4]);
+				zone->patrollingNodes[counter].pause = atoi(row[5]);
+			}
 			counter++;
 		}
 		zone->numberOfPatrollingNodes = counter;

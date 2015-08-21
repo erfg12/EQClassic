@@ -451,27 +451,25 @@ namespace EQC
 				{ /*Necromancer*/   0,   0,   0,  10,   0,  10,   0,  30},
 				{ /*Wizard*/        0,  10,   0,   0,   0,  10,   0,  30},
 				{ /*Magician*/      0,  10,   0,   0,   0,  10,   0,  30},
-				{ /*Enchanter*/     0,   0,   0,   0,   0,  10,  10,  30},
-				{ /*Beastlord*/     0,  10,   5,   0,  10,   0,   5,  20},
+				{ /*Enchanter*/     0,   0,   0,   0,   0,  10,  10,  30}
 			};
 
 			static const bool ClassRaceLookupTable[TOTAL_CLASSES][TOTAL_RACES]= 
-			{						/*Human  Barbarian Erudite Woodelf Highelf Darkelf Halfelf Dwarf  Troll  Ogre   Halfling Gnome  Iksar  Vahshir Froglok*/
-				{ /*Warrior*/         true,  true,     false,  true,   false,  true,   true,   true,  true,  true,  true,    true},
-				{ /*Cleric*/          true,  false,    true,   false,  true,   true,   true,   true,  false, false, true,    true},
-				{ /*Paladin*/         true,  false,    true,   false,  true,   false,  true,   true,  false, false, true,    true},
-				{ /*Ranger*/          true,  false,    false,  true,   false,  false,  true,   false, false, false, true,    false},
-				{ /*ShadowKnight*/    true,  false,    true,   false,  false,  true,   false,  false, true,  true,  false,   true},
-				{ /*Druid*/           true,  false,    false,  true,   false,  false,  true,   false, false, false, true,    false},
-				{ /*Monk*/            true,  false,    false,  false,  false,  false,  false,  false, false, false, false,   false},
-				{ /*Bard*/            true,  false,    false,  true,   false,  false,  true,   false, false, false, false,   false},
-				{ /*Rogue*/           true,  true,     false,  true,   false,  true,   true,   true,  false, false, true,    true},
-				{ /*Shaman*/          false, true,     false,  false,  false,  false,  false,  false, true,  true,  false,   false},
-				{ /*Necromancer*/     true,  false,    true,   false,  false,  true,   false,  false, false, false, false,   true},
-				{ /*Wizard*/          true,  false,    true,   false,  true,   true,   false,  false, false, false, false,   true},
-				{ /*Magician*/        true,  false,    true,   false,  true,   true,   false,  false, false, false, false,   true},
-				{ /*Enchanter*/       true,  false,    true,   false,  true,   true,   false,  false, false, false, false,   true},
-				{ /*Beastlord*/       false, true,     false,  false,  false,  false,  false,  false, true,  true,  false,   false}
+			{						/*Human  Barbarian Erudite Woodelf Highelf Darkelf Halfelf Dwarf  Troll  Ogre   Halfling Gnome  Iksar*/
+				{ /*Warrior*/         true,  true,     false,  true,   false,  true,   true,   true,  true,  true,  true,    true,	true},
+				{ /*Cleric*/          true,  false,    true,   false,  true,   true,   true,   true,  false, false, true,    true,	false},
+				{ /*Paladin*/         true,  false,    true,   false,  true,   false,  true,   true,  false, false, true,    true,	false},
+				{ /*Ranger*/          true,  false,    false,  true,   false,  false,  true,   false, false, false, true,    false,	false},
+				{ /*ShadowKnight*/    true,  false,    true,   false,  false,  true,   false,  false, true,  true,  false,   true,	true},
+				{ /*Druid*/           true,  false,    false,  true,   false,  false,  true,   false, false, false, true,    false,	false},
+				{ /*Monk*/            true,  false,    false,  false,  false,  false,  false,  false, false, false, false,   false,	true},
+				{ /*Bard*/            true,  false,    false,  true,   false,  false,  true,   false, false, false, false,   false,	false},
+				{ /*Rogue*/           true,  true,     false,  true,   false,  true,   true,   true,  false, false, true,    true,	false},
+				{ /*Shaman*/          false, true,     false,  false,  false,  false,  false,  false, true,  true,  false,   false,	true},
+				{ /*Necromancer*/     true,  false,    true,   false,  false,  true,   false,  false, false, false, false,   true,	true},
+				{ /*Wizard*/          true,  false,    true,   false,  true,   true,   false,  false, false, false, false,   true,	false},
+				{ /*Magician*/        true,  false,    true,   false,  true,   true,   false,  false, false, false, false,   true,	false},
+				{ /*Enchanter*/       true,  false,    true,   false,  true,   true,   false,  false, false, false, false,   true,	false}
 			};//Initial table by kathgar, editted by Wiz for accuracy, solar too, addeed to EQC by Dark-Prince
 
 			EQC::Common::PrintF(CP_WORLDSERVER, "Validating char creation info for '%s'...\n", cc->name);
@@ -480,10 +478,10 @@ namespace EQC
 			racetemp = cc->race - 1;
 
 			// Iksar support.... might as well keep it in, its not hurting -- Dark-Prince 22/12/2007
-			if (cc->race == IKSAR) 
+			/*if (cc->race == IKSAR) //newage: iksar is 13, 12 is gnome
 			{
 				racetemp = 12;
-			}
+			}*/
 
 			// Added a level check, dont want to be able to phoney this one :P - Dark-Prince 22/12/2007
 			if((cc->level <1) || (cc->level > MAX_PLAYERLEVEL))

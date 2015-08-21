@@ -155,7 +155,7 @@ public:
 	//Yeahlight: end paths
 
 	//Yeahlight: start patrolling nodes
-	PatrollingNode patrollingNodes[15000];
+	PatrollingNode patrollingNodes[25000];//PatrollingNode patrollingNodes[15000]; //newage: Crashes at 15252 in freportw. That zone has 21757 patrolling nodes.
 	int16	zoneID;
 	int16	numberOfPatrollingNodes;
 	bool	ParseGridData(Mob* parser);
