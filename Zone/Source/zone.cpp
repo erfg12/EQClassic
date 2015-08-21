@@ -562,6 +562,62 @@ bool Database::PopulateZoneLists(char* zone_name, LinkedList<ZonePoint*>* zone_p
 	char *query = 0;
 	MYSQL_RES *result;
 	MYSQL_ROW row;
+	query = 0;
+
+	if (RunQuery(query, MakeAnyLenString(&query, "SELECT DISTINCT(spawngroupID), spawngroup.name FROM spawn2,spawngroup WHERE spawn2.spawngroupID=spawngroup.ID and zone='%s'", zone_name), errbuf, &result))
+	{
+		safe_delete_array(query);//delete[] query;
+		while (row = mysql_fetch_row(result)) {
+			SpawnGroup* newSpawnGroup = new SpawnGroup(atoi(row[0]), row[1]);
+			spawn_group_list->AddSpawnGroup(newSpawnGroup);
+		}
+		mysql_free_result(result);
+	}
+	else
+	{
+		cerr << "Error1 in PopulateZoneLists query '" << query << "' " << errbuf << endl;
+		safe_delete_array(query);//delete[] query;
+		return false;
+	}
+
+	query = 0;
+
+	if (RunQuery(query, MakeAnyLenString(&query, "SELECT spawnentry.spawngroupID, npcid, chance, time_of_day from spawnentry, spawn2 where spawnentry.spawngroupID=spawn2.spawngroupID and zone='%s' ORDER by chance", zone_name), errbuf, &result)) {
+		safe_delete_array(query);//delete[] query;
+		while (row = mysql_fetch_row(result))
+		{
+			SpawnGroup* sg = spawn_group_list->GetSpawnGroup(atoi(row[0]));
+
+			if (sg == 0)
+			{
+				// ERROR... unable to find the spawn group!
+				EQC::Common::PrintF(CP_ZONESERVER, "Unable to locate a spawn group for NPC ID: %i!\n", atoi(row[1]));
+			}
+			else
+			{
+				SpawnEntry* newSpawnEntry = new SpawnEntry(atoi(row[1]), atoi(row[2]), (SPAWN_TIME_OF_DAY)atoi(row[3]));
+				sg->AddSpawnEntry(newSpawnEntry);
+			}
+
+		}
+		mysql_free_result(result);
+	}
+	else
+	{
+		cerr << "Error2 in PopulateZoneLists query '" << query << "' " << errbuf << endl;
+		safe_delete_array(query);//delete[] query;
+		return false;
+	}
+
+	// CODER end new spawn code
+
+	return true;
+}
+/*bool Database::PopulateZoneLists(char* zone_name, LinkedList<ZonePoint*>* zone_point_list, SpawnGroupList* spawn_group_list) {
+	char errbuf[MYSQL_ERRMSG_SIZE];
+	char *query = 0;
+	MYSQL_RES *result;
+	MYSQL_ROW row;
 
 	MakeAnyLenString(&query, "SELECT x,y,z,target_x,target_y,target_z,target_zone,heading FROM zone_points WHERE zone='%s'", zone_name);
 	if (RunQuery(query, strlen(query), errbuf, &result))
@@ -639,7 +695,7 @@ bool Database::PopulateZoneLists(char* zone_name, LinkedList<ZonePoint*>* zone_p
 	// CODER end new spawn code
 
 	return true;
-}
+}*/
 
 bool Database::PopulateZoneSpawnList(char* zone_name, LinkedList<Spawn2*> &spawn2_list, int32 repopdelay) {
 	char errbuf[MYSQL_ERRMSG_SIZE];

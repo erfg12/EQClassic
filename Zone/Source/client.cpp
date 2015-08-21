@@ -3630,10 +3630,11 @@ void Client::CreateZoneLineNode(char* zoneName, char* connectingZoneName, int16 
 	strcat(fileNamePrefix, fileNameSuffix);
 	ofstream myfile;
 	myfile.open(fileNamePrefix, ios::app);
-	if(range == 75)
-		myfile<<"INSERT INTO `zone_line_nodes` ( `zone` , `x` , `y` , `z` , `target_zone` , `target_x` , `target_y` , `target_z`) VALUES ('"<<zoneName<<"','"<<GetX()<<"','"<<GetY()<<"','"<<GetZ()<<"','"<<connectingZoneName<<"','0','0','0');"<<endl;
-	else
-		myfile<<"INSERT INTO `zone_line_nodes` ( `zone` , `x` , `y` , `z` , `target_zone` , `target_x` , `target_y` , `target_z` , `range`) VALUES ('"<<zoneName<<"','"<<GetX()<<"','"<<GetY()<<"','"<<GetZ()<<"','"<<connectingZoneName<<"','0','0','0','"<<range<<"');"<<endl;
+		myfile << "INSERT INTO `zone_point` ( `zone` , `x` , `y` , `z` , `target_zone` , `target_x` , `target_y` , `target_z`) VALUES ('" << zoneName << "','" << GetX() << "','" << GetY() << "','" << GetZ() << "','" << connectingZoneName << "','0','0','0');" << endl;
+	//if(range == 75)
+		//myfile<<"INSERT INTO `zone_line_nodes` ( `zone` , `x` , `y` , `z` , `target_zone` , `target_x` , `target_y` , `target_z`) VALUES ('"<<zoneName<<"','"<<GetX()<<"','"<<GetY()<<"','"<<GetZ()<<"','"<<connectingZoneName<<"','0','0','0');"<<endl;
+	//else
+		//myfile<<"INSERT INTO `zone_line_nodes` ( `zone` , `x` , `y` , `z` , `target_zone` , `target_x` , `target_y` , `target_z` , `range`) VALUES ('"<<zoneName<<"','"<<GetX()<<"','"<<GetY()<<"','"<<GetZ()<<"','"<<connectingZoneName<<"','0','0','0','"<<range<<"');"<<endl;
 	myfile.close();
 }
 
@@ -3764,7 +3765,8 @@ void Client::ZonePC(char* zonename, float x, float y, float z)
 	
 
 	// Harakiri Client will automatically do local movepc if the client is already in the target zone
-	TeleportPC(zonename,x,y,z);
+	MovePC(zonename, x, y, z);
+	//TeleportPC(zonename,x,y,z);
 
 	CAST_CLIENT_DEBUG_PTR(this)->Log(CP_UPDATES, "Client::ZonePC(zone name = %s, x = %f, y = %f, z = %f)", zonename, x, y, z);
 }

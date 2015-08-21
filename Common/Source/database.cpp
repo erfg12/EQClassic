@@ -3442,7 +3442,7 @@ bool Database::loadZoneLines(vector<zoneLine_Struct*>* zone_line_data, char* zon
 
 	EQC::Common::Log(EQCLog::Debug, CP_DATABASE, "LOADING ZONE LINES FROM %s", zoneName);
 
-	if(RunQuery(query, MakeAnyLenString(&query, "SELECT zone,x,y,z,target_zone,target_x,target_y,target_z,'range',heading,id FROM zone_points WHERE zone = '%s'", zoneName), errbuf, &result))
+	if(RunQuery(query, MakeAnyLenString(&query, "SELECT id,zone,y,x,z,target_zone,target_y,target_x,target_z,heading FROM zone_points WHERE zone = '%s'", zoneName), errbuf, &result))
 	{
 		safe_delete_array(query);//delete[] query;
 
@@ -3451,23 +3451,23 @@ bool Database::loadZoneLines(vector<zoneLine_Struct*>* zone_line_data, char* zon
 			zoneLine_Struct* zoneLine = new zoneLine_Struct;
 			memset(zoneLine, 0, sizeof(zoneLine_Struct));
 			
-			strcpy(zoneLine->zone, row[0]);
-			zoneLine->x = (float)atof(row[1]);
-			zoneLine->y = (float)atof(row[2]);
-			zoneLine->z = (float)atof(row[3]);
-			strcpy(zoneLine->target_zone, row[4]);
-			zoneLine->target_x = (float)atof(row[5]);
+			strcpy(zoneLine->zone, row[1]);
+			zoneLine->x = (float)atof(row[2]); //x and y are switched around
+			zoneLine->y = (float)atof(row[3]);
+			zoneLine->z = (float)atof(row[4]);
+			strcpy(zoneLine->target_zone, row[5]);
+			zoneLine->target_x = (float)atof(row[7]);
 			zoneLine->target_y = (float)atof(row[6]);
-			zoneLine->target_z = (float)atof(row[7]);
-			zoneLine->range = atoi(row[8]);
+			zoneLine->target_z = (float)atof(row[8]);
+			zoneLine->range = 75;
 			zoneLine->heading = (int8)atof(row[9]);
-			zoneLine->id = atoi(row[10]);
-			/*zoneLine->maxZDiff = atoi(row[11]);
-			zoneLine->keepX = atoi(row[12]);
-			zoneLine->keepY = atoi(row[13]);
-			zoneLine->keepZ = atoi(row[14]);*/
+			zoneLine->id = atoi(row[0]);
+			zoneLine->maxZDiff = 0;
+			zoneLine->keepX = 0;
+			zoneLine->keepY = 0;
+			zoneLine->keepZ = 0;
 
-			EQC::Common::Log(EQCLog::Debug, CP_DATABASE, "Adding zone line x:%f y:%f z:%f to:%s", (float)atof(row[1]), (float)atof(row[2]), (float)atof(row[3]), row[4]);
+			EQC::Common::Log(EQCLog::Debug, CP_DATABASE, "Adding zone line x:%f y:%f z:%f to:%s", (float)atof(row[3]), (float)atof(row[2]), (float)atof(row[4]), row[5]);
 
 			zone_line_data->push_back(zoneLine);
 		}
@@ -3847,7 +3847,7 @@ bool Database::FindMyZoneInLocation(const char* zone, const char* zoneLine, floa
 
 	//Yeahlight: GM does not have a zoneline preference, pick one for them
 	if(strcmp(zoneLine, "ANY") == 0){
-		if (RunQuery(query, MakeAnyLenString(&query, "SELECT target_x, target_y, target_z, heading FROM zone_line_nodes WHERE target_zone = '%s'", zone), errbuf, &result)) 
+		if (RunQuery(query, MakeAnyLenString(&query, "SELECT target_x, target_y, target_z, heading FROM zone_point WHERE target_zone = '%s'", zone), errbuf, &result)) 
 		{
 			row = mysql_fetch_row(result);
 			if(row)
@@ -3875,7 +3875,7 @@ bool Database::FindMyZoneInLocation(const char* zone, const char* zoneLine, floa
 	}
 	else
 	{
-		if (RunQuery(query, MakeAnyLenString(&query, "SELECT target_x, target_y, target_z, heading FROM zone_line_nodes WHERE zone = '%s' AND target_zone = '%s'", zoneLine, zone), errbuf, &result)) 
+		if (RunQuery(query, MakeAnyLenString(&query, "SELECT target_x, target_y, target_z, heading FROM zone_point WHERE zone = '%s' AND target_zone = '%s'", zoneLine, zone), errbuf, &result)) 
 		{
 			row = mysql_fetch_row(result);
 			if(row)
