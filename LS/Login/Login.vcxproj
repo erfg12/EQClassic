@@ -45,7 +45,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v120_xp</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -71,7 +71,7 @@
     <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\Build\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\..\Build\Debug\</IntDir>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='PublicLogin|Win32'">.\../Build\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='PublicLogin|Win32'">.\../Build/PublicLogin\</IntDir>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='PublicLogin|Win32'">false</LinkIncremental>
@@ -90,9 +90,9 @@
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>LOGINCRYPTO;INVERSEXY;_WIN32_WINNT=0x0400;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>EQC_SHAREDMEMORY;LOGINCRYPTO;INVERSEXY;_WIN32_WINNT=0x0400;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeader>
       </PrecompiledHeader>
       <PrecompiledHeaderOutputFile>.\../build/login/debug/Login.pch</PrecompiledHeaderOutputFile>
@@ -102,14 +102,15 @@
       <BrowseInformation>true</BrowseInformation>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
-      <AdditionalIncludeDirectories>C:\Program Files %28x86%29\MySQL\MySQL Server 5.1\include;..\..\Dependencies\zlib\include;..\..\Dependencies\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\Dependencies\mysql\include;..\..\Dependencies\zlib\include;..\..\Dependencies\openssl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>true</MinimalRebuild>
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>odbc32.lib;odbccp32.lib;wsock32.lib;mysqlclient.lib;zlib.lib;libeay32.lib;ssleay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;wsock32.lib;libmysql.lib;zdll.lib;libeay32.lib;ssleay32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>../../Build/Debug/Login.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreSpecificDefaultLibraries>libcmt</IgnoreSpecificDefaultLibraries>
@@ -120,7 +121,8 @@
       <DataExecutionPrevention>
       </DataExecutionPrevention>
       <TargetMachine>MachineX86</TargetMachine>
-      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\MySQL\MySQL Server 5.1\lib;C:\Program Files %28x86%29\MySQL\MySQL Server 5.1\lib\debug;..\..\Dependencies\zlib\lib;..\..\Dependencies\openssl\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\Dependencies\mysql\lib;..\..\Dependencies\zlib\lib;..\..\Dependencies\openssl\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <MinimumRequiredVersion />
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='PublicLogin|Win32'">
