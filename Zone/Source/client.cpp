@@ -3765,8 +3765,8 @@ void Client::ZonePC(char* zonename, float x, float y, float z)
 	
 
 	// Harakiri Client will automatically do local movepc if the client is already in the target zone
-	MovePC(zonename, x, y, z);
-	//TeleportPC(zonename,x,y,z);
+	//MovePC(zonename, x, y, z);
+	TeleportPC(zonename,x,y,z);
 
 	CAST_CLIENT_DEBUG_PTR(this)->Log(CP_UPDATES, "Client::ZonePC(zone name = %s, x = %f, y = %f, z = %f)", zonename, x, y, z);
 }

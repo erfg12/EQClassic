@@ -614,14 +614,14 @@ bool Client::Process()
 			{
 				if (app->opcode == OP_ZoneEntry)
 				{
-					if(!this->QuagmireGhostCheck(app))
-					{
+					//if(!this->QuagmireGhostCheck(app))
+					//{
 						ret = false;
-					}
-					else
-					{
+					//}
+					//else
+					//{
 					this->Process_ClientConnection2(app);
-					}
+					//}
 				}
 				else if (app->opcode == OP_SetDataRate)
 				{
