@@ -287,15 +287,15 @@ namespace EQC
 			// Check if the client is still connected (aka ping it)
 			if (!this->network->packet_manager.CheckActive())
 			{
-				//cout << "Client disconnected" << endl;
+				cout << "[CheckActive] Client disconnected" << endl;
 				return false; // bail out, we cant ping the client
 			}
 
 			// check if the client has timed out
 			if (this->timeout_timer->Check())
 			{
-				//cout << "Client timeout" << endl;
-				return false; return false; // bail out, timer has expired
+				cout << "[timeout_timer->Check()] Client timeout" << endl;
+				return false; //return false; // bail out, timer has expired
 			}
 
 			// Check packet managers timers

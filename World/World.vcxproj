@@ -20,7 +20,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v120_xp</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -73,7 +73,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Perl\lib\CORE;C:\mysql\include;..\Dependencies\zlib\include;..\Dependencies\openssl\include;.\Network;.\Include;..\Common\Include;..\EQC\Include;../Common/Include;..\SharedMemory\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Dependencies\Perl\lib\CORE;..\Dependencies\mysql\include;..\Dependencies\zlib\include;..\Dependencies\openssl\include;.\Network;.\Include;..\Common\Include;..\EQC\Include;../Common/Include;..\SharedMemory\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_CRT_SECURE_NO_DEPRECATE;RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PrecompiledHeader>
@@ -83,7 +83,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>WS2_32.lib;libmysql.lib;Zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\mysql\lib\opt;C:\mysql\lib;..\Dependencies\openssl\lib;..\Dependencies\zlib\lib;../Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\Dependencies\mysql\lib;..\Dependencies\openssl\lib;..\Dependencies\zlib\lib;../Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>

@@ -17,7 +17,7 @@
 #include "eq_packet_structs.h"
 
 #define SERVER_TIMEOUT						60000	// Comment: how often keepalive gets sent
-#define INTERSERVER_TIMER					90000	// Comment: 
+#define INTERSERVER_TIMER					10000	// Comment: does MySQL pings and auto-reconnect
 #define LoginServer_StatusUpdateInterval	15000	// Comment: 
 #define LoginServer_AuthStale				60000	// Comment: 
 #define AUTHCHANGE_TIMEOUT					900		// Comment: in seconds

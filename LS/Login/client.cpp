@@ -700,7 +700,7 @@ void ClientList::Process() {
 #ifdef CLIENT_JOINPART
 			struct in_addr  in;
 			in.s_addr = iterator.GetData()->GetIP();
-			cout << "Removing client from ip: " << inet_ntoa(in) << ", port: " << iterator.GetData()->GetPort() << endl;
+			cout << "[CLIENT_JOINPART] Removing client from ip: " << inet_ntoa(in) << ", port: " << iterator.GetData()->GetPort() << endl;
 #endif
 			iterator.RemoveCurrent();
 		}

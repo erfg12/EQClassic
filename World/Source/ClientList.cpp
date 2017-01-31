@@ -77,7 +77,6 @@ namespace EQC
 				bool Res = false;
 				try {
 					Res = iterator.GetData()->Process();
-
 				}
 				catch (EQC::Common::EQCException Exception) { //Cofruben: Let's try to catch our exceptions.
 					struct in_addr  in;
@@ -96,7 +95,7 @@ namespace EQC
 				{
 					struct in_addr in;
 					in.s_addr = iterator.GetData()->GetIP();
-					cout << "Removing client from ip:" << inet_ntoa(in) << " port:" << ntohs((int16)(iterator.GetData()->GetPort())) << endl;
+					cout << "[ClientList::Process()] Removing client from ip:" << inet_ntoa(in) << " port:" << ntohs((int16)(iterator.GetData()->GetPort())) << endl;
 					//Yeahlight: Log the account out of the database if they are not entering the world
 					if(!iterator.GetData()->GetIgnoreLogOut())
 					{
