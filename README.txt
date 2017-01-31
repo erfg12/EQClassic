@@ -2,8 +2,7 @@ EQClassic source code from January 1st, 2010
 
 _Build Dependencies_
 ---
-- ActivePerl 5.12: http://eqemu.github.io/downloads/ActivePerl-5.12.3.1204-MSWin32-x86-294330.msi
-- Additional depencies: http://newagesoldier.com/myfiles/openeqc/Dependencies.zip
+- http://newagesoldier.com/myfiles/openeqc/Dependencies.zip
 
 
 _Known Issues_
