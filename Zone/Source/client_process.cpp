@@ -613,15 +613,11 @@ bool Client::Process()
 		case CLIENT_CONNECTING2: 
 			{
 				if (app->opcode == OP_ZoneEntry)
-				{
-					//if(!this->QuagmireGhostCheck(app))
-					//{
+				{ //loop through until client is 100% ready to connect to zone
+					if(!this->QuagmireGhostCheck(app))
 						ret = false;
-					//}
-					//else
-					//{
-					this->Process_ClientConnection2(app);
-					//}
+					else
+						this->Process_ClientConnection2(app);
 				}
 				else if (app->opcode == OP_SetDataRate)
 				{
@@ -629,9 +625,7 @@ bool Client::Process()
 				}
 				//Recycle packet until client is connected...
 				else if (app->opcode == OP_WearChange)
-				{
-					//QueuePacket(app);
-				}
+					QueuePacket(app);
 				else
 				{
 					cout << "Unexpected packet during CLIENT_CONNECTING2: OpCode: 0x" << hex << setw(4) << setfill('0') << app->opcode << dec << ", size: " << app->size << endl;
@@ -5764,7 +5758,7 @@ void Client::Process_ClientConnection5(APPLAYER *app)
 	//Recycle packet until client is connected...
 	else if (app->opcode == OP_WearChange)
 	{
-		//QueuePacket(app);
+		QueuePacket(app);
 	}
 	else if (app->opcode == OP_SpawnAppearance)
 	{
@@ -6238,6 +6232,7 @@ void Client::Process_ClientConnection2(APPLAYER *app)
 *******************************************************************/
 void Client::Process_ClientConnection3(APPLAYER *app)
 {
+	EQC::Common::PrintF(CP_CLIENT, "ready for part 3 of Process_ClientConnection. Waiting for opcode 0x5d20\n");
 	if (app->opcode == 0x5d20)
 	{
 		EQC::Common::PrintF(CP_CLIENT, "Login packet 3\n"); // Here the client sends tha character name again.. 
