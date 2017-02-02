@@ -877,16 +877,25 @@ int PerlembParser::LoadScript(int npcid, const char * zone, Mob* activater)
 	tmpf = fopen(filename.c_str(), "r");
 	if(tmpf == NULL) {
 		//the npc has no qst file, attach the defaults
-		std::string setdefcmd = "$";
+		try {
+			std::string setdefcmd = "$";
 			setdefcmd += packagename;
 			setdefcmd += "::isdefault = 1;";
-		perl->eval(setdefcmd.c_str());
-		setdefcmd = "$";
+			perl->eval(setdefcmd.c_str());
+			setdefcmd = "$";
 			setdefcmd += packagename;
 			setdefcmd += "::isloaded = 1;";
-		perl->eval(setdefcmd.c_str());
-		hasQuests[npcid] = questDefault;
-		EQC::Common::Log(EQCLog::Debug, CP_QUESTS, "NPC doesnt have a quest file.", packagename.c_str());
+			perl->eval(setdefcmd.c_str());
+			hasQuests[npcid] = questDefault;
+			EQC::Common::Log(EQCLog::Debug, CP_QUESTS, "NPC doesnt have a quest file.", packagename.c_str());
+		}
+		catch (const char * err)
+		{
+			//try to reduce some of the console spam...
+			//todo: tweak this to be more accurate at deciding what to filter (we don't want to gag legit errors)
+			//		if(!strstr(err,"No such file or directory"))
+			EQC::Common::Log(EQCLog::Error, CP_QUESTS, "NPC doesnt have a quest file, so zone tried to crash. %s", err);
+		}
 		return(1);
 	} else {
 		fclose(tmpf);
