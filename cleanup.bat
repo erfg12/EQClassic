@@ -7,3 +7,4 @@ rmdir /s /q "SharedMemory\Intermediate"
 rmdir /s /q "Zone\Intermediate"
 del /S /F /AH *.suo
 del /S /F /AH logfile.txt
+del EQCEmu.sdf

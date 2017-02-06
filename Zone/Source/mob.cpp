@@ -230,6 +230,8 @@ Mob::Mob(char*   in_name,
     fear_walkto_y = 0;
     fear_walkto_z = 0;
 
+	elevator = false;
+
 	mesmerized = false; // Pinedepain // We initialize mesmerized to false. When a mob enters the world, he's not mezzed.
 
 	nodeReporter = false;

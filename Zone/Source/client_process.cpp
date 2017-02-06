@@ -4815,13 +4815,15 @@ void Client::ProcessOP_ClickDoor(APPLAYER* pApp)
 	bool debugFlag = true;
 
 	LinkedListIterator<Door_Struct*> iterator(zone->door_list);
-
 	iterator.Reset();
 
 	while(iterator.MoreElements())	
 	{
 		Door_Struct* door = iterator.GetData();
 		ClickDoor_Struct* clicked = (ClickDoor_Struct*) pApp->pBuffer;
+
+		#define OPEN_DOOR 0x02
+		#define CLOSE_DOOR 0x03
 
 		if(door->doorid == clicked->doorid) 
 		{
@@ -4835,13 +4837,22 @@ void Client::ProcessOP_ClickDoor(APPLAYER* pApp)
 			APPLAYER* outapp = new APPLAYER(OP_OpenDoor, sizeof(DoorOpen_Struct));
 			APPLAYER* outapp2 = new APPLAYER(OP_OpenDoor, sizeof(DoorOpen_Struct));
 			DoorOpen_Struct* od = (DoorOpen_Struct*)outapp->pBuffer;
+
 			//Yeahlight: Door is a trigger for another door.
 			//Yeahlight: TODO: Are any triggers "locked"?
 			if(door->triggerID > 0)
 			{
 				DoorOpen_Struct* od2 = (DoorOpen_Struct*)outapp2->pBuffer;
 				od2->doorid = door->triggerID;
-				od2->action = 0x02;
+				//newage: gfaydark elevators get stuck. Added boolean "elevator" to fix.
+				if (elevator){
+					od2->action = OPEN_DOOR;
+					elevator = false;
+				}
+				else {
+					od2->action = CLOSE_DOOR;
+					elevator = true;
+				}
 				entity_list.QueueClients(this, outapp2, false);
 			}
 			//Yeahlight: Door is locked
@@ -4873,13 +4884,13 @@ void Client::ProcessOP_ClickDoor(APPLAYER* pApp)
 						{
 							Message(DARK_BLUE,"The door swings open!");
 							od->doorid = door->doorid;
-							od->action = 0x02;
+							od->action = CLOSE_DOOR;
 							door->doorIsOpen = 1;
 						}
 						else
 						{
 							od->doorid = door->doorid;
-							od->action = 0x03;
+							od->action = OPEN_DOOR;
 							door->doorIsOpen = 0;
 						}
 						entity_list.QueueClients(this, outapp, false);
@@ -4895,13 +4906,13 @@ void Client::ProcessOP_ClickDoor(APPLAYER* pApp)
 							if(!door->doorIsOpen == 1){
 								Message(DARK_BLUE,"The door swings open!");
 								od->doorid = door->doorid;
-								od->action = 0x02;
+								od->action = CLOSE_DOOR;
 								door->doorIsOpen = 1;
 							}
 							else
 							{
 								od->doorid = door->doorid;
-								od->action = 0x03;
+								od->action = OPEN_DOOR;
 								door->doorIsOpen = 0;
 							}
 							entity_list.QueueClients(this, outapp, false);
@@ -4947,14 +4958,16 @@ void Client::ProcessOP_ClickDoor(APPLAYER* pApp)
 			{
 				if(!door->doorIsOpen == 1)
 				{
+					//Message(LIGHTEN_BLUE, "Debug: Door is open. We will now close it.: [%s] %s", door->doorid, door->name);
 					od->doorid = door->doorid;
-					od->action = 0x02;
+					od->action = CLOSE_DOOR;
 					door->doorIsOpen = 1;
 				}
 				else
 				{
+					//Message(LIGHTEN_BLUE, "Debug: Door is closed. We will now open it.: [%s] %s", door->doorid, door->name);
 					od->doorid = door->doorid;
-					od->action = 0x03;
+					od->action = OPEN_DOOR;
 					door->doorIsOpen = 0;
 				}
 				entity_list.QueueClients(this, outapp, false);

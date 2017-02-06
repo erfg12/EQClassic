@@ -651,6 +651,8 @@ protected:
 	bool	canSeeThroughInvis;
 	bool	canSeeThroughInvisToUndead;
 
+	bool	elevator;
+
 	SPAWN_TIME_OF_DAY time_of_day; // Kibanu
 
 	// Harakiri Quests

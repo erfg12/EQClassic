@@ -1778,6 +1778,7 @@ struct Door_Struct{
 /*0040*/ int16	 parameter;     //Yeahlight: Specific distance door (most likely a lift/button) will travel
 /*????*/ //Yeahlight: I could not find the correct locations in the struct for the below variables, which probably means they are safe here:
 		 uint8	 triggerID;     //Yeahlight: ID of door this "door" triggers (0 means no doors triggered)
+		 //uint8	 triggerType;     //NeWaGe: 255 = button for FAYLEVATORs
 		 uint8	 lockpick;		//Yeahlight: Skill required to pick this lock (0 means no lock on door or door is unpickable if a key exists [below])
 		 int16	 keyRequired;	//Yeahlight: Key required to open the lock, item ID #
 		 char	 zoneName[16];  //Yeahlight: Destination zone name for clickies ("NONE" is default)
