@@ -90,6 +90,7 @@ public:
 	
 	void	Attack(Mob* other, int hand = 13, bool procEligible = true, bool riposte = false);	// 13 = Primary (default), 14 = secondary
 	void	SetAttackTimer();
+	void	ResetSpellGems();
 	void	Heal();
 	void	Damage(Mob* other, sint32 damage, int16 spell_id, int8 attack_skill = 0x04);
 	void	Death(Mob* other, sint32 damage, int16 spell_id = 0xFFFF, int8 attack_skill = 0x04);

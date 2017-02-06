@@ -183,7 +183,7 @@ Client::Client(int32 in_ip, int16 in_port, int in_send_socket)
 	stunned_timer->Disable();
 	stunned = false;
 
-	camp_timer = new Timer(30000);
+	camp_timer = new Timer(30500);
 	camp_timer->Disable();
 
 	myNetworkFootprint = 0;

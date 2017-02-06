@@ -725,6 +725,21 @@ void Client::Disconnect()
 	// Should we be calling a Save() here?
 }
 
+//newage: reset our grey spell gems
+void Client::ResetSpellGems(){
+	for (int i = 0; i < 8; i++){
+		APPLAYER* outapp2 = NULL;
+		outapp2 = new APPLAYER(OP_MemorizeSpell, sizeof(MemorizeSpell_Struct));
+		memset(outapp2->pBuffer, 0, outapp2->size);
+		MemorizeSpell_Struct* memspell = (MemorizeSpell_Struct*)outapp2->pBuffer;
+		memspell->slot = i;
+		memspell->spell_id = pp.spell_memory[i];
+		memspell->scribing = 3;
+		this->CastToClient()->QueuePacket(outapp2);
+		safe_delete(outapp2);
+	}
+}
+
 void Client::SetAttackTimer() 
 {
 	bool debugFlag = true;
@@ -1423,7 +1438,7 @@ void Client::ProcessOP_ZoneChange(APPLAYER* pApp)
 //Yeahlight: TODO: What?? What does any of this mean? We only PMClose() GMs? Why?
 void Client::ProcessOP_Camp(APPLAYER* pApp)
 {
-	camp_timer->Start(30000);
+	camp_timer->Start(30500);
 	return;
 	//QueuePacket(0);
 }
@@ -6228,6 +6243,8 @@ void Client::Process_ClientConnection2(APPLAYER *app)
 	//cout << "Sent addplayer... (EQ disconnects here on error)" << endl;
 
 	SetAttackTimer();
+
+	ResetSpellGems();
 
 	//Yeahlight: Last stage of account login process to the active_accounts table
 	Database::Instance()->LogAccountInPartIV(this->account_id, this->ip);

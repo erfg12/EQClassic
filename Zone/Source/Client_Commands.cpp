@@ -2306,6 +2306,7 @@ void Client::ProcessCommand(char* message)
 				SetSpellRecastTimer(i, 0);
 				//pp.spell_memory[i] = 0xffff;
 			}
+			ResetSpellGems();
 		}
 	}
 	if (strcasecmp(sep.arg[0], "#zonebootup") == 0 && admin >= 150) {
