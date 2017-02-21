@@ -3337,13 +3337,20 @@ void Client::ProcessOP_GMSummon(APPLAYER* pApp){
 		cout << "Wrong size on OP_GMSummon. Got: " << pApp->size << ", Expected: " << sizeof(GMSummon_Struct) << endl;
 		return;
 	}
-	if(admin<100) 
+	
+	GMSummon_Struct* gms = (GMSummon_Struct*) pApp->pBuffer;
+	Mob* st = entity_list.GetMob(gms->charname);
+
+	if (st->IsCorpse()) {
+		st->CastToCorpse()->Summon(this);
+		return;
+	}
+
+	if (admin<100)
 	{
 		Message(RED, "You're not awesome enough to use this command!");
 		return;
 	}
-	GMSummon_Struct* gms = (GMSummon_Struct*) pApp->pBuffer;
-	Mob* st = entity_list.GetMob(gms->charname);
 
 	if (admin >= 100) 
 	{

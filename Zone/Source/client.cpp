@@ -4037,8 +4037,11 @@ bool Client::CanEquipThisItem(Item_Struct* item)
 
 	//Yeahlight: Rip the bitmasks apart and seperate it into slots
 	//Yeahlight: TODO: Check deities
-	int16 classes[14] = {0};
-	int16 races[13] = {0};
+
+	//jimm0thy: Fixes auto loot zone crash
+	int16 classes[28] = { 0 }; //int16 classes[14] = {0};
+	int16 races[26] = { 0 }; //int16 races[13] = {0};
+
 	uint16 itemClasses = item->common.classes;
 	uint16 itemRaces = item->common.normal.races;
 	int16 counter = 0;
