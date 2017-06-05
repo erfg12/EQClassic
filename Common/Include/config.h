@@ -7,7 +7,8 @@
 // ***************************************************************
 
 #ifndef CONFIG_H
-#define CONFIG_H
+	#define CONFIG_H
+#endif
 
 #include <stdio.h>
 
@@ -55,10 +56,13 @@ const int WORLD_PORT = 9000;
 
 // defines for making these methods work in Windows
 #ifdef WIN32
+#if _MSC_VER < 1900 
 	#define snprintf	_snprintf
+#endif
 	#define strncasecmp	_strnicmp
 	#define strcasecmp	_stricmp
-	//#define vsnprintf	_vsnprintf
+#if (_MSC_VER < 1500)
+	#define vsnprintf	_vsnprintf
 #endif
 
 // Name of the Shared Memory library

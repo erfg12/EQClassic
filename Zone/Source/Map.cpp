@@ -32,7 +32,9 @@ using namespace std;
 #include "../include/zone.h"
 #include "../../Utils/azone/map.h"
 #ifdef WIN32
+#if _MSC_VER < 1900 
 #define snprintf	_snprintf
+#endif
 #endif
 
 //Do we believe the normals from the map file?

@@ -33,7 +33,9 @@ using namespace std;
 #ifdef WIN32
 	#include <windows.h>
 
-	#define snprintf	_snprintf
+#if _MSC_VER < 1900 
+#define snprintf	_snprintf
+#endif
 	//#define vsnprintf	_vsnprintf
 	#define strncasecmp	_strnicmp
 	#define strcasecmp  _stricmp

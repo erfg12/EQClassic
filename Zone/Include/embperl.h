@@ -37,6 +37,7 @@ extern "C" {	//the perl headers dont do this for us...
 };
 #endif
 #ifdef WIN32
+#if _MSC_VER < 1900 
 #define snprintf        _snprintf
 #endif
 

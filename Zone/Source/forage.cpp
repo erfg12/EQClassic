@@ -3,7 +3,9 @@ using namespace std;
 #include <stdlib.h>
 
 #ifdef WIN32
+#if _MSC_VER < 1900 
 #define snprintf	_snprintf
+#endif
 #endif
 
 #include "forage.h"
@@ -12,7 +14,9 @@ using namespace std;
 
 #include "database.h"
 #ifdef WIN32
+#if _MSC_VER < 1900 
 #define snprintf	_snprintf
+#endif
 #endif
 
 // This allows EqEmu to have zone specific foraging - BoB

@@ -30,7 +30,9 @@ using namespace std;
 // Disgrace: for windows compile
 #ifdef WIN32
 #include <windows.h>
+#if _MSC_VER < 1900 
 #define snprintf	_snprintf
+#endif
 #define strncasecmp	_strnicmp
 #define strcasecmp	_stricmp
 #else
