@@ -1,6 +1,6 @@
 EQClassic source code from January 1st, 2010 - For EverQuest Trilogy (big box)
 
-http://newagesoldier.com/myfiles/openeqc/readme.txt
+http://erfg12.github.io/EQClassic/
 
 
 _Known Issues_
