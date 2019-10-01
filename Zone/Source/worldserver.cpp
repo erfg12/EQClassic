@@ -422,7 +422,7 @@ bool WorldServer::Connect(bool FromInit)
 	}
 	
 	memcpy ((char FAR *)&(server_sin.sin_addr), phostent->h_addr, phostent->h_length);
-	server_sin.sin_port = htons(WORLD_PORT);
+	server_sin.sin_port = htons(9000);
 
 	// Establish a connection to the server socket.
 	if (connect (send_socket, (PSOCKADDR) &server_sin, sizeof (server_sin)) == SOCKET_ERROR)

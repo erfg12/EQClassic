@@ -123,7 +123,7 @@ int main(int argc, char** argv) // This is going to be moved to the WorldServer.
 
 	char* WorldAddress = net.GetWorldAddress();
 	
-	EQC::Common::PrintF(CP_WORLDSERVER, "World server listening on Address : '%s' and port : %d\n", WorldAddress, WORLD_PORT);
+	EQC::Common::PrintF(CP_WORLDSERVER, "World server listening on Address : '%s' and port : %d\n", WorldAddress, 9000);
 
 #ifdef WIN32
 	_beginthread(ConsoleLoop, 0, NULL);

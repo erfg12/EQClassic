@@ -77,7 +77,7 @@ bool InitTCP()
      This is used with the bind() call */
 	memset((char *) &address, 0, sizeof(address));
 	address.sin_family = AF_INET;
-	address.sin_port = htons(WORLD_PORT);
+	address.sin_port = htons(9000);
 	address.sin_addr.s_addr = htonl(INADDR_ANY);
 
 	/* Setting up TCP port for new TCP connections */

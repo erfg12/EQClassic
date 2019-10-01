@@ -21,7 +21,7 @@
 #define DB_FILE "db.ini"
 
 // World Server Port - This cannot be changed it is used by the client
-const int WORLD_PORT = 9000;
+//const int WORLD_PORT = 9000;
 
 // Login Server Port - This cannot be changed it is used by the client
 #define LOGIN_PORT 5999
