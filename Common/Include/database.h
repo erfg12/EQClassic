@@ -101,6 +101,11 @@ public:
 	bool	LoadPlayerCorpses(char* zonename);
 	bool	LoadDoorData(LinkedList<Door_Struct*>* door_list, char* zonename);
 	bool	LoadObjects(vector<Object_Struct*>* object_list, char* zonename);
+	int32	getZoneShutDownDelay(char* short_name);
+	bool    UpdateCorpseSave(int32 dbid, float x, float y, float z);
+	float   getTargetZoneCenter(char* source_zone, char* target_zone, int16 tozoneid);
+	float   getTargetZoneMin(char* source_zone, char* target_zone, int16 tozoneid);
+	float   getTargetZoneMax(char* source_zone, char* target_zone, int16 tozoneid);
 	bool	GetZoneLongName(char* short_name, char** long_name, char* file_name = 0, float* safe_x = 0, float* safe_y = 0, float* safe_z = 0);
 	int32	GetAuthentication(char* char_name, char* zone_name, int32 ip);
 	bool	SetAuthentication(int32 account_id, char* char_name, char* zone_name, int32 ip);

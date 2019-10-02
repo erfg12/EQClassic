@@ -1310,6 +1310,171 @@ bool Database::EditGuild(int32 guilddbid, int8 ranknum, GuildRankLevel_Struct* g
 	return false;
 }
 
+bool Database::UpdateCorpseSave(int32 dbid, float x, float y, float z) //jimm0thy -  Couldn't get Corpse::Save to work so just added my own
+{
+	char errbuf[MYSQL_ERRMSG_SIZE];
+	char* query = 0;
+	int32 affected_rows = 0;
+	MYSQL_RES* result;
+	MYSQL_ROW row;
+
+	if (RunQuery(query, MakeAnyLenString(&query, "update player_corpses set x = %f, y = %f, z = %f where id = %i", x, y, z, dbid), errbuf, &result))
+	{
+		safe_delete_array(query);
+		if (affected_rows == 1)
+		{
+			return true;
+		}
+
+		else
+		{
+			cerr << "Error in UpdateCorpseSave query '" << query << "' " << errbuf << endl;
+			safe_delete_array(query);
+			return false;
+		}
+		return false;
+	}
+}
+
+//jimm0thy - Get new zoning additional information
+float Database::getTargetZoneCenter(char* source_zone, char* target_zone, int16 tozoneid)
+{
+	char errbuf[MYSQL_ERRMSG_SIZE];
+	char* query = 0;
+	MYSQL_RES* result;
+	MYSQL_ROW row;
+	//bool qResult;
+	float tmp = 0;
+
+	if (RunQuery(query, MakeAnyLenString(&query, "SELECT centerpoint FROM zone_points WHERE target_zone='%s' and zone='%s' and tozoneid='%i' and usenewzoning >= 1", source_zone, target_zone, tozoneid), errbuf, &result))
+	{
+		if (mysql_num_rows(result) == 1)
+		{
+			row = mysql_fetch_row(result);
+			tmp = atoi(row[0]);
+
+			return tmp;
+
+		}
+		mysql_free_result(result);
+		safe_delete_array(query);
+		return tmp;
+	}
+	else {
+		cerr << "Error in getTargetZoneCenter query '" << query << "' " << errbuf << endl;
+		safe_delete_array(query);
+		mysql_free_result(result);
+		return 0;
+	}
+
+}
+
+//jimm0thy - Get new zoning additional information
+float Database::getTargetZoneMax(char* source_zone, char* target_zone, int16 tozoneid)
+{
+	char errbuf[MYSQL_ERRMSG_SIZE];
+	char* query = 0;
+	MYSQL_RES* result;
+	MYSQL_ROW row;
+	//bool qResult;
+	float tmp = 0;
+
+	if (RunQuery(query, MakeAnyLenString(&query, "SELECT maxvert FROM zone_points WHERE target_zone='%s' and zone='%s' and tozoneid='%i' and usenewzoning >= 1", source_zone, target_zone, tozoneid), errbuf, &result))
+	{
+		if (mysql_num_rows(result) == 1)
+		{
+			row = mysql_fetch_row(result);
+			tmp = atoi(row[0]);
+
+			return tmp;
+
+		}
+		mysql_free_result(result);
+		safe_delete_array(query);
+		return tmp;
+	}
+	else {
+		cerr << "Error in getTargetZoneMax query '" << query << "' " << errbuf << endl;
+		safe_delete_array(query);
+		mysql_free_result(result);
+		return 0;
+	}
+
+}
+
+//jimm0thy - Get new zoning additional information
+float Database::getTargetZoneMin(char* source_zone, char* target_zone, int16 tozoneid)
+{
+	char errbuf[MYSQL_ERRMSG_SIZE];
+	char* query = 0;
+	MYSQL_RES* result;
+	MYSQL_ROW row;
+	//bool qResult;
+	float tmp = 0;
+
+	if (RunQuery(query, MakeAnyLenString(&query, "SELECT minvert FROM zone_points WHERE target_zone='%s' and zone='%s' and tozoneid='%i' and usenewzoning >= 1", source_zone, target_zone, tozoneid), errbuf, &result))
+	{
+		if (mysql_num_rows(result) == 1)
+		{
+			row = mysql_fetch_row(result);
+			tmp = atoi(row[0]);
+
+			return tmp;
+
+		}
+		mysql_free_result(result);
+		safe_delete_array(query);
+		return tmp;
+	}
+	else {
+		cerr << "Error in getTargetZoneMin query '" << query << "' " << errbuf << endl;
+		safe_delete_array(query);
+		mysql_free_result(result);
+		return 0;
+	}
+
+}
+
+
+//jimm0thy - Zone Shutdown delay per Database
+int32 Database::getZoneShutDownDelay(char* short_name)
+{
+	char errbuf[MYSQL_ERRMSG_SIZE];
+	char* query = 0;
+	MYSQL_RES* result;
+	MYSQL_ROW row;
+	int32 qResult = 3000;
+
+
+	if (RunQuery(query, MakeAnyLenString(&query, "SELECT shutdowndelay FROM zone WHERE short_name='%s'", short_name), errbuf, &result))
+	{
+		if (mysql_num_rows(result) == 1)
+		{
+			row = mysql_fetch_row(result);
+			int32 tmp = atoi(row[0]);
+			qResult = tmp;
+			return qResult;
+			//return (atoi(row[0]));
+		}
+		mysql_free_result(result);
+		safe_delete_array(query);
+		//else {
+		//	cerr << "Error in getZoneShutDownDelay (more than one result) query '" << query << "' " << errbuf << endl;
+		//	mysql_free_result(result);
+		//	safe_delete_array(query);
+		////	return (RuleI(Zone, AutoShutdownDelay));
+		//}
+		return qResult;
+	}
+	else {
+		cerr << "Error in getZoneShutDownDelay query '" << query << "' " << errbuf << endl;
+		safe_delete_array(query);
+		mysql_free_result(result);
+		return qResult;
+	}
+	//return (RuleI(Zone, AutoShutdownDelay));
+}
+
 bool Database::GetZoneLongName(char* short_name, char** long_name, char* file_name, float* safe_x, float* safe_y, float* safe_z)
 {
 	char errbuf[MYSQL_ERRMSG_SIZE];

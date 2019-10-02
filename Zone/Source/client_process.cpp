@@ -3331,70 +3331,80 @@ void Client::ProcessOP_Taunt(APPLAYER* pApp)
 
 //////////////////////
 
-void Client::ProcessOP_GMSummon(APPLAYER* pApp){
-	if (pApp->size != sizeof(GMSummon_Struct)) 
+void Client::ProcessOP_GMSummon(APPLAYER* pApp) {
+	if (pApp->size != sizeof(GMSummon_Struct))
 	{
 		cout << "Wrong size on OP_GMSummon. Got: " << pApp->size << ", Expected: " << sizeof(GMSummon_Struct) << endl;
 		return;
 	}
-	
-	GMSummon_Struct* gms = (GMSummon_Struct*) pApp->pBuffer;
+
+	GMSummon_Struct* gms = (GMSummon_Struct*)pApp->pBuffer;
 	Mob* st = entity_list.GetMob(gms->charname);
 
-	if (st->IsCorpse()) {
+	if (st->IsCorpse()) // player using the /corpse command
+	{
 		st->CastToCorpse()->Summon(this);
+
+		int32 CorpseID = st->CastToCorpse()->GetDBID();
+
+		Database::Instance()->UpdateCorpseSave(CorpseID, this->GetX(), this->GetY(), this->GetZ());
+
+
 		return;
 	}
 
-	if (admin<100)
-	{
-		Message(RED, "You're not awesome enough to use this command!");
-		return;
-	}
+	else {
 
-	if (admin >= 100) 
-	{
-		int8 tmp = gms->charname[strlen(gms->charname)-1];
-		if (st != 0)
+		if (admin < 100)
 		{
-			this->Message(BLACK, "Local: Summoning %s to %i, %i, %i", gms->charname, gms->x, gms->y, gms->z);
-			if (st->IsClient() && (st->CastToClient()->GetAnon() != 1 || this->Admin() >= st->CastToClient()->Admin()))
+			Message(RED, "You're not awesome enough to use this command!");
+			return;
+		}
+
+		if (admin >= 100)
+		{
+			int8 tmp = gms->charname[strlen(gms->charname) - 1];
+			if (st != 0)
 			{
-				st->CastToClient()->MovePC(0, gms->x, gms->y, gms->z);
+				this->Message(BLACK, "Local: Summoning %s to %i, %i, %i", gms->charname, gms->x, gms->y, gms->z);
+				if (st->IsClient() && (st->CastToClient()->GetAnon() != 1 || this->Admin() >= st->CastToClient()->Admin()))
+				{
+					st->CastToClient()->MovePC(0, gms->x, gms->y, gms->z);
+				}
+				else
+				{
+					st->GMMove(gms->x, gms->y, gms->z);
+				}
+			}
+			else if (!worldserver.Connected())
+			{
+				Message(BLACK, "Error: World server disconnected");
+			}
+			else if (tmp < '0' || tmp > '9')
+			{ // dont send to world if it's not a player's name
+				ServerPacket* pack = new ServerPacket(ServerOP_ZonePlayer, sizeof(ServerZonePlayer_Struct));
+
+				//pack->pBuffer = new uchar[pack->size]; //Taz : Memory leak again
+				memset(pack->pBuffer, 0, pack->size);
+				ServerZonePlayer_Struct* szp = (ServerZonePlayer_Struct*)pack->pBuffer;
+				strcpy(szp->adminname, this->GetName());
+				szp->adminrank = this->Admin();
+				strcpy(szp->name, gms->charname);
+				strcpy(szp->zone, zone->GetShortName());
+				szp->x_pos = gms->x;
+				szp->y_pos = gms->y;
+				szp->z_pos = gms->z;
+				szp->ignorerestrictions = true;
+				worldserver.SendPacket(pack);
+				safe_delete(pack);//delete pack;
 			}
 			else
-			{
-				st->GMMove(gms->x, gms->y, gms->z);
-			}
+				Message(RED, "Error: '%s' not found.", gms->charname);
 		}
-		else if (!worldserver.Connected())
-		{
-			Message(BLACK, "Error: World server disconnected");
-		}
-		else if (tmp < '0' || tmp > '9') 
-		{ // dont send to world if it's not a player's name
-			ServerPacket* pack = new ServerPacket(ServerOP_ZonePlayer, sizeof(ServerZonePlayer_Struct));
-
-			//pack->pBuffer = new uchar[pack->size]; //Taz : Memory leak again
-			memset(pack->pBuffer, 0, pack->size);
-			ServerZonePlayer_Struct* szp = (ServerZonePlayer_Struct*) pack->pBuffer;
-			strcpy(szp->adminname, this->GetName());
-			szp->adminrank = this->Admin();
-			strcpy(szp->name, gms->charname);
-			strcpy(szp->zone, zone->GetShortName());
-			szp->x_pos = gms->x;
-			szp->y_pos = gms->y;
-			szp->z_pos = gms->z;
-			szp->ignorerestrictions = true;
-			worldserver.SendPacket(pack);
-			safe_delete(pack);//delete pack;
-		}
-		else 
-			Message(RED, "Error: '%s' not found.", gms->charname);
 	}
-	else if (st->IsCorpse()) {
+	/*else if (st->IsCorpse()) {
 		st->CastToCorpse()->Summon(this);
-	}
+	}*/
 }
 
 //////////////////////
@@ -4867,13 +4877,24 @@ void Client::ProcessOP_ClickDoor(APPLAYER* pApp)
 				DoorOpen_Struct* od2 = (DoorOpen_Struct*)outapp2->pBuffer;
 				od2->doorid = door->triggerID;
 				//newage: gfaydark elevators get stuck. Added boolean "elevator" to fix.
-				if (elevator){
-					od2->action = OPEN_DOOR;
-					elevator = false;
+				//jimm0thy -  Make this only affect the lifts in Kelethin (others can be added), IDs are based off the above debug message
+				// however these doorid's do not show in the doors table of the database
+				if (strcmp(zone->GetShortName(), "gfaydark") == 0) {
+					if (clicked->doorid == 74 || clicked->doorid == 73 || clicked->doorid == 81 || clicked->doorid == 82 || clicked->doorid == 78 || clicked->doorid == 79)
+					{
+						if (elevator) {
+							od2->action = OPEN_DOOR;
+							elevator = false;
+						}
+						else {
+							od2->action = CLOSE_DOOR;
+							elevator = true;
+						}
+					}
 				}
-				else {
-					od2->action = CLOSE_DOOR;
-					elevator = true;
+				else
+				{
+					od2->action = OPEN_DOOR;
 				}
 				entity_list.QueueClients(this, outapp2, false);
 			}
