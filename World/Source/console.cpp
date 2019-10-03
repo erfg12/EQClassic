@@ -278,6 +278,7 @@ namespace EQC
 						// buffer overflow, kill client
 						SendMessage(0, 0);
 						SendMessage(0, "Buffer overflow, disconnecting");
+						cout << "Buffer overflow, disconnecting" << endl;
 						return false;
 					} else {
 						memcpy(&textbuf[bufindex], &buffer, status);
@@ -288,6 +289,7 @@ namespace EQC
 						CheckBuffer();
 					}
 				} else if (status == SOCKET_ERROR) {
+					cout << "Socket error" << endl;
 			#ifdef WIN32
 					if (!(WSAGetLastError() == WSAEWOULDBLOCK)) {
 			#else

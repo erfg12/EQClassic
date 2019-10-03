@@ -48,10 +48,10 @@ using namespace std;
 #include "../common/MiscFunctions.h"
 #include "../common/crc32.h"
 
-#define EQN_DEBUG			0
-#define EQN_DEBUG_Error		0
-#define EQN_DEBUG_Packet	0
-#define EQN_DEBUG_Fragment	0
+#define EQN_DEBUG			1
+#define EQN_DEBUG_Error		6
+#define EQN_DEBUG_Packet	1
+#define EQN_DEBUG_Fragment	1
 #define EQN_DEBUG_ACK		0
 #define EQN_DEBUG_Unknown	0
 #define LOG_PACKETS			0
