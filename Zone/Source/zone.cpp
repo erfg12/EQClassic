@@ -182,22 +182,42 @@ Zone::Zone(char* in_short_name, char* in_address, int16 in_port)
 	{
 		long_name = strcpy(new char[18], "Long zone missing");
 	}
+	// jimm0thy - added custom zone shutdown delay to database
+	int32 ZoneShutDownDelay;
+	ZoneShutDownDelay = (Database::Instance()->getZoneShutDownDelay(short_name));
 
-	autoshutdown_timer = new Timer(ZONE_AUTOSHUTDOWN_DELAY);
-	autoshutdown_timer->Start(AUTHENTICATION_TIMEOUT * 1000, false);
+
+	if (ZoneShutDownDelay >= 1) // This zone is non-static so we will sleep after the given time to free up resources
+	{
+		EQC::Common::Log(EQCLog::Debug, CP_ZONESERVER, "Shutdown Delay set to %i seconds\n", (ZoneShutDownDelay / 1000));
+		autoshutdown_timer = new Timer(ZoneShutDownDelay);
+		autoshutdown_timer->Start();
+		autoshutdown_timer->Enable();
+	}
+	else if (ZoneShutDownDelay <= 0) //  This zone is set to static 
+	{
+		EQC::Common::Log(EQCLog::Debug, CP_ZONESERVER, "Zone set to static, we won't sleep\n");
+		autoshutdown_timer = new Timer(ZONE_AUTOSHUTDOWN_DELAY);
+		autoshutdown_timer->Start(AUTHENTICATION_TIMEOUT * 1000, false);
+		autoshutdown_timer->Disable();
+	}
+
+
+	//autoshutdown_timer = new Timer(ZONE_AUTOSHUTDOWN_DELAY);
+	//autoshutdown_timer->Start(AUTHENTICATION_TIMEOUT * 1000, false);
 	//Yeahlight: Our zones are now static, they do not shutdown
-	autoshutdown_timer->Disable();
+	//autoshutdown_timer->Enable();
 	bindCondition = 0;
 	levCondition = 0;
 	outDoorZone = false;
 
-	cout<<"Loading zone safe points"<<endl;
+	cout << "Loading zone safe points" << endl;
 	SetSafeX(-1);
 	SetSafeY(-1);
 	SetSafeZ(-1);
 	SetSafeHeading(-1);
-	if(Database::Instance()->GetSafePoints(short_name, &safeX, &safeY, &safeZ, 0, 0, &safeHeading) == false)
-		cout<<"ERROR loading zone safe points"<<endl;
+	if (Database::Instance()->GetSafePoints(short_name, &safeX, &safeY, &safeZ, 0, 0, &safeHeading) == false)
+		cout << "ERROR loading zone safe points" << endl;
 
 	zoneStatus_timer = new Timer(ZONE_STATUS_CHECK_DELAY);
 }
@@ -276,6 +296,10 @@ bool Zone::Init() {
 		zone->thisZonesZoneLines[i]->keepX = zone->zone_line_data.at(i)->keepX;
 		zone->thisZonesZoneLines[i]->keepY = zone->zone_line_data.at(i)->keepY;
 		zone->thisZonesZoneLines[i]->keepZ = zone->zone_line_data.at(i)->keepZ;
+		zone->thisZonesZoneLines[i]->useNewZoning = zone->zone_line_data.at(i)->useNewZoning; // jimm0thy - added for new zoning code
+		zone->thisZonesZoneLines[i]->centerpoint = zone->zone_line_data.at(i)->centerpoint; // jimm0thy - added for new zoning code
+		zone->thisZonesZoneLines[i]->maxvert = zone->zone_line_data.at(i)->maxvert; // jimm0thy - added for new zoning code
+		zone->thisZonesZoneLines[i]->minvert = zone->zone_line_data.at(i)->minvert; // jimm0thy - added for new zoning code
 	}
 
 	if (!Database::Instance()->LoadDoorData(&door_list, short_name))
@@ -446,13 +470,14 @@ bool Zone::Process()
 	}
 
 	//Yeahlight: We use static zones now; no more going to sleep
-	//if (autoshutdown_timer->Check()) {
-	//	StartShutdownTimer();
-	//	if (numclients == 0) {
-	//		EQC::Common::PrintF(CP_ZONESERVER, "Automatic shutdown\n");
-	//		return false;
-	//	}
-	//}
+	// jimm0thy - re-enabled auto shutdown
+	if (autoshutdown_timer->Check()) {
+		StartShutdownTimer();
+		if (numclients == 0) {
+			EQC::Common::PrintF(CP_ZONESERVER, "Automatic shutdown\n");
+			return false;
+		}
+	}
 
 	//Yeahlight: Bulk spawn only timer has expired, permit respawns to send out spawn packets now
 	if(bulkOnly == true && bulkOnly_timer->Check())

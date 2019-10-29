@@ -1310,7 +1310,7 @@ bool Database::EditGuild(int32 guilddbid, int8 ranknum, GuildRankLevel_Struct* g
 	return false;
 }
 
-bool Database::UpdateCorpseSave(int32 dbid, float x, float y, float z) //jimm0thy -  Couldn't get Corpse::Save to work so just added my own
+bool Database::UpdateCorpseSave(int32 dbid, float x, float y, float z) // jimm0thy -  Couldn't get Corpse::Save to work so just added my own
 {
 	char errbuf[MYSQL_ERRMSG_SIZE];
 	char* query = 0;
@@ -1336,7 +1336,7 @@ bool Database::UpdateCorpseSave(int32 dbid, float x, float y, float z) //jimm0th
 	}
 }
 
-//jimm0thy - Get new zoning additional information
+// jimm0thy - Get new zoning additional information
 float Database::getTargetZoneCenter(char* source_zone, char* target_zone, int16 tozoneid)
 {
 	char errbuf[MYSQL_ERRMSG_SIZE];
@@ -1369,7 +1369,7 @@ float Database::getTargetZoneCenter(char* source_zone, char* target_zone, int16 
 
 }
 
-//jimm0thy - Get new zoning additional information
+// jimm0thy - Get new zoning additional information
 float Database::getTargetZoneMax(char* source_zone, char* target_zone, int16 tozoneid)
 {
 	char errbuf[MYSQL_ERRMSG_SIZE];
@@ -1402,7 +1402,7 @@ float Database::getTargetZoneMax(char* source_zone, char* target_zone, int16 toz
 
 }
 
-//jimm0thy - Get new zoning additional information
+// jimm0thy - Get new zoning additional information
 float Database::getTargetZoneMin(char* source_zone, char* target_zone, int16 tozoneid)
 {
 	char errbuf[MYSQL_ERRMSG_SIZE];
@@ -1436,7 +1436,7 @@ float Database::getTargetZoneMin(char* source_zone, char* target_zone, int16 toz
 }
 
 
-//jimm0thy - Zone Shutdown delay per Database
+// jimm0thy - Zone Shutdown delay per Database
 int32 Database::getZoneShutDownDelay(char* short_name)
 {
 	char errbuf[MYSQL_ERRMSG_SIZE];
@@ -3607,7 +3607,7 @@ bool Database::loadZoneLines(vector<zoneLine_Struct*>* zone_line_data, char* zon
 
 	EQC::Common::Log(EQCLog::Debug, CP_DATABASE, "LOADING ZONE LINES FROM %s", zoneName);
 
-	if(RunQuery(query, MakeAnyLenString(&query, "SELECT id,zone,y,x,z,target_zone,target_y,target_x,target_z,heading FROM zone_points WHERE zone = '%s'", zoneName), errbuf, &result))
+	if (RunQuery(query, MakeAnyLenString(&query, "SELECT id,zone,y,x,z,target_zone,target_y,target_x,target_z,heading,Zrange,keepY,UseNewZoning,keepX,centerpoint,maxvert,minvert FROM zone_points WHERE zone = '%s'", zoneName), errbuf, &result))
 	{
 		safe_delete_array(query);//delete[] query;
 
@@ -3624,15 +3624,22 @@ bool Database::loadZoneLines(vector<zoneLine_Struct*>* zone_line_data, char* zon
 			zoneLine->target_x = (float)atof(row[7]);
 			zoneLine->target_y = (float)atof(row[6]);
 			zoneLine->target_z = (float)atof(row[8]);
-			zoneLine->range = 75;
+			//zoneLine->range = 75;
+			zoneLine->range = (int16)atof(row[10]); // jimm0thy - read range from database instead of hard coded value, needed to change range to Zrange in database due to protected commands
 			zoneLine->heading = (int8)atof(row[9]);
 			zoneLine->id = atoi(row[0]);
 			zoneLine->maxZDiff = 0;
 			zoneLine->keepX = 0;
 			zoneLine->keepY = 0;
 			zoneLine->keepZ = 0;
+			zoneLine->useNewZoning = (int8)atof(row[12]); // jimm0thy - Added for NewZoning code
+			zoneLine->centerpoint = (float)atof(row[14]); // jimm0thy - Added for NewZoning code
+			zoneLine->maxvert = (float)atof(row[15]); // jimm0thy - Added for NewZoning code
+			zoneLine->minvert = (float)atof(row[16]); // jimm0thy - Added for NewZoning code
 
-			EQC::Common::Log(EQCLog::Debug, CP_DATABASE, "Adding zone line x:%f y:%f z:%f to:%s", (float)atof(row[3]), (float)atof(row[2]), (float)atof(row[4]), row[5]);
+
+			EQC::Common::Log(EQCLog::Debug, CP_DATABASE, "Zoning range set to %i", zoneLine->range); // jimm0thy - added range output to zone window with zone line coords
+			EQC::Common::Log(EQCLog::Debug, CP_DATABASE, "Adding zone line x:%f y:%f z:%f to:%s heading:%i", (float)atof(row[3]), (float)atof(row[2]), (float)atof(row[4]), row[5], zoneLine->heading);
 
 			zone_line_data->push_back(zoneLine);
 		}

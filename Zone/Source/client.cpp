@@ -3766,7 +3766,7 @@ void Client::ZonePC(char* zonename, float x, float y, float z)
 
 	// Harakiri Client will automatically do local movepc if the client is already in the target zone
 	//MovePC(zonename, x, y, z);
-	TeleportPC(zonename,x,y,z);
+	TeleportPC(zonename,x,y,z); // jimm0thy updated to use TeleportPC instead of MovePC
 
 	CAST_CLIENT_DEBUG_PTR(this)->Log(CP_UPDATES, "Client::ZonePC(zone name = %s, x = %f, y = %f, z = %f)", zonename, x, y, z);
 }
@@ -3782,47 +3782,440 @@ void Client::ScanForZoneLines()
 {
 	bool debugFlag = true;
 
+
 	//Yeahlight: Check to see if player is in range of each zoneline node
-	for(int i = 0; i < zone->numberOfZoneLineNodes; i++)
+	for (int i = 0; i < zone->numberOfZoneLineNodes; i++)
 	{
 		int16 range = zone->thisZonesZoneLines[i]->range;
 		int16 zDiff = zone->thisZonesZoneLines[i]->maxZDiff;
-		if(zDiff == 0)
+		if (zDiff == 0)
 			zDiff = 50000;
-		if(abs(this->GetX() - zone->thisZonesZoneLines[i]->x) > range || abs(this->GetY() - zone->thisZonesZoneLines[i]->y) > range || abs(this->GetZ() - zone->thisZonesZoneLines[i]->z) > zDiff || (GetZ() + 10) < zone->thisZonesZoneLines[i]->z)
+
+		//o--------------------------------------------------------------
+		// New Zoning Code; jimm0thy, August 22, 2019
+		//o--------------------------------------------------------------
+		//| Updated zoning code, triggers off of one coordinate X or Y
+		//| which is set in the database as 1 = X , 2 = Y in the UseNewZoning
+		//| field of the zone_points table. This is especially useful for
+		//| large zones with zone lines that span across them such as 
+		//| Commonlands, Desert of Ro, and Karanas
+		//o--------------------------------------------------------------
+
+		if (zone->thisZonesZoneLines[i]->useNewZoning >= 1) // 1 = Zone line is X based, 2 = Zone line is Y based
+		{
+
+
+			if (zone->thisZonesZoneLines[i]->useNewZoning == 1) // X based Zone Code
+			{
+				float playerX = this->GetX();
+				float triggerX = zone->thisZonesZoneLines[i]->x;
+				float zwallMin = zone->thisZonesZoneLines[i]->minvert;
+				float zwallMax = zone->thisZonesZoneLines[i]->maxvert;
+
+				if (zwallMax == 0) { zwallMax = 999999; } // Most zones wont use zone line boundries but we dont want a bunch of different lines of code
+				if (zwallMin == 0) { zwallMin = -999999; }
+
+				//	this->Message(WHITE, "Zone = %s X = %f", zone->GetShortName(), playerX); // testing only
+				//	this->Message(WHITE, "Trigger = %f between %f and %f", triggerX, zwallMin, zwallMax);
+
+				if (triggerX >= 0) // Positive X
+				{
+					if (playerX >= triggerX && this->GetY() >= zwallMin && this->GetY() <= zwallMax)
+					{
+
+						float sendY;
+						float sendX = (zone->thisZonesZoneLines[i]->target_x);
+						float best_z = 0;
+
+						if (zone->thisZonesZoneLines[i]->keepY == 1) // the Y coordinates line up between zones so we will keep them
+						{
+							sendY = this->GetY();
+							float targetMax = (Database::Instance()->getTargetZoneMax(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
+							float targetMin = (Database::Instance()->getTargetZoneMin(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
+							// While the coordinates may line up sometimes one of the connecting zones is slightly larger than the other
+							// When this happens, or when they do not line up at all, we set the MaxCoordinate and MinCoordinate in the database
+							// this will allow us to make sure we dont overshoot and end up falling through the world
+							if (targetMax != 0 && targetMin != 0)
+							{
+								if (sendY > targetMax)
+								{
+									sendY = targetMax;
+								}
+								if (sendY < targetMin)
+								{
+									sendY = targetMin;
+								}
+							}
+						}
+						else
+						{
+							sendY = (zone->thisZonesZoneLines[i]->target_y);
+							float targetMax = (Database::Instance()->getTargetZoneMax(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
+							float targetMin = (Database::Instance()->getTargetZoneMin(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
+
+
+
+							if (sendY > targetMax)
+							{
+								sendY = targetMax;
+							}
+							if (sendY < targetMin)
+							{
+								sendY = targetMin;
+							}
+						}
+
+						VERTEX me;
+						me.x = sendX;
+						me.y = sendY;
+						me.z = 50;
+						VERTEX hit;
+						FACE* onhit;
+
+						if (best_z == 0)
+						{
+							best_z = zone->map->LoadMapfile(zone->thisZonesZoneLines[i]->target_zone)->FindBestZ(MAP_ROOT_NODE, me, &hit, &onhit);
+						}
+
+						if (best_z == -999999.000000)
+						{
+							best_z = 0;
+						}
+
+
+						//this->Message(YELLOW, "Positive Zoning to %s at x= %f y=%f z=%f", zone->thisZonesZoneLines[i]->target_zone, sendX, sendY, best_z);
+
+						// jimm0thy Comment out for No-Zoning Testing
+						this->TeleportPC(zone->thisZonesZoneLines[i]->target_zone, sendX, sendY, best_z, zone->thisZonesZoneLines[i]->heading);
+
+
+					}
+				}
+
+				if (triggerX <= 0) // Negative X
+				{
+					if (playerX <= triggerX && this->GetY() >= zwallMin && this->GetY() <= zwallMax)
+					{
+
+						float sendY;
+						float sendX = (zone->thisZonesZoneLines[i]->target_x);
+						float best_z = 0;
+
+						if (zone->thisZonesZoneLines[i]->keepY == 1)
+						{
+							sendY = this->GetY();
+							float targetMax = (Database::Instance()->getTargetZoneMax(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
+							float targetMin = (Database::Instance()->getTargetZoneMin(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
+
+							if (targetMax != 0 && targetMin != 0)
+							{
+								if (sendY > targetMax)
+								{
+									sendY = targetMax;
+								}
+								if (sendY < targetMin)
+								{
+									sendY = targetMin;
+								}
+							}
+						}
+						else
+						{
+							sendY = (zone->thisZonesZoneLines[i]->target_y);
+							float targetMax = (Database::Instance()->getTargetZoneMax(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
+							float targetMin = (Database::Instance()->getTargetZoneMin(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
+
+							sendY = this->GetX();
+
+							if (sendY > targetMax)
+							{
+								sendY = targetMax;
+							}
+							if (sendY < targetMin)
+							{
+								sendY = targetMin;
+							}
+						}
+
+						VERTEX me;
+						me.x = sendX;
+						me.y = sendY;
+						me.z = 50;
+						VERTEX hit;
+						FACE* onhit;
+
+						if (best_z == 0)
+						{
+							best_z = zone->map->LoadMapfile(zone->thisZonesZoneLines[i]->target_zone)->FindBestZ(MAP_ROOT_NODE, me, &hit, &onhit);
+						}
+
+						if (best_z == -999999.000000)
+						{
+							best_z = 0;
+						}
+
+						//this->Message(YELLOW, "Negative Zoning to %s at x= %f y=%f z=%f", zone->thisZonesZoneLines[i]->target_zone, sendX, sendY, best_z);
+
+						// jimm0thy Comment out for No-Zoning Testing
+						this->TeleportPC(zone->thisZonesZoneLines[i]->target_zone, sendX, this->GetY(), best_z, zone->thisZonesZoneLines[i]->heading);
+
+
+					}
+				}
+
+			}
+			if (zone->thisZonesZoneLines[i]->useNewZoning == 2) // Y based Zone code
+			{
+				float playerY = this->GetY();
+				float triggerY = zone->thisZonesZoneLines[i]->y;
+				float zwallMin = zone->thisZonesZoneLines[i]->minvert;
+				float zwallMax = zone->thisZonesZoneLines[i]->maxvert;
+
+				if (zwallMax == 0) { zwallMax = 999999; } // Most zones wont use zone line boundries but we dont want a bunch of different lines of code
+				if (zwallMin == 0) { zwallMin = -999999; }
+
+				//	this->Message(WHITE, "Zone = %s Y = %f", zone->GetShortName(), playerY); // testing only
+				//	this->Message(WHITE, "Trigger = %f between %f and %f", triggerY, zwallMin, zwallMax);
+
+				if (triggerY >= 0) // Positive Y
+				{
+
+
+					if (playerY >= triggerY && this->GetX() >= zwallMin && this->GetX() <= zwallMax)
+					{
+
+						float sendY = (zone->thisZonesZoneLines[i]->target_y);
+						float sendX;
+						float best_z = 0;
+
+						if (zone->thisZonesZoneLines[i]->keepX == 1)
+						{
+							sendX = this->GetX();
+							float targetMax = (Database::Instance()->getTargetZoneMax(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
+							float targetMin = (Database::Instance()->getTargetZoneMin(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
+
+							if (targetMax != 0 && targetMin != 0)
+							{
+								if (sendX > targetMax)
+								{
+									sendX = targetMax;
+								}
+								if (sendX < targetMin)
+								{
+									sendX = targetMin;
+								}
+							}
+						}
+						else
+						{
+							//sendX = (zone->thisZonesZoneLines[i]->target_x);
+							float targetCenter = (Database::Instance()->getTargetZoneCenter(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
+							float distFromCenter = (this->GetX() - zone->thisZonesZoneLines[i]->centerpoint);
+							float targetMax = (Database::Instance()->getTargetZoneMax(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
+							float targetMin = (Database::Instance()->getTargetZoneMin(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
+							sendX = (targetCenter + distFromCenter);
+							//			this->Message(YELLOW, "DistFromCenter = %f", distFromCenter);
+
+							if (sendX > targetMax)
+							{
+								sendX = targetMax;
+							}
+							if (sendX < targetMin)
+							{
+								sendX = targetMin;
+							}
+						}
+
+						VERTEX me;
+						me.x = sendX;
+						me.y = sendY;
+						me.z = 50;
+						VERTEX hit;
+						FACE* onhit;
+
+						if (best_z == 0)
+						{
+							best_z = zone->map->LoadMapfile(zone->thisZonesZoneLines[i]->target_zone)->FindBestZ(MAP_ROOT_NODE, me, &hit, &onhit);
+						}
+
+						if (best_z == -999999.000000)
+						{
+							best_z = 0;
+						}
+
+
+						//this->Message(YELLOW, "Positive Zoning to %s at x= %f y=%f z=%f", zone->thisZonesZoneLines[i]->target_zone, sendX, sendY, best_z);
+
+						// jimm0thy Comment out for No-Zoning Testing
+						this->TeleportPC(zone->thisZonesZoneLines[i]->target_zone, sendX, sendY, best_z, zone->thisZonesZoneLines[i]->heading);
+
+
+					}
+				}
+
+				if (triggerY <= 0) // Negative Y
+				{
+					if (playerY <= triggerY && this->GetX() >= zwallMin && this->GetX() <= zwallMax)// && playerX >= (triggerX - 50))
+					{
+
+						float sendY = (zone->thisZonesZoneLines[i]->target_y);
+						float sendX;
+						float best_z = 0;
+
+						if (zone->thisZonesZoneLines[i]->keepX == 1)
+						{
+							float targetMax = (Database::Instance()->getTargetZoneMax(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
+							float targetMin = (Database::Instance()->getTargetZoneMin(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
+
+							sendX = this->GetX();
+
+							if (targetMax != 0 && targetMin != 0)
+							{
+								if (sendX > targetMax)
+								{
+									sendX = targetMax;
+								}
+								if (sendX < targetMin)
+								{
+									sendX = targetMin;
+								}
+							}
+						}
+						else
+						{
+							//sendX = (zone->thisZonesZoneLines[i]->target_x);
+							float targetCenter = (Database::Instance()->getTargetZoneCenter(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
+							float distFromCenter = (this->GetX() - zone->thisZonesZoneLines[i]->centerpoint);
+							float targetMax = (Database::Instance()->getTargetZoneMax(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
+							float targetMin = (Database::Instance()->getTargetZoneMin(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
+							sendX = (targetCenter + distFromCenter);
+							//		this->Message(YELLOW, "DistFromCenter = %f", distFromCenter);
+							if (sendX > targetMax)
+							{
+								sendX = targetMax;
+							}
+							if (sendX < targetMin)
+							{
+								sendX = targetMin;
+							}
+						}
+
+						VERTEX me;
+						me.x = sendX;
+						me.y = sendY;
+						me.z = 50;
+						VERTEX hit;
+						FACE* onhit;
+
+						if (best_z == 0)
+						{
+							best_z = zone->map->LoadMapfile(zone->thisZonesZoneLines[i]->target_zone)->FindBestZ(MAP_ROOT_NODE, me, &hit, &onhit);
+						}
+
+						if (best_z == -999999.000000)
+						{
+							best_z = 0;
+						}
+
+
+						//this->Message(YELLOW, "Negative Zoning to %s at x= %f y=%f z=%f", zone->thisZonesZoneLines[i]->target_zone, sendX, sendY, best_z);
+
+						// jimm0thy Comment out for No-Zoning Testing
+						this->TeleportPC(zone->thisZonesZoneLines[i]->target_zone, sendX, sendY, best_z, zone->thisZonesZoneLines[i]->heading);
+
+
+					}
+				}
+
+
+
+			}
+
+		}
+
+		//o--------------------------------------------------------------
+		// jimm0thy - End of New Zoning Code
+		//o--------------------------------------------------------------
+		//| Check for original style zoning as well
+		//o--------------------------------------------------------------
+
+
+
+
+
+
+		// default abs = int , fabsf = flot 
+		if (fabsf(this->GetX() - zone->thisZonesZoneLines[i]->x) > range || fabsf(this->GetY() - zone->thisZonesZoneLines[i]->y) > range || fabsf(this->GetZ() - zone->thisZonesZoneLines[i]->z) > zDiff || (GetZ() + 10) < zone->thisZonesZoneLines[i]->z)
 		{
 			continue;
 		}
 		else
+
 		{
-			if(CheckCoordLos(GetX(), GetY(), GetZ(), zone->thisZonesZoneLines[i]->x, zone->thisZonesZoneLines[i]->y, zone->thisZonesZoneLines[i]->z))
+			if (CheckCoordLos(GetX(), GetY(), GetZ(), zone->thisZonesZoneLines[i]->x, zone->thisZonesZoneLines[i]->y, zone->thisZonesZoneLines[i]->z))
+
 			{
-				if(debugFlag && GetDebugMe())
-					this->Message(WHITE,"Debug: You have come in contact with zoneline node: %i",zone->thisZonesZoneLines[i]->id);
-				if(strcmp(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone) == 0)
+
+				if (zone->thisZonesZoneLines[i]->useNewZoning == 0)
+
+
+
 				{
-					this->MovePC(0, zone->thisZonesZoneLines[i]->target_x, zone->thisZonesZoneLines[i]->target_y, zone->thisZonesZoneLines[i]->target_z, false, false);
+					// jimm0thy - zoning testing output
+					int16 x1 = fabsf(this->GetX() - zone->thisZonesZoneLines[i]->x);
+					int16 y1 = fabsf(this->GetY() - zone->thisZonesZoneLines[i]->y);
+					int16 z1 = fabsf(this->GetZ() - zone->thisZonesZoneLines[i]->z);
+
+					/*this->Message(WHITE, "Range = %i", range);
+					this->Message(WHITE, "X1 = %i", x1);
+					this->Message(WHITE, "Y1 = %i", y1);
+					this->Message(WHITE, "Z1 = %i", z1);
+
+					this->Message(WHITE, "You've hit the zone line for %s)", zone->thisZonesZoneLines[i]->target_zone);
+					this->Message(WHITE, "Zone_Point ID = %i", zone->thisZonesZoneLines[i]->id);*/
+
+
+
+					if (debugFlag && GetDebugMe())
+						this->Message(WHITE, "Debug: You have come in contact with zoneline node: %i", zone->thisZonesZoneLines[i]->id);
+					if (strcmp(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone) == 0)
+					{
+						//this->Message(YELLOW, "MovePCRoutine for ShortName = %s to TargetName = %s", zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone);
+						//this->MovePC(0, zone->thisZonesZoneLines[i]->target_x, zone->thisZonesZoneLines[i]->target_y, zone->thisZonesZoneLines[i]->target_z, false, true); 
+						// jimm0thy - Changed to use TeleportPC the same as all other zoning.
+						//   Using MovePC causes issues where the player will appear higher and fall to the floor
+						//   While there are no visible cons to simply using TeleportPC as you don't get a load screen for same zone zoning
+						this->TeleportPC(zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->target_x, zone->thisZonesZoneLines[i]->target_y, zone->thisZonesZoneLines[i]->target_z, zone->thisZonesZoneLines[i]->heading);
+
+					}
+					else
+					{
+						this->tempHeading = zone->thisZonesZoneLines[i]->heading;
+						this->usingSoftCodedZoneLine = true; //default = true
+						this->isZoning = true; //default = true
+						//this->isZoningZP = true;  //default = not here
+
+						if (zone->thisZonesZoneLines[i]->keepX == 1)
+							this->zoningX = x_pos;
+						else
+							this->zoningX = zone->thisZonesZoneLines[i]->target_x;
+
+						if (zone->thisZonesZoneLines[i]->keepY == 1)
+							this->zoningY = y_pos;
+						else
+							this->zoningY = zone->thisZonesZoneLines[i]->target_y;
+
+						if (zone->thisZonesZoneLines[i]->keepZ == 1)
+							this->zoningZ = z_pos;
+						else
+							this->zoningZ = zone->thisZonesZoneLines[i]->target_z;
+
+						// jimm0thy - updated to use TeleportPC directly so we can pass heading
+						// jimm0thy Comment out for No-Zoning Testing
+						this->TeleportPC(zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->target_x, zone->thisZonesZoneLines[i]->target_y, zone->thisZonesZoneLines[i]->target_z, zone->thisZonesZoneLines[i]->heading);
+					}
+					break;
 				}
-				else
-				{
-					this->tempHeading = zone->thisZonesZoneLines[i]->heading;
-					this->usingSoftCodedZoneLine = true;
-					this->isZoning = true;
-					if(zone->thisZonesZoneLines[i]->keepX == 1)
-						this->zoningX = x_pos;
-					else
-						this->zoningX = zone->thisZonesZoneLines[i]->target_x;
-					if(zone->thisZonesZoneLines[i]->keepY == 1)
-						this->zoningY = y_pos;
-					else
-						this->zoningY = zone->thisZonesZoneLines[i]->target_y;
-					if(zone->thisZonesZoneLines[i]->keepZ == 1)
-						this->zoningZ = z_pos;
-					else
-						this->zoningZ = zone->thisZonesZoneLines[i]->target_z;
-					this->ZonePC(zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->target_x, zone->thisZonesZoneLines[i]->target_y, zone->thisZonesZoneLines[i]->target_z);
-				}
-				break;
 			}
 		}
 	}
@@ -4038,7 +4431,7 @@ bool Client::CanEquipThisItem(Item_Struct* item)
 	//Yeahlight: Rip the bitmasks apart and seperate it into slots
 	//Yeahlight: TODO: Check deities
 
-	//jimm0thy: Fixes auto loot zone crash
+	// jimm0thy: Fixes auto loot zone crash
 	int16 classes[28] = { 0 }; //int16 classes[14] = {0};
 	int16 races[26] = { 0 }; //int16 races[13] = {0};
 
