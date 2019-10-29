@@ -827,6 +827,7 @@ void command_npcstats(Client *c, const Seperator *sep)
 			c->Message(BLACK, "ERROR: Target is not a NPC!");
 		else {
 			c->Message(BLACK, "NPC Stats:");
+			c->Message(BLACK, "  ID: %i", c->GetTarget()->GetID()); // jimm0thy added NPCID 
 			c->Message(BLACK, "  Name: %s",c->GetTarget()->GetName()); 
 			//Message(BLACK, "  Last Name: %s",sep.arg[2]); 
 			c->Message(BLACK, "  Race: %i",c->GetTarget()->GetRace());  

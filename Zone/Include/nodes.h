@@ -56,6 +56,10 @@ public:
 	int8	keepX;
 	int8	keepY;
 	int8	keepZ;
+	int8	useNewZoning; // jimm0thy - added for new zoning code
+	float   centerpoint; // jimm0thy - added for new zoning code
+	float   maxvert; // jimm0thy - added for new zoning code
+	float   minvert; // jimm0thy - added for new zoning code
 };
 
 #endif

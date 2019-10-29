@@ -39,7 +39,9 @@ int32 Database::GetLSLoginInfo(char* iUsername, char* oPassword, int8* lsadmin, 
 
 	DoEscapeString(tmp, iUsername, strlen(iUsername));
 
-	if (RunQuery(query, MakeAnyLenString(&query, "SELECT id, name, password, lsadmin, lsstatus, worldadmin,user_active from login_accounts where name like '%s'", tmp), errbuf, &result)) {
+	// jimm0thy - changed to have name (username) an exact match instead of like
+	//   and changed to also match password SHA
+	if (RunQuery(query, MakeAnyLenString(&query, "SELECT id, name, password, lsadmin, lsstatus, worldadmin,user_active from login_accounts where name = '%s' and password = sha('%s')", tmp, oPassword), errbuf, &result)) {
 		delete[] query;
 		if (mysql_num_rows(result) == 1) {
 			row = mysql_fetch_row(result);
@@ -403,47 +405,61 @@ int8 Database::ChangeLSPassword(int32 accountid, const char* newpassword, const 
 }
 
 #if defined(LOGINCRYPTO) && !defined(MINILOGIN) && !defined(PUBLICLOGIN)
-int32 Database::CheckEQLogin(const APPLAYER* app, char* oUsername, int8* lsadmin, int* lsstatus, bool* verified, sint16* worldadmin,int32 ip) //newage: fixed this
+int32 Database::CheckEQLogin(const APPLAYER* app, char* oUsername, int8* lsadmin, int* lsstatus, bool* verified, sint16* worldadmin, int32 ip) //newage: fixed this
 {
-	uchar eqlogin[40];
+	uchar eqlogin[80]; // jimm0thy - doubled size
 	char errbuf[MYSQL_ERRMSG_SIZE];
 	char* query = 0;
-	MYSQL_RES *result;
+	MYSQL_RES* result;
 	MYSQL_ROW row;
 	eq_crypto.DoEQDecrypt(app->pBuffer, eqlogin, 40);
 
-	LoginCrypt_struct* lcs = (LoginCrypt_struct*) eqlogin;
+	LoginCrypt_struct* lcs = (LoginCrypt_struct*)eqlogin;
 
 	if (strlen(lcs->username) >= 20 || strlen(lcs->password) >= 20)
-		{
-			cout<<"Invalid username/password lengths"<<endl;
-			return 0;
-		}
-		char dbpass[33];
-		int32 accid = database.GetLSLoginInfo(lcs->username, dbpass, lsadmin, lsstatus, verified, worldadmin);
-		if (accid == 0)
-			return 0;
-		MD5 md5pass(lcs->password, strlen(lcs->password));
-		MD5 DBmd5pass(dbpass, strlen(dbpass));
-		if (oUsername)
-			strcpy(oUsername, lcs->username);
-		string str = md5pass;
-		//string str2 = dbpass;
-		string str2 = DBmd5pass;
-		if (!str.compare(str2))
-		{
-			struct in_addr in;
-			in.s_addr = ip;
-			//Yeahlight: Check for account lockout, return 9999999 for a 15 min suspension, 9999998 for PERMINATE
-		//	database.ClearAccountLockout(inet_ntoa(in));
-			return accid;
-		}
-		else
-		{
-			cout << "[INVALID PASS]" << " Typed:" << md5pass << " Expecting:" << DBmd5pass << endl;
-			return 0;
-		}
-	
+	{
+		cout << "Invalid username/password lengths" << endl;
+		return 0;
+	}
+	char dbpass[33];
+	int32 accid = database.GetLSLoginInfo(lcs->username, lcs->password, lsadmin, lsstatus, verified, worldadmin); // jimm0thy - replaced dbpass with lcs->password
+	if (accid == 0)
+		return 0;
+
+	// jimm0thy - this shouldn't be needed since the SQL query is pulling the SHA password
+
+	//MD5 md5pass(lcs->password, strlen(lcs->password));
+	//MD5 DBmd5pass(dbpass, strlen(dbpass));
+	//if (oUsername)
+	//	strcpy(oUsername, lcs->username);
+	//string str = md5pass;
+	////string str2 = dbpass;
+	//string str2 = DBmd5pass;
+
+	//if (!str.compare(str2))
+	//{
+	//	struct in_addr in;
+	//	in.s_addr = ip;
+	//	//Yeahlight: Check for account lockout, return 9999999 for a 15 min suspension, 9999998 for PERMINATE
+	////	database.ClearAccountLockout(inet_ntoa(in));
+	//	return accid;
+	//}
+	//else
+	//{
+	//	cout << "[INVALID PASS]" << " Typed:" << md5pass << " Expecting:" << DBmd5pass << endl;
+	//	return 0;
+	//}
+
+
+	if (accid > 0)
+	{
+		return accid;
+	}
+	else
+	{
+		cout << "Invalid Password for account " << lcs->username << endl;
+		return 0;
+	}
 }
 #endif
 

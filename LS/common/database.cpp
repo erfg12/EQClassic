@@ -540,7 +540,7 @@ int32 Database::CheckLogin(const char* name, const char* password, sint16* oStat
 	DoEscapeString(tmpUN, name, strlen(name));
 	DoEscapeString(tmpPW, password, strlen(password));
 	
-	if (RunQuery(query, MakeAnyLenString(&query, "SELECT id, status FROM account WHERE name='%s' AND (password='%s' or password=MD5('%s'))", tmpUN, tmpPW, tmpPW), errbuf, &result)) {
+	if (RunQuery(query, MakeAnyLenString(&query, "SELECT id, status FROM account WHERE name='%s' AND (password='%s' or password=MD5('%s') or password=sha('%s')", tmpUN, tmpPW, tmpPW), errbuf, &result)) { // jimm0thy - added SHA
 		delete[] query;
 		if (mysql_num_rows(result) == 1)
 		{

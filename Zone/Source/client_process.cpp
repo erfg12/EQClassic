@@ -4877,7 +4877,7 @@ void Client::ProcessOP_ClickDoor(APPLAYER* pApp)
 				DoorOpen_Struct* od2 = (DoorOpen_Struct*)outapp2->pBuffer;
 				od2->doorid = door->triggerID;
 				//newage: gfaydark elevators get stuck. Added boolean "elevator" to fix.
-				//jimm0thy -  Make this only affect the lifts in Kelethin (others can be added), IDs are based off the above debug message
+				// jimm0thy -  Make this only affect the lifts in Kelethin (others can be added), IDs are based off the above debug message
 				// however these doorid's do not show in the doors table of the database
 				if (strcmp(zone->GetShortName(), "gfaydark") == 0) {
 					if (clicked->doorid == 74 || clicked->doorid == 73 || clicked->doorid == 81 || clicked->doorid == 82 || clicked->doorid == 78 || clicked->doorid == 79)
@@ -5181,6 +5181,7 @@ void Client::ProcessOP_ConsentRequest(APPLAYER* pApp){
 	ConsentResponse_Struct* conres = (ConsentResponse_Struct*)outapp->pBuffer;
 	memset(conres, 0, sizeof(ConsentResponse_Struct));
 
+	// jimm0thy - Should these be static? I would think they should be set to actual values, in testing though I got OPCode errors 
 	strcpy(conres->consentee, "Consentee");
 	strcpy(conres->consenter, "Consenter");
 	strcpy(conres->corpseZoneName, "qeynos");
