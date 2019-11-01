@@ -1310,6 +1310,42 @@ bool Database::EditGuild(int32 guilddbid, int8 ranknum, GuildRankLevel_Struct* g
 	return false;
 }
 
+int32 Database::GetSpawn2ID(int32 spawngroupid) // jimm0thy - added for npc stats info command
+{
+	char errbuf[MYSQL_ERRMSG_SIZE];
+	char* query = 0;
+	int32 affected_rows = 0;
+	MYSQL_RES* result;
+	MYSQL_ROW row;
+	int32 tmp = 0;
+
+	if (RunQuery(query, MakeAnyLenString(&query, "SELECT id FROM spawn2 WHERE spawngroupid = %i", spawngroupid), errbuf, &result))
+	{
+		if (mysql_num_rows(result) == 1)
+		{
+			row = mysql_fetch_row(result);
+			tmp = atoi(row[0]);
+
+			return tmp;
+
+		}
+		mysql_free_result(result);
+		safe_delete_array(query);
+		return tmp;
+	}
+	else {
+		cerr << "Error in GetSpawn2ID query '" << query << "' " << errbuf << endl;
+		safe_delete_array(query);
+		mysql_free_result(result);
+		return 0;
+
+
+	}
+
+}
+
+
+
 bool Database::UpdateCorpseSave(int32 dbid, float x, float y, float z) // jimm0thy -  Couldn't get Corpse::Save to work so just added my own
 {
 	char errbuf[MYSQL_ERRMSG_SIZE];
@@ -1317,6 +1353,7 @@ bool Database::UpdateCorpseSave(int32 dbid, float x, float y, float z) // jimm0t
 	int32 affected_rows = 0;
 	MYSQL_RES* result;
 	MYSQL_ROW row;
+	
 
 	if (RunQuery(query, MakeAnyLenString(&query, "update player_corpses set x = %f, y = %f, z = %f where id = %i", x, y, z, dbid), errbuf, &result))
 	{
@@ -1334,6 +1371,7 @@ bool Database::UpdateCorpseSave(int32 dbid, float x, float y, float z) // jimm0t
 		}
 		return false;
 	}
+	return false;
 }
 
 // jimm0thy - Get new zoning additional information
