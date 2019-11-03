@@ -2,10 +2,14 @@ EQClassic source code from January 1st, 2010 - For EverQuest Trilogy (big box)
 
 **Online Documention:** http://erfg12.github.io/EQClassic/
 
-**Required Files:**
+
+### Required Files:
 Build Dependencies - https://drive.google.com/open?id=1Pt3Io2EM5bUbcYfh_PW6n_Um_wTjnSck
+
 Perl512 - https://drive.google.com/open?id=12mbabEwGLZbtD3Q7Xykvwf6MZzLbSCI2
+
 MySQL (build only) - https://drive.google.com/open?id=1YtRohGLkvMIIGWr3L8VECw7HEepfh_a1
+
 Database - https://drive.google.com/open?id=1PFKcvvzc2yq45yW1eCgXlBYQ_kADuJJU
 
 
