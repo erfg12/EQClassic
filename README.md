@@ -10,8 +10,9 @@ Perl512 - https://drive.google.com/open?id=12mbabEwGLZbtD3Q7Xykvwf6MZzLbSCI2
 
 MySQL (build only) - https://drive.google.com/open?id=1YtRohGLkvMIIGWr3L8VECw7HEepfh_a1
 
-Database - https://drive.google.com/open?id=1PFKcvvzc2yq45yW1eCgXlBYQ_kADuJJU
+Database - https://drive.google.com/open?id=1ECxfqNPbWyEqibEJOzUL6tvTO3lwdJF2
 
+Compiled EXE - https://drive.google.com/open?id=1YT-SzOCdInGicvpjF8UJaJ-QqF9RlRpN
 
 ### Support
 
