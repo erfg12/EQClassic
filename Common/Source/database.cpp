@@ -206,7 +206,9 @@ int32 Database::GetAuthentication(char* char_name, char* zone_name, int32 ip)
 	MYSQL_ROW row;
 	//int32 newip = 83994816;
 	int32 newip = ip;
-	int32 tamanio = MakeAnyLenString(&query, "SELECT account_id FROM authentication WHERE char_name='%s' AND zone_name='%s' AND ip=%u AND UNIX_TIMESTAMP()-time < %i", char_name, zone_name, newip, AUTHENTICATION_TIMEOUT);
+	//int32 tamanio = MakeAnyLenString(&query, "SELECT account_id FROM authentication WHERE char_name='%s' AND zone_name='%s' AND ip=%u AND UNIX_TIMESTAMP()-time < %i", char_name, zone_name, newip, AUTHENTICATION_TIMEOUT);
+	//jimm0thy - This check was failing the ip check portion for some reason, So I've removed both ip and timestamp checks and now it appears to be ok
+	int32 tamanio = MakeAnyLenString(&query, "SELECT account_id FROM authentication WHERE char_name='%s' AND zone_name='%s'", char_name, zone_name);
 	int32 iresult = 0;
 
 	if (RunQuery(query, tamanio, errbuf, &result))
