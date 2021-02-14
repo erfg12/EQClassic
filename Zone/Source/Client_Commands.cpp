@@ -150,8 +150,8 @@ int command_init(void) {
 		command_add("si2",NULL,EQC_Alpha_Tester,command_summonitemnonblob) ||
 		command_add("summonitem2",NULL,EQC_Alpha_Tester,command_summonitemnonblob) ||
 		
-		// corpse summon //newage: is this supposed to be in EQC?
-		command_add("corpse","- Manipulate corpses, use with no arguments for help",0,command_corpse) ||
+		// corpse summon //newage: is this supposed to be in EQC? // jimm0thy - No as these are all GM commands made for the server, so I've updated the permissons for this command
+		command_add("corpse","- Manipulate corpses, use with no arguments for help",GM_ADMIN,command_corpse) ||
 
 		command_add("setexp","[value] - Set your experience",GM_ADMIN,command_setexp) ||
 		command_add("addexp","[value] - Adds to your experience",GM_ADMIN,command_addexp) ||
@@ -821,13 +821,24 @@ void command_loc(Client *c, const Seperator *sep)
 
 void command_npcstats(Client *c, const Seperator *sep) 
 {
+	
+		
 		if (c->GetTarget() == 0)
 			c->Message(BLACK, "ERROR: No target!");
 		else if (!c->GetTarget()->IsNPC())
 			c->Message(BLACK, "ERROR: Target is not a NPC!");
-		else {
+		else {			
 			c->Message(BLACK, "NPC Stats:");
-			c->Message(BLACK, "  ID: %i", c->GetTarget()->GetID()); // jimm0thy added NPCID 
+			c->Message(BLACK, "  NPC_Type ID: %i", c->GetTarget()->CastToNPC()->GetNPCTypeID()); // jimm0thy added NPCID
+
+			// jimm0thy - added Spawn2ID to stats. Since most mobs are multiple spawns off 1 entry this doesn't really work, unless we loop through and list all
+			//    So we have it only show if it does have a single answer, which is generally for Guards and Merchants
+			int32 s2id = Database::Instance()->GetSpawn2ID(c->GetTarget()->CastToNPC()->GetSpawnGroupId());  
+			if (!s2id == 0)
+			{
+				c->Message(BLACK, "  Spawn2 ID: %i", (s2id)); 
+			}
+			
 			c->Message(BLACK, "  Name: %s",c->GetTarget()->GetName()); 
 			//Message(BLACK, "  Last Name: %s",sep.arg[2]); 
 			c->Message(BLACK, "  Race: %i",c->GetTarget()->GetRace());  

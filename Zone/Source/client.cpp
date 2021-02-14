@@ -3849,10 +3849,12 @@ void Client::ScanForZoneLines()
 						}
 						else
 						{
-							sendY = (zone->thisZonesZoneLines[i]->target_y);
+							//sendY = (zone->thisZonesZoneLines[i]->target_y);
+							float targetCenter = (Database::Instance()->getTargetZoneCenter(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
+							float distFromCenter = (this->GetY() - zone->thisZonesZoneLines[i]->centerpoint);
 							float targetMax = (Database::Instance()->getTargetZoneMax(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
 							float targetMin = (Database::Instance()->getTargetZoneMin(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
-
+							sendY = (targetCenter + distFromCenter);
 
 
 							if (sendY > targetMax)
@@ -3921,11 +3923,13 @@ void Client::ScanForZoneLines()
 						}
 						else
 						{
-							sendY = (zone->thisZonesZoneLines[i]->target_y);
+							//sendY = (zone->thisZonesZoneLines[i]->target_y);
+							float targetCenter = (Database::Instance()->getTargetZoneCenter(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
+							float distFromCenter = (this->GetY() - zone->thisZonesZoneLines[i]->centerpoint);
 							float targetMax = (Database::Instance()->getTargetZoneMax(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
 							float targetMin = (Database::Instance()->getTargetZoneMin(zone->GetShortName(), zone->thisZonesZoneLines[i]->target_zone, zone->thisZonesZoneLines[i]->id));
-
-							sendY = this->GetX();
+							sendY = (targetCenter + distFromCenter);
+							//sendY = this->GetY();
 
 							if (sendY > targetMax)
 							{
@@ -3957,7 +3961,7 @@ void Client::ScanForZoneLines()
 						//this->Message(YELLOW, "Negative Zoning to %s at x= %f y=%f z=%f", zone->thisZonesZoneLines[i]->target_zone, sendX, sendY, best_z);
 
 						// jimm0thy Comment out for No-Zoning Testing
-						this->TeleportPC(zone->thisZonesZoneLines[i]->target_zone, sendX, this->GetY(), best_z, zone->thisZonesZoneLines[i]->heading);
+						this->TeleportPC(zone->thisZonesZoneLines[i]->target_zone, sendX, sendY, best_z, zone->thisZonesZoneLines[i]->heading);
 
 
 					}
