@@ -6,7 +6,106 @@
 	}
 </style>
 <h1>EQCLASSIC ALPHA DOCUMENTATION</h1>
-<hr />
+<hr>
+<h2>GAME CLIENT</h2>
+<p>
+	EverQuest Trilogy Game CD's ::
+	<a href="https://archive.org/details/EverQuestTrilogy" target="_BLANK"
+		>Archive.org</a
+	>
+	|
+	<a
+		href="https://drive.google.com/file/d/0B4YtK9YXaHvQeEVRclI2bkxlMEU/view?usp=sharing"
+		target="_BLANK"
+		>GDRIVE</a
+	>
+	|
+	<a
+		href="https://www.dropbox.com/s/8njrsesjeozcu1p/EverQuest%20Trilogy.zip?dl=0"
+		target="_BLANK"
+		>DROPBOX</a
+	>
+</p>
+<p>
+	<ul>
+		<li>
+			<a
+				href="https://archive.org/details/eqwindow-beta-v-2.32"
+				target="_BLANK"
+				>EQWindow App beta v2.32 (fixes game DirectDraw)</a
+			>
+		</li>
+		<li>
+			<a
+				href="https://dege.freeweb.hu/dgVoodoo2/dgVoodoo2/"
+				target="_BLANK"
+				>dgVoodoo2 (DirectX to Voodoo 3D wrapper)</a
+			>
+		</li>
+		<li>
+			<a
+				href="https://dege.freeweb.hu/dgVoodoo2/bin/D3DRM.zip"
+				target="_BLANK"
+				>d3drm.dll missing file</a
+			>
+		</li>
+	</ul>
+</p>
+<ol style="line-height:40px;">
+	<li>
+		Download "EverQuest Trilogy Game CD's (ISO Files)" and mount CD1 and CD2.
+		Start installing the game.<br />
+		Delete shortcuts on desktop, do not run them.
+	</li>
+
+	<li>
+		Place the downloaded files into your "Sony/Everquest Trilogy" folder. <br />
+		Make a shortcut on your desktop to eqw.exe (you can change the icon too if
+		you want). Edit "eqhost.txt" change login and register to IP:Port of server.
+	</li>
+
+	<li>
+		Run eqw.exe and point to eqgame.exe. The game will now launch. Select VooDoo
+		as your 3D card. Login with the credentials in the "accounts" table in the
+		DB.
+	</li>
+</ol>
+
+<h2>COMPILING CODE</h2>
+<p>
+	<ul>
+		<li>
+		<a href="https://github.com/erfg12/EQClassic" target="_BLANK"
+			>EQClassic Alpha Source Code (GitHub)</a
+		>
+		</li>
+		<li>
+				EQClassic Compile Dependencies (Required to compile code) :: <a href="https://archive.org/details/dependencies_202505">Archive.org</a> | <a href="https://drive.google.com/file/d/0B4YtK9YXaHvQbU93Z25kY2J4WWM/view?usp=sharing">GDRIVE</a>
+		</li>
+	</ul>
+</p>
+<ol style="line-height:40px;">
+	<li>Clone the code from GitHub.</li>
+
+	<li>
+		Download "EverQuest Compile Dependencies (Required for compile)" unzip and
+		place the folers in the cloned source Dependencies folder.
+	</li>
+
+	<li>
+		Open the solution file (.sln) with Visual Studio 2022 Community Edition (<a
+			href="https://visualstudio.microsoft.com"
+			target="_BLANK"
+			>https://visualstudio.microsoft.com</a
+		>) and click Build > Build Solution.<br />
+		This will give you login.exe, world.exe, zone.exe and SharedMemory.dll in
+		the Build/Debug folder.
+	</li>
+</ol>
+
+- EQClassic was developed by Yeahlight and Harakiri. This is a fork of their
+early code, and was fixed to run on modern systems.
+
 <h2>SERVER HOSTING</h2>
 <p>
 	<ul>
@@ -18,10 +117,7 @@
 		>
 		</li>
 		<li>
-			<a
-				href="https://drive.google.com/file/d/1LvigV1hwdo729SH0wutvYs9xc9tVaUKV/view?usp=drive_link"
-				target="_BLANK"
-				>EQClassic Server Files (needs compiled executables)</a
+			EQClassic Server Files (needs compiled executables) :: <a href="https://archive.org/details/open-eqc-server" target="_BLANK">Archive.org</a> | <a href="https://drive.google.com/file/d/1LvigV1hwdo729SH0wutvYs9xc9tVaUKV/view?usp=sharing" target="_BLANK">GDRIVE</a
 			>
 		</li>
 		<li>
@@ -83,7 +179,7 @@
 	<li>
 		Edit LoginServer.ini and db.ini to reflect your MySQL database credentials. <br />
 		Want someone to connect to your server via the internet? Change 127.0.0.1 in
-		LoginServer.ini and boot5zones.bat to your external IP (<a href="https://whatismyip.com">whatismyip.com</a>) <br />
+		LoginServer.ini and boot5zones.bat to your external IP (<a href="https://api.ipify.org">api.ipify.org</a>) <br />
 		Want to use different computers on your local network? Change 127.0.0.1 in
 		LoginServer.ini and boot5zones.bat to your computer's network IP (cmd > ipconfig)
 	</li>
@@ -93,103 +189,3 @@
 		windows open, as this is your server.
 	</li>
 </ol>
-<hr>
-<h2>GAME CLIENT</h2>
-<p>
-	EverQuest Trilogy Game CD's ::
-	<a href="https://archive.org/details/EverQuestTrilogy" target="_BLANK"
-		>Archive.org</a
-	>
-	|
-	<a
-		href="https://drive.google.com/file/d/0B4YtK9YXaHvQeEVRclI2bkxlMEU/view?usp=sharing"
-		target="_BLANK"
-		>GDRIVE</a
-	>
-	|
-	<a
-		href="https://www.dropbox.com/s/8njrsesjeozcu1p/EverQuest%20Trilogy.zip?dl=0"
-		target="_BLANK"
-		>DROPBOX</a
-	>
-</p>
-<p>
-	<ul>
-		<li>
-			<a
-				href="https://archive.org/details/eqwindow-beta-v-2.32"
-				target="_BLANK"
-				>EQWindow App beta v2.32 (fixes game DirectDraw)</a
-			>
-		</li>
-		<li>
-			<a
-				href="https://dege.freeweb.hu/dgVoodoo2/dgVoodoo2/"
-				target="_BLANK"
-				>dgVoodoo2 (Voodoo 3d wrapper)</a
-			>
-		</li>
-		<li>
-			<a
-				href="https://dege.freeweb.hu/dgVoodoo2/bin/D3DRM.zip"
-				target="_BLANK"
-				>d3drm.dll missing file</a
-			>
-		</li>
-	</ul>
-</p>
-<ol style="line-height:40px;">
-	<li>
-		Download "EverQuest Trilogy Game CD's (ISO Files)" and mount CD1 and CD2.
-		Start installing the game.<br />
-		Delete shortcuts on desktop, do not run them.
-	</li>
-
-	<li>
-		Download "Client fix. Required for Login to World/Zone." place these files
-		in your "Sony/Everquest Trilogy" folder. <br />
-		Make a shortcut on your desktop to eqw.exe (you can change the icon too if
-		you want). Edit "eqhost.txt" change login and register to IP of server.
-	</li>
-
-	<li>
-		Run eqw.exe and point to eqgame.exe. The game will now launch. Select VooDoo
-		as your 3D card. Login with the credentials in the "accounts" table in the
-		DB.
-	</li>
-</ol>
-
-<h2>COMPILING CODE</h2>
-<p>
-	<ul>
-		<li>
-		<a href="https://github.com/erfg12/EQClassic" target="_BLANK"
-			>EQClassic Alpha Source Code (GitHub)</a
-		>
-		</li>
-		<li>
-				EQClassic Compile Dependencies (Required to compile code) :: <a href="https://archive.org/details/dependencies_202505">Archive.org</a> | <a href="https://drive.google.com/file/d/0B4YtK9YXaHvQbU93Z25kY2J4WWM/view?usp=sharing&resourcekey=0-jSbOZuDQgtwbZGrEJ9fVwQ">GDRIVE</a>
-		</li>
-	</ul>
-</p>
-<ol style="line-height:40px;">
-	<li>Clone the code from GitHub.</li>
-
-	<li>
-		Download "EverQuest Compile Dependencies (Required for compile)" unzip and
-		place the folers in the cloned source Dependencies folder.
-	</li>
-
-	<li>
-		Open the solution file (.sln) with Visual Studio 2022 Community Edition (<a
-			href="https://visualstudio.microsoft.com"
-			target="_BLANK"
-			>https://visualstudio.microsoft.com</a
-		>) and click Build > Build Solution.<br />
-		This will give you login.exe, world.exe, zone.exe and SharedMemory.dll in
-		the Build/Debug folder.
-	</li>
-</ol>
-
-- EQClassic was developed by Yeahlight and Harakiri. This is a fork of their
-early code, and was fixed to run on modern systems.
